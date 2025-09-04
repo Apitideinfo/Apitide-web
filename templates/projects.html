@@ -1,0 +1,620 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Apitide | Turning Ideas into Impactful Digital Solutions</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img"></div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'projects' %}">Projects</a>
+      <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+    <div class="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- PROJECTS HERO -->
+  <section class="projects-hero">
+    <div class="container">
+      <h1 style="color: var(--secondary-color);">Turning Ideas into <span style="color: var(--orange);">Impactful</span> Digital Solutions</h1>
+      <h4 style="color: var(--primary-color);">Here's a glimpse of the projects we've crafted — from sleek websites to AI-powered assistants. Each project reflects creativity, problem-solving, and measurable results.</h4>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="projects-grid">
+    <div class="container" style="display: contents;">
+    <!-- Project 1: RAG Model -->
+    <div class="project-card fade-in" onclick="openModal('rag-modal')">
+      <div class="project-image" style="background-image: url('{% static "images/RAG Model.jpg" %}'); background-size: cover;">
+      </div>
+      <div class="project-content">
+        <span class="project-icon">🧠</span>
+        <h3 class="project-title">RAG Model – Intelligent Healthcare Assistant</h3>
+        <p class="project-preview">An AI-powered assistant for healthcare, built using Retrieval-Augmented Generation (RAG). It reduces hallucinations by grounding responses in embedded medical datasets, ensuring reliable and context-aware insights for sensitive domains.</p>
+        <button class="view-case-study">View Case Study</button>
+      </div>
+    </div>
+
+    <!-- Project 2: Agentic AI -->
+    <div class="project-card fade-in" onclick="openModal('agentic-modal')">
+      <div class="project-image" style="background-image: url('{% static "images/AI.jpg" %}'); background-size: cover;">
+      </div>
+      <div class="project-content">
+        <span class="project-icon">🤖</span>
+        <h3 class="project-title">Agentic AI – Smart Business Assistant</h3>
+        <p class="project-preview">A smart autonomous assistant that manages emails and schedules meetings. It automates repetitive tasks, saves hours of work weekly, and ensures error-free scheduling with seamless business integration.</p>
+        <button class="view-case-study">View Case Study</button>
+      </div>
+    </div>
+
+    <!-- Project 3: ElectricFutureIndia -->
+    <div class="project-card fade-in" onclick="openModal('ev-modal')">
+      <div class="project-image" style="background-image: url('{% static "images/Electric.jpg" %}'); background-size: cover;">
+      </div>
+      <div class="project-content">
+        <span class="project-icon">⚡</span>
+        <h3 class="project-title">ElectricFutureIndia.com – Informative EV Website</h3>
+        <p class="project-preview">A lightweight and responsive website created for an EV startup. Designed with clean UI, smooth animations, and fast loading speed, it boosts the client's credibility and provides a polished online presence.</p>
+        <button class="view-case-study">View Case Study</button>
+      </div>
+    </div>
+
+    <!-- Project 4: HealthDominus -->
+    <div class="project-card fade-in" onclick="openModal('health-modal')">
+      <div class="project-image" style="background-image: url('{% static "images/Health-Dominus.jpg" %}'); background-size: cover;">
+      </div>
+      <div class="project-content">
+        <span class="project-icon">🏥</span>
+        <h3 class="project-title">HealthDominus – AI Medicine Recommender</h3>
+        <p class="project-preview">An AI-powered system that predicts diseases from symptoms and recommends basic medicines. Especially impactful in rural areas, it ensures safe, instant, and reliable healthcare guidance 24/7.</p>
+        <button class="view-case-study">View Case Study</button>
+      </div>
+    </div>
+
+    <!-- Project 5: Real-Time Chat App -->
+    <div class="project-card fade-in" onclick="openModal('chat-modal')">
+      <div class="project-image" style="background-image: url('{% static "images/real-time-chat.jpg" %}'); background-size: cover;">
+      </div>
+      <div class="project-content">
+        <span class="project-icon">💬</span>
+        <h3 class="project-title">Real-Time Chat App</h3>
+        <p class="project-preview">A modern chat application with one-to-one & group messaging, multimedia sharing, typing indicators, and optional encryption. Built for scalability and reliability with smooth real-time performance.</p>
+        <button class="view-case-study">View Case Study</button>
+      </div>
+    </div>
+
+    <!-- Project 6: E-Commerce Website -->
+    <div class="project-card fade-in" onclick="openModal('ecommerce-modal')">
+      <div class="project-image" style="background-image: url('{% static "images/E-Commerce.jpg" %}'); background-size: cover;">
+      </div>
+      <div class="project-content">
+        <span class="project-icon">🛒</span>
+        <h3 class="project-title">E-Commerce Website</h3>
+        <p class="project-preview">A complete e-commerce solution with user authentication, cart, wishlist, secure checkout, and admin dashboard. Designed to improve UX, reduce cart abandonment, and streamline business operations.</p>
+        <button class="view-case-study">View Case Study</button>
+      </div>
+    </div>
+
+    <!-- Project 7: AI Tutor -->
+    <div class="project-card fade-in" onclick="openModal('ai-tutor-modal')">
+      <div class="project-image" style="background-image: url('{% static "images/Genetic-AI.jpg" %}'); background-size: cover;">
+      </div>
+      <div class="project-content">
+        <span class="project-icon">📚</span>
+        <h3 class="project-title">AI Tutor – Personalized Learning Assistant</h3>
+        <p class="project-preview">An AI-powered tutor with personalized guidance, adaptive quizzes, and real-time coding support. Enhances learning engagement and knowledge retention.</p>
+        <button class="view-case-study">View Case Study</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- MODALS -->
+  
+  <!-- RAG Model Modal -->
+  <div id="rag-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeModal('rag-modal')">&times;</span>
+        <h2 class="modal-title">🧠 RAG Model – Intelligent Healthcare Assistant</h2>
+        <p class="modal-subtitle">AI-powered healthcare assistant with knowledge grounding</p>
+      </div>
+      <div class="modal-body">
+        <div class="case-study-section">
+          <h3><i class="fas fa-exclamation-triangle"></i> Problem</h3>
+          <div class="case-study-content">
+            Patients and professionals lacked fast, reliable access to healthcare knowledge. Traditional LLMs risk hallucinations and lack context, making them unsuitable for sensitive healthcare domains.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-lightbulb"></i> Solution</h3>
+          <div class="case-study-content">
+            Built an AI-powered assistant using Retrieval-Augmented Generation (RAG) that grounds responses in embedded healthcare datasets. The assistant retrieves relevant information before generating answers, ensuring accuracy and reliability.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-chart-line"></i> Results</h3>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">40%</span>
+              <div class="result-label">Improved accuracy of medical insights compared to baseline LLMs</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">60%</span>
+              <div class="result-label">Reduced hallucinations through knowledge-grounding</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">&lt;2s</span>
+              <div class="result-label">Average query response time</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">∞</span>
+              <div class="result-label">Scalable to integrate multiple medical datasets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agentic AI Modal -->
+  <div id="agentic-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeModal('agentic-modal')">&times;</span>
+        <h2 class="modal-title">🤖 Agentic AI – Smart Business Assistant</h2>
+        <p class="modal-subtitle">Autonomous email and meeting management system</p>
+      </div>
+      <div class="modal-body">
+        <div class="case-study-section">
+          <h3><i class="fas fa-exclamation-triangle"></i> Problem</h3>
+          <div class="case-study-content">
+            Professionals wasted hours manually managing emails & scheduling meetings.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-lightbulb"></i> Solution</h3>
+          <div class="case-study-content">
+            Built an autonomous AI agent that reads emails, checks calendar availability, schedules meetings, and sends confirmations.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-chart-line"></i> Results</h3>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">100%</span>
+              <div class="result-label">Automated scheduling workflow</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">5+</span>
+              <div class="result-label">Hours saved per week per professional</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">80%</span>
+              <div class="result-label">Reduced scheduling errors</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">✓</span>
+              <div class="result-label">Scalable for real-world business use</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ElectricFutureIndia Modal -->
+  <div id="ev-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeModal('ev-modal')">&times;</span>
+        <h2 class="modal-title">⚡ ElectricFutureIndia.com – Informative EV Website</h2>
+        <p class="modal-subtitle">Lightweight, responsive website for EV startup</p>
+      </div>
+      <div class="modal-body">
+        <div class="case-study-section">
+          <h3><i class="fas fa-exclamation-triangle"></i> Problem</h3>
+          <div class="case-study-content">
+            Client needed a lightweight, professional EV website with fast performance.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-lightbulb"></i> Solution</h3>
+          <div class="case-study-content">
+            Built a static responsive site with clean UI, smooth animations, and lightweight interactivity.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-chart-line"></i> Results</h3>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">1.2s</span>
+              <div class="result-label">Load time across devices</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">↑</span>
+              <div class="result-label">Increased client credibility with polished presence</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">60%</span>
+              <div class="result-label">Reduced maintenance overhead</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HealthDominus Modal -->
+  <div id="health-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeModal('health-modal')">&times;</span>
+        <h2 class="modal-title">🏥 HealthDominus – AI Medicine Recommender</h2>
+        <p class="modal-subtitle">AI-powered disease prediction and medicine recommendation</p>
+      </div>
+      <div class="modal-body">
+        <div class="case-study-section">
+          <h3><i class="fas fa-exclamation-triangle"></i> Problem</h3>
+          <div class="case-study-content">
+            Patients lacked instant, reliable medical guidance—especially in rural areas.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-lightbulb"></i> Solution</h3>
+          <div class="case-study-content">
+            AI-powered system predicting diseases from symptoms & recommending basic medicines.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-chart-line"></i> Results</h3>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">85%</span>
+              <div class="result-label">Accuracy in medical insights</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">50%</span>
+              <div class="result-label">Reduced reliance on unsafe internet searches</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">24/7</span>
+              <div class="result-label">Access for rural/remote users</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat App Modal -->
+  <div id="chat-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeModal('chat-modal')">&times;</span>
+        <h2 class="modal-title">💬 Real-Time Chat App</h2>
+        <p class="modal-subtitle">Modern chat application with multimedia support</p>
+      </div>
+      <div class="modal-body">
+        <div class="case-study-section">
+          <h3><i class="fas fa-exclamation-triangle"></i> Problem</h3>
+          <div class="case-study-content">
+            Existing chat tools lacked scalability, multimedia, and security.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-lightbulb"></i> Solution</h3>
+          <div class="case-study-content">
+            Developed a chat app with 1-to-1 & group chat, multimedia sharing, indicators, and optional encryption.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-chart-line"></i> Results</h3>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">99%</span>
+              <div class="result-label">Uptime for real-time communication</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">40%</span>
+              <div class="result-label">Increased user engagement with group/multimedia features</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">5,000+</span>
+              <div class="result-label">Concurrent users supported</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-Commerce Modal -->
+  <div id="ecommerce-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeModal('ecommerce-modal')">&times;</span>
+        <h2 class="modal-title">🛒 E-Commerce Website</h2>
+        <p class="modal-subtitle">Complete e-commerce solution with admin dashboard</p>
+      </div>
+      <div class="modal-body">
+        <div class="case-study-section">
+          <h3><i class="fas fa-exclamation-triangle"></i> Problem</h3>
+          <div class="case-study-content">
+            Businesses faced poor UI, high cart abandonment & weak admin control.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-lightbulb"></i> Solution</h3>
+          <div class="case-study-content">
+            Built a full-featured e-commerce site with authentication, cart, wishlist, secure checkout, and admin panel.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-chart-line"></i> Results</h3>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">30%</span>
+              <div class="result-label">Reduced cart abandonment</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">↑</span>
+              <div class="result-label">Boosted user engagement with wishlist & order tracking</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">✓</span>
+              <div class="result-label">Improved business efficiency with centralized admin panel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- AI Tutor Modal -->
+  <div id="ai-tutor-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeModal('ai-tutor-modal')">&times;</span>
+        <h2 class="modal-title">📚 AI Tutor – Personalized Learning Assistant</h2>
+        <p class="modal-subtitle">AI-powered tutor with personalized guidance and adaptive quizzes</p>
+      </div>
+      <div class="modal-body">
+        <div class="case-study-section">
+          <h3><i class="fas fa-exclamation-triangle"></i> Problem</h3>
+          <div class="case-study-content">
+            Students struggle with self-learning due to lack of personalized guidance, adaptive quizzes, and real-time coding support. Traditional platforms remain static and fail to adapt to individual progress.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-lightbulb"></i> Solution</h3>
+          <div class="case-study-content">
+            Built an AI-powered tutor leveraging LLMs, real-time Python execution (Docker), and interactive visualizations. The tutor provides context-aware explanations, adaptive quizzes, instant evaluation, AI-guided code walkthroughs, and progress tracking.
+          </div>
+        </div>
+        
+        <div class="case-study-section">
+          <h3><i class="fas fa-chart-line"></i> Results</h3>
+          <div class="results-grid">
+            <div class="result-item">
+              <span class="result-number">45%</span>
+              <div class="result-label">Improved knowledge retention through adaptive difficulty</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">&lt;3s</span>
+              <div class="result-label">Real-time code execution & explanations</div>
+            </div>
+            <div class="result-item">
+              <span class="result-number">✓</span>
+              <div class="result-label">Personalized learning paths with progress tracking</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52,583,67.32c69.27,15,138.3,24.22,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#0a192f"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,141.56,72.2V0Z" opacity=".5" fill="#0a192f"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,86c57.52-8.48,105-41.95,136.65-72.46,36.04-34.25,71.52-83,112.15-13.82V0Z" fill="#0a192f"></path>
+      </svg>
+    </div>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="brand-wrapper">
+            <h2 class="brand-name">
+              <img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img">
+            </h2>
+          </div>
+          <p class="brand-desc">Transforming businesses with cutting-edge technology solutions. Let's build the future together.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/apitide.info?igsh=N3BzZzhkajE3N3hw" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'index' %}#hero" class="footer-link">Home</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
+            <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'services' %}#web" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#mobile" class="footer-link">Mobile Apps</a></li>
+            <li><a href="{% url 'services' %}#ai" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#ecommerce" class="footer-link">E-commerce</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">IT Consulting</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h3 class="footer-heading">Get In Touch</h3>
+          <ul class="contact-info">
+            <li class="contact-item">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>MDV Colony, Bikaner, India</span>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-phone contact-icon"></i>
+              <a href="tel:+917877813270" class="contact-link">+91 7877813270</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-envelope contact-icon"></i>
+              <a href="mailto:info@apitide.com" class="contact-link">apitideinfo@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-clock contact-icon"></i>
+              <span>Mon - Fri: 9:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Apitide. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    (function() {
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navbar = document.querySelector('.navbar');
+      
+      mobileMenuToggle.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on a link
+      const navLinks = document.querySelectorAll('.navbar a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navbar.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
+        });
+      });
+    })();
+
+    // Scroll Animation
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    }
+
+    // Initialize animations
+    document.addEventListener('DOMContentLoaded', function() {
+      animateOnScroll();
+    });
+
+    // Modal Functions
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+          if (modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

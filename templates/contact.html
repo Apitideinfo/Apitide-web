@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Apitide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body class="contact-page">
+  <header class="header">
+    <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img"></div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'projects' %}">Projects</a>
+      <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+    <div class="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="contact-hero" style=" background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); ">
+    <div class="contact-hero-inner">
+      <h1 style="color: var(--secondary-color);">Tell Us About Your Project</h1>
+      <p style="color: var(--primary-color);">Get Your Free Consultation Within 24 Hours <b>free consultation</b>.</p>
+    </div>
+    <div class="contact-hero-art" aria-hidden="true">
+      <svg viewBox="0 0 600 200" preserveAspectRatio="none" role="img" focusable="false">
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#C4B6F7;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <path d="M0,120 C150,180 450,60 600,120 L600,200 L0,200 Z" fill="url(#grad)"></path>
+      </svg>
+    </div>
+  </section>
+
+  <main class="contact-main">
+    {% if messages %}
+    <div class="messages">
+      {% for message in messages %}
+      <div class="message {{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <section class="contact-form-section">
+      <h2 class="section-title">Send Us a Message</h2>
+      <form class="contact-form" action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
+        <div class="form-row">
+          <label for="full_name">Full Name <span class="req">*</span></label>
+          <input type="text" id="full_name" name="full_name" placeholder="Your Name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone Number <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+ 555 123 4567" />
+        </div>
+        <div class="form-row">
+          <label for="project_type">Project Type</label>
+          <select id="project_type" name="project_type">
+            <option>Web Development</option>
+            <option>App Development</option>
+            <option>AI Solutions</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="details">Tell Us About Your Project</label>
+          <textarea id="details" name="details" rows="6" placeholder="Share your goals, timeline, and any references..."></textarea>
+        </div>
+        <button type="submit" class="cta-btn primary submit-btn">Send Message</button>
+      </form>
+    </section>
+
+    <section class="contact-direct">
+      <h2 class="section-title">Get in Touch Directly</h2>
+      <div class="direct-grid">
+        <div class="direct-card">
+          <i class="fas fa-envelope"></i>
+          <p>You can also reach our <b>team</b> directly at:</p>
+          <a class="direct-link" href="mailto:apitideinfo@gmail.com">apitideinfo@gmail.com</a>
+        </div>
+        <div class="direct-card">
+          <i class="fas fa-phone"></i>
+          <p>Give us a call to discuss your <b>digital solution</b>:</p>
+          <a class="direct-link" href="tel:+91 9216344282">+91  7877813270
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52,583,67.32c69.27,15,138.3,24.22,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#0a192f"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,141.56,72.2V0Z" opacity=".5" fill="#0a192f"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,86c57.52-8.48,105-41.95,136.65-72.46,36.04-34.25,71.52-83,112.15-13.82V0Z" fill="#0a192f"></path>
+      </svg>
+    </div>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="brand-wrapper">
+            <h2 class="brand-name">
+              <img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img">
+            </h2>
+          </div>
+          <p class="brand-desc">Transforming businesses with cutting-edge technology solutions. Let's build the future together.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/apitide.info?igsh=N3BzZzhkajE3N3hw" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'index' %}#hero" class="footer-link">Home</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
+            <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'services' %}#web" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#mobile" class="footer-link">Mobile Apps</a></li>
+            <li><a href="{% url 'services' %}#ai" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#ecommerce" class="footer-link">E-commerce</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">IT Consulting</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h3 class="footer-heading">Get In Touch</h3>
+          <ul class="contact-info">
+            <li class="contact-item">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>MDV Colony, Bikaner, India</span>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-phone contact-icon"></i>
+              <a href="tel:+917877813270" class="contact-link">+91 7877813270</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-envelope contact-icon"></i>
+              <a href="mailto:info@apitide.com" class="contact-link">apitideinfo@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-clock contact-icon"></i>
+              <span>Mon - Fri: 9:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Apitide. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navbar = document.querySelector('.navbar');
+      mobileMenuToggle.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+      });
+      const navLinks = document.querySelectorAll('.navbar a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navbar.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+

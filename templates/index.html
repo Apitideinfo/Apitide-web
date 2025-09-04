@@ -1,0 +1,440 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apitide - Innovate. Automate. Scale.</span></title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img"></div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}#hero">Home</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'projects' %}">Projects</a>
+      <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+    <div class="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1 style="color:white;">Innovate. <span class="orange">Automate.</span> <span
+          style="color:white;">Scale.</span></h1>
+      <p>Apitide delivers cutting-edge web, mobile, and AI solutions designed for the <span class="orange">future  of your business.</span></p>
+      <div class="hero-buttons">
+        <a href="{% url 'contact' %}" class="cta-btn primary">Start Free Consultation</a>
+        <a href="{% url 'projects' %}" class="cta-btn secondary">View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; padding: 60px 20px; max-width: 900px; margin: 0 auto;">
+
+  <!-- Heading -->
+  <h2 style="font-size: 2.8rem; font-weight: 700; color: #1a202c; margin-bottom: 20px; line-height: 1.3;">
+    Built on a Foundation of 
+    <span style="color: #f97316;">Friendship</span> 
+    and 
+    <span style="color: #a78bfa;">Expertise</span>
+  </h2>
+
+  <!-- Paragraph -->
+  <p style="font-size: 1.2rem; line-height: 1.8; color: #4a5568; max-width: 800px; margin: 0 auto;">
+    Apitide began as a simple idea among college friends. We were united by a shared passion to create 
+    and a belief that our combined expertise could help businesses succeed. Today, that original 
+    partnership drives everything we do. We aren't just an agency; we're your dedicated team, 
+    ready to bring your vision to life.
+  </p>
+
+</div>
+
+
+  <!-- PROCESS -->
+  <!-- <section id="process">
+    <div class="process-container">
+      <h2 class="section-title">Our Proven Process</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-number">01</div>
+          <h3 class="process-title">Discover</h3>
+          <p class="process-desc">We analyze your requirements and goals to understand your business needs and
+            objectives.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">02</div>
+          <h3 class="process-title">Design</h3>
+          <p class="process-desc">Create intuitive wireframes and beautiful design mockups tailored to your brand.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">03</div>
+          <h3 class="process-title">Develop</h3>
+          <p class="process-desc">Build and rigorously test your solution using modern technologies and best practices.
+          </p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">04</div>
+          <h3 class="process-title">Launch</h3>
+          <p class="process-desc">Deploy your solution and monitor performance to ensure a successful launch.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="services" class="services-overview">
+    <div class="container">
+      <h2 class="section-title">A Combination of  <span class="orange">Skills</span>, Built for Your  <span class="lavender">Growth</span></h2>
+      
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Custom websites built with modern technologies and best practices</p>
+          <div class="service-features">
+            <span class="feature-tag">React</span>
+            <span class="feature-tag">Node.js</span>
+            <span class="feature-tag">Python</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-magic"></i></div>
+          <h3>No-Code Solutions</h3>
+          <p>Build powerful applications without writing a single line of code</p>
+          <div class="service-features">
+            <span class="feature-tag">Bubble</span>
+            <span class="feature-tag">Webflow</span>
+            <span class="feature-tag">Zapier</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+          <h3>WordPress Development</h3>
+          <p>Powerful websites with easy content management and SEO optimization</p>
+          <div class="service-features">
+            <span class="feature-tag">Custom Themes</span>
+            <span class="feature-tag">Plugins</span>
+            <span class="feature-tag">E-commerce</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  
+
+
+
+  <!-- WHY CHOOSE US SECTION -->
+  <section id="why">
+    <div class="container">
+      <h2 class="section-title">Why Business Owners Choose Apitide</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">👥</div>
+          <h3 class="why-heading">Dedicated Customer Support</h3>
+          <p class="why-content">We provide dedicated 24/7 support to answer your questions and keep your project on track.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3 class="why-heading">Rapid Delivery</h3>
+          <p class="why-content">Our agile and efficient process is designed to get your project launched quickly without sacrificing quality.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💬</div>
+          <h3 class="why-heading">Free Consultation</h3>
+          <p class="why-content">Your journey starts with a free, no-obligation consultation to discuss your idea and how we can help.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎯</div>
+          <h3 class="why-heading">MVP Approach</h3>
+          <p class="why-content">We focus on core features to get your idea to market fast and affordably, allowing you to test and grow.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🤖</div>
+          <h3 class="why-heading">AI-First Solutions</h3>
+          <p class="why-content">We integrate smart, AI-powered solutions to give your business a competitive edge for the future.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🌍</div>
+          <h3 class="why-heading">Global Scalability</h3>
+          <p class="why-content">Our solutions are built to scale seamlessly, helping your business grow locally and globally without limits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="services-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Let's Start Your Project</h2>
+        <p>We are excited to hear about your project and help you turn your great ideas into digital reality. </p>
+        <div class="cta-buttons">
+          <a href="{% url 'contact' %}" class="cta-btn primary">Get Free Consultation</a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52,583,67.32c69.27,15,138.3,24.22,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25" fill="#0a192f"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,141.56,72.2V0Z"
+          opacity=".5" fill="#0a192f"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,86c57.52-8.48,105-41.95,136.65-72.46,36.04-34.25,71.52-83,112.15-13.82V0Z"
+          fill="#0a192f"></path>
+      </svg>
+    </div>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="brand-wrapper">
+            <h2 class="brand-name">
+              <img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img">
+            </h2>
+          </div>
+          <p class="brand-desc">Transforming businesses with cutting-edge technology solutions. Let's build the future
+            together.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/apitide.info?igsh=N3BzZzhkajE3N3hw" class="social-icon"
+              aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'index' %}#hero" class="footer-link">Home</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
+            <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'services' %}#web" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#mobile" class="footer-link">Mobile Apps</a></li>
+            <li><a href="{% url 'services' %}#ai" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#ecommerce" class="footer-link">E-commerce</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">IT Consulting</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h3 class="footer-heading">Get In Touch</h3>
+          <ul class="contact-info">
+            <li class="contact-item">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>MDV Colony, Bikaner, India</span>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-phone contact-icon"></i>
+              <a href="tel:+917877813270" class="contact-link">+91 7877813270</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-envelope contact-icon"></i>
+              <a href="mailto:info@apitide.com" class="contact-link">apitideinfo@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-clock contact-icon"></i>
+              <span>Mon - Fri: 9:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Apitide. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    (function () {
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navbar = document.querySelector('.navbar');
+
+      mobileMenuToggle.addEventListener('click', function () {
+        navbar.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+      });
+
+      // Close menu when clicking on a link
+      const navLinks = document.querySelectorAll('.navbar a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navbar.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
+        });
+      });
+    })();
+
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.why-slider.multi .why-slide'));
+      const slidesPerView = 3;
+      let current = 0;
+      let interval;
+      const totalSets = Math.ceil(slides.length / slidesPerView);
+
+      function showSlides(idx) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active', 'inactive', 'visible');
+          if (i >= idx * slidesPerView && i < (idx + 1) * slidesPerView) {
+            slide.classList.add('visible');
+          } else {
+            slide.classList.add('inactive');
+          }
+        });
+      }
+
+      function nextSlideSet() {
+        showSlides((current + 1) % totalSets);
+      }
+
+      function startAuto() {
+        interval = setInterval(nextSlideSet, 3500);
+      }
+      function stopAuto() {
+        clearInterval(interval);
+      }
+
+      // Create dots
+      // Removed Why section slider JS
+
+      showSlides(0);
+      startAuto();
+    })();
+
+    // Infinite carousel for Why section
+    (function () {
+      const slider = document.querySelector('.why-slider.infinite-loop');
+      const track = slider.querySelector('.why-track');
+      const slides = Array.from(track.children);
+      let slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap || 32);
+      let animationId;
+      let pos = 0;
+
+      function animate() {
+        pos -= 1; // speed: 1px per frame
+        if (Math.abs(pos) >= slideWidth) {
+          // Move first slide to end
+          track.appendChild(track.children[0]);
+          pos += slideWidth;
+        }
+        track.style.transform = `translateX(${pos}px)`;
+        animationId = requestAnimationFrame(animate);
+      }
+
+      // Responsive: recalculate slideWidth on resize
+      function updateSlideWidth() {
+        const slide = track.children[0];
+        slideWidth = slide.offsetWidth + parseInt(getComputedStyle(track).gap || 32);
+      }
+      window.addEventListener('resize', updateSlideWidth);
+
+      // Pause on hover
+      slider.addEventListener('mouseenter', () => cancelAnimationFrame(animationId));
+      slider.addEventListener('mouseleave', () => animate());
+
+      updateSlideWidth();
+      animate();
+    })();
+
+    // Scroll-in animation for why-slide boxes
+    (function () {
+      const slides = document.querySelectorAll('.why-slider.infinite-loop .why-slide');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animated');
+            }
+          });
+        }, { threshold: 0.2 });
+        slides.forEach(slide => observer.observe(slide));
+      } else {
+        // Fallback: show all
+        slides.forEach(slide => slide.classList.add('animated'));
+      }
+    })();
+
+    // Header scroll effect
+    (function () {
+      const header = document.querySelector('.header');
+      function onScroll() {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    })();
+  </script>
+</body>
+
+</html>

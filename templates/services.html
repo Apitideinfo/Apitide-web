@@ -1,0 +1,548 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Apitide | Web, Mobile & AI Solutions</title>
+  <meta name="description" content="Comprehensive digital solutions including web development, mobile apps, AI, and digital marketing. Let's build your next big idea together!">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img"></div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}#hero">Home</a>
+      <a href="{% url 'services' %}" class="active">Services</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'projects' %}">Projects</a>
+      <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+    <div class="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="services-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1><span style="color:#1D3557 ;">Smart</span> Digital <span style="color:#1D3557;">Solutions,</span>Tailored <span style="color:#1D3557;">for</span> You</h1>
+        <p>We design websites, apps, AI systems, and marketing strategies that help businesses grow faster, smarter, and stronger.</p>
+        <div class="hero-stats">
+        
+          <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Support Available</span>
+          </div>
+          
+        </div>
+        <div class="services-buttons">
+        <a href="{% url 'contact' %}" class="cta-btn primary">Start your Project</a>
+        <a href="{% url 'projects' %}" class="cta-btn secondary">View Our Work</a>
+      </div>
+      </div>
+      <!-- <div class="hero-image">
+        <img src="images/Service_Image.png" alt="Smart Digital Solutions" class="hero-gif">
+      </div> -->
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section id="services" class="services-overview">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Comprehensive digital solutions tailored to your business needs</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Custom websites built with modern technologies and best practices</p>
+          <div class="service-features">
+            <span class="feature-tag">React</span>
+            <span class="feature-tag">Node.js</span>
+            <span class="feature-tag">Python</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-magic"></i></div>
+          <h3>No-Code Solutions</h3>
+          <p>Build powerful applications without writing a single line of code</p>
+          <div class="service-features">
+            <span class="feature-tag">Bubble</span>
+            <span class="feature-tag">Webflow</span>
+            <span class="feature-tag">Zapier</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+          <h3>WordPress Development</h3>
+          <p>Powerful websites with easy content management and SEO optimization</p>
+          <div class="service-features">
+            <span class="feature-tag">Custom Themes</span>
+            <span class="feature-tag">Plugins</span>
+            <span class="feature-tag">E-commerce</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile App Development</h3>
+          <p>Native and cross-platform mobile solutions for iOS and Android</p>
+          <div class="service-features">
+            <span class="feature-tag">React Native</span>
+            <span class="feature-tag">Flutter</span>
+            <span class="feature-tag">Swift</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3>AI Solutions</h3>
+          <p>Intelligent automation and machine learning for business growth</p>
+          <div class="service-features">
+            <span class="feature-tag">ChatGPT API</span>
+            <span class="feature-tag">RAG Models</span>
+            <span class="feature-tag">Automation</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-comments"></i></div>
+          <h3>AI Chatbots</h3>
+          <p>24/7 automated customer support with intelligent responses</p>
+          <div class="service-features">
+            <span class="feature-tag">24/7 Support</span>
+            <span class="feature-tag">Multi-language</span>
+            <span class="feature-tag">Integration</span>
+          </div>
+          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, intuitive user experiences that convert visitors to customers</p>
+          <div class="service-features">
+            <span class="feature-tag">Figma</span>
+            <span class="feature-tag">Prototyping</span>
+            <span class="feature-tag">User Testing</span>
+          </div>
+          <a href="contact.html" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Digital Marketing</h3>
+          <p>Data-driven strategies to grow your online presence and reach</p>
+          <div class="service-features">
+            <span class="feature-tag">SEO</span>
+            <span class="feature-tag">PPC</span>
+            <span class="feature-tag">Analytics</span>
+          </div>
+          <a href="contact.html" class="service-btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+          <h3>Social Media Management</h3>
+          <p>Engage and grow your audience across all social platforms</p>
+          <div class="service-features">
+            <span class="feature-tag">Content Creation</span>
+            <span class="feature-tag">Community Management</span>
+            <span class="feature-tag">Growth Strategy</span>
+          </div>
+          <a href="contact.html" class="service-btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div style="padding: 60px 20px; text-align: center; font-family: Arial, sans-serif; background-color: #f9fbfd;">
+  
+  <!-- Heading with underline -->
+  <h2 style="font-size: 2.5rem; font-weight: 700; color: #1a202c; margin-bottom: 10px; position: relative; display: inline-block;">
+    Our Proven Process
+    <span style="display: block; width: 100%; height: 4px; background: #ff6600; margin: 8px auto 0; border-radius: 2px;"></span>
+
+  </h2>
+  
+  <!-- Subheading -->
+  <p style="font-size: 1.2rem; color: #4a5568; max-width: 700px; margin: 20px auto 50px;">
+    We follow a structured approach to ensure your project's success from concept to completion.
+  </p>
+  
+  <!-- Process cards -->
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    
+    <!-- Card 1 -->
+    <div style="position: relative; background: white; padding: 30px 20px; border-radius: 8px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+      <div style="width: 60px; height: 60px; margin: 0 auto 20px; border-radius: 50%; background: #1a365d; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+        👥
+      </div>
+      <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a365d; margin-bottom: 10px;">Consultation & Discovery</h3>
+      <p style="font-size: 0.95rem; color: #4a5568;">We start with a deep dive into your business goals, target audience, and project requirements.</p>
+      <span style="position: absolute; top: -12px; right: -12px; background: #ff6600; color: white; font-size: 0.9rem; font-weight: bold; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">1</span>
+    </div>
+    
+    <!-- Card 2 -->
+    <div style="position: relative; background: white; padding: 30px 20px; border-radius: 8px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+      <div style="width: 60px; height: 60px; margin: 0 auto 20px; border-radius: 50%; background: #1a365d; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+        💡
+      </div>
+      <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a365d; margin-bottom: 10px;">Strategy & Planning</h3>
+      <p style="font-size: 0.95rem; color: #4a5568;">Our team creates a comprehensive strategy and project roadmap tailored to your objectives.</p>
+      <span style="position: absolute; top: -12px; right: -12px; background: #ff6600; color: white; font-size: 0.9rem; font-weight: bold; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">2</span>
+    </div>
+    
+    <!-- Card 3 -->
+    <div style="position: relative; background: white; padding: 30px 20px; border-radius: 8px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+      <div style="width: 60px; height: 60px; margin: 0 auto 20px; border-radius: 50%; background: #1a365d; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+        🎯
+      </div>
+      <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a365d; margin-bottom: 10px;">Design & Development</h3>
+      <p style="font-size: 0.95rem; color: #4a5568;">We bring your vision to life with cutting-edge design and development practices.</p>
+      <span style="position: absolute; top: -12px; right: -12px; background: #ff6600; color: white; font-size: 0.9rem; font-weight: bold; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">3</span>
+    </div>
+    
+    <!-- Card 4 -->
+    <div style="position: relative; background: white; padding: 30px 20px; border-radius: 8px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+      <div style="width: 60px; height: 60px; margin: 0 auto 20px; border-radius: 50%; background: #1a365d; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+        ✅
+      </div>
+      <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a365d; margin-bottom: 10px;">Testing & Launch</h3>
+      <p style="font-size: 0.95rem; color: #4a5568;">Thorough testing ensures quality delivery, followed by a smooth launch and ongoing support.</p>
+      <span style="position: absolute; top: -12px; right: -12px; background: #ff6600; color: white; font-size: 0.9rem; font-weight: bold; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">4</span>
+    </div>
+    
+  </div>
+</div>
+
+
+  
+  <section id="why-choose" class="why-choose-services">
+    <div class="container">
+      <h2 class="section-title">Why Choose Apitide?</h2>
+      <p class="section-subtitle">We deliver results that exceed expectations</p>
+      
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-clock"></i></div>
+          <h3 class="why-heading">Fast Delivery</h3>
+          <p class="why-content">We deliver projects 40% faster than industry average without compromising quality.</p>
+        </div>
+        
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-headset"></i></div>
+          <h3 class="why-heading">24/7 Support</h3>
+          <p class="why-content">Round-the-clock technical support and maintenance to keep your systems running smoothly.</p>
+        </div>
+        
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="why-heading">Future-Proof</h3>
+          <p class="why-content">Built with scalability in mind, our solutions grow with your business needs.</p>
+        </div>
+        
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3 class="why-heading">Proven Results</h3>
+          <p class="why-content">Over 250+ successful projects with a 98% client satisfaction rate.</p>
+        </div>
+        
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3 class="why-heading">Cost-Effective</h3>
+          <p class="why-content">Competitive pricing with transparent costs and no hidden fees.</p>
+        </div>
+        
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-users"></i></div>
+          <h3 class="why-heading">Expert Team</h3>
+          <p class="why-content">Experienced developers, designers, and strategists dedicated to your success.</p>
+        </div>
+      </div>
+    </div>
+  </section> --
+  
+  <!-- CTA SECTION -->
+  <section class="services-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Digital Presence?</h2>
+        <p>Let's discuss your project and create something amazing together</p>
+        <div class="cta-buttons">
+          <a href="{% url 'contact' %}" class="cta-btn primary">Get Free Consultation</a>
+          <a href="{% url 'projects' %}" class="cta-btn secondary">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- SERVICE MODALS -->
+  
+  <!-- Web Development Modal -->
+  <div id="web-dev-modal" class="service-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeServiceModal('web-dev')">&times;</span>
+        <h2><i class="fas fa-laptop-code"></i> Web Development</h2>
+      </div>
+      <div class="modal-body">
+        <div class="service-details">
+          <h3>What We Offer</h3>
+          <ul>
+            <li>Custom website development</li>
+            <li>E-commerce solutions</li>
+            <li>Progressive Web Apps (PWA)</li>
+            <li>API development and integration</li>
+            <li>Performance optimization</li>
+            <li>SEO-friendly development</li>
+          </ul>
+          
+          <h3>Technologies We Use</h3>
+          <div class="tech-stack">
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Python/Django</span>
+            <span class="tech-tag">PHP/Laravel</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+          
+          <h3>Why Choose Our Web Development?</h3>
+          <ul>
+            <li>Modern, responsive design</li>
+            <li>Fast loading times</li>
+            <li>Mobile-first approach</li>
+            <li>Scalable architecture</li>
+            <li>Security best practices</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Solutions Modal -->
+  <div id="ai-modal" class="service-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeServiceModal('ai')">&times;</span>
+        <h2><i class="fas fa-robot"></i> AI Solutions</h2>
+      </div>
+      <div class="modal-body">
+        <div class="service-details">
+          <h3>What We Offer</h3>
+          <ul>
+            <li>Custom AI chatbots</li>
+            <li>Machine learning models</li>
+            <li>Natural language processing</li>
+            <li>Predictive analytics</li>
+            <li>Process automation</li>
+            <li>Data analysis and insights</li>
+          </ul>
+          
+          <h3>Technologies We Use</h3>
+          <div class="tech-stack">
+            <span class="tech-tag">OpenAI GPT</span>
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">LangChain</span>
+            <span class="tech-tag">RAG Models</span>
+            <span class="tech-tag">Python</span>
+          </div>
+          
+          <h3>Why Choose Our AI Solutions?</h3>
+          <ul>
+            <li>Custom-trained models</li>
+            <li>High accuracy and reliability</li>
+            <li>Scalable architecture</li>
+            <li>Real-time processing</li>
+            <li>Continuous learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Development Modal -->
+  <div id="mobile-modal" class="service-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-close" onclick="closeServiceModal('mobile')">&times;</span>
+        <h2><i class="fas fa-mobile-alt"></i> Mobile App Development</h2>
+      </div>
+      <div class="modal-body">
+        <div class="service-details">
+          <h3>What We Offer</h3>
+          <ul>
+            <li>Native iOS development</li>
+            <li>Native Android development</li>
+            <li>Cross-platform solutions</li>
+            <li>App store optimization</li>
+            <li>App maintenance and updates</li>
+            <li>Performance optimization</li>
+          </ul>
+          
+          <h3>Technologies We Use</h3>
+          <div class="tech-stack">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Swift</span>
+            <span class="tech-tag">Kotlin</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">AWS</span>
+          </div>
+          
+          <h3>Why Choose Our Mobile Development?</h3>
+          <ul>
+            <li>Native performance</li>
+            <li>Cross-platform compatibility</li>
+            <li>Modern UI/UX design</li>
+            <li>Offline functionality</li>
+            <li>Push notifications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52,583,67.32c69.27,15,138.3,24.22,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#0a192f"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,141.56,72.2V0Z" opacity=".5" fill="#0a192f"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,86c57.52-8.48,105-41.95,136.65-72.46,36.04-34.25,71.52-83,112.15-13.82V0Z" fill="#0a192f"></path>
+      </svg>
+    </div>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="brand-wrapper">
+            <h2 class="brand-name">
+              <img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img">
+            </h2>
+          </div>
+          <p class="brand-desc">Transforming businesses with cutting-edge technology solutions. Let's build the future together.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/apitide.info?igsh=N3BzZzhkajE3N3hw" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'index' %}#hero" class="footer-link">Home</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
+            <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'services' %}#web" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#mobile" class="footer-link">Mobile Apps</a></li>
+            <li><a href="{% url 'services' %}#ai" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#ecommerce" class="footer-link">E-commerce</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">IT Consulting</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h3 class="footer-heading">Get In Touch</h3>
+          <ul class="contact-info">
+            <li class="contact-item">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>MDV Colony, Bikaner, India</span>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-phone contact-icon"></i>
+              <a href="tel:+917877813270" class="contact-link">+91 7877813270</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-envelope contact-icon"></i>
+              <a href="mailto:info@apitide.com" class="contact-link">apitideinfo@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-clock contact-icon"></i>
+              <span>Mon - Fri: 9:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Apitide. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+  // Mobile Menu Toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navbar = document.querySelector('.navbar');
+    
+    if (mobileMenuToggle && navbar) {
+      mobileMenuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navbar.classList.toggle('active');
+      });
+    }
+    
+    // Close mobile menu when clicking a link
+    const navLinks = document.querySelectorAll('.navbar a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        navbar.classList.remove('active');
+      });
+    });
+  });
+
+
+  </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</body>
+</html>

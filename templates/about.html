@@ -1,0 +1,318 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Apitide</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <!-- Removed inline About page styles: now in style.css -->
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img"></div>
+    <nav class="navbar">
+      <a href="{% url 'index' %}#hero">Home</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'projects' %}">Projects</a>
+      <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+    <div class="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section id="hero" class="about-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1><span style="color:white;">Digital</span> Solutions, <span style="color:white;"></span> <span style="color:white;">Build </span> <span style="color:white;">for</span> Your <span style="color:white;">Growth</span></h1>
+        <p>At  Apitide, we simplify technology with AI chatbots, automation, and websites that help businesses scale faster.</p>
+        </div>
+        <div class="hero-buttons">
+        <a href="{% url 'contact' %}" class="cta-btn primary">Get in touch</a>
+        <a href="{% url 'services' %}" class="cta-btn secondary">Explore Services</a>
+      </div>
+      </div>
+    
+    </div>
+  </section>
+
+  <main class="about-main">
+    <div class="container">
+
+<section style="padding: 80px 20px; text-align: center; background: white;">
+  
+  <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: #e85d04;">
+    About Us - Apitide
+  </h2>
+  
+  <p style="font-size: 1.2rem; line-height: 1.8; color: #1a202c; max-width: 900px; margin: 0 auto;">
+    At Apitide, we believe technology should empower businesses, 
+    <span style="color: #e85d04; font-weight: 600;">not complicate them.</span> 
+    What started as a group of college friends 
+    <span style="color: #e85d04; font-weight: 600;">united by the same vision</span> 
+    has now grown into a digital solutions company driven by 
+    <span style="color: #e85d04; font-weight: 600;">innovation, passion, and collaboration.</span>
+  </p>
+
+</section>
+
+
+
+
+
+      <div class="about-content">
+        <!-- <div class="about-text">
+          <p>We specialize in AI-powered chatbots, website development, automation, and smart IT solutions that help businesses streamline operations, connect with customers, and scale faster. Our youthful energy, combined with technical expertise, makes us a partner you can trust to bring fresh ideas with reliable execution.</p>
+        </div> -->
+       <div class="about-vision-mission"> 
+        <div class="vision-mission-card">
+          <h3><lottie-player class="icon" src="" background="transparent" speed="1" loop autoplay></lottie-player> <span class="orange">Our Vision</span></h3>
+          <ul>
+          <li>✔ To become a global leader in intelligent digital solutions, while proving that great idea.</li>
+          <li>✔ When nurtured with teamwork and passion, can change the future of businesses.</li>
+          <li>✔ When nurtured with teamwork and passion, can change the future of businesses.</li>
+          </ul>
+        </div>
+        <div class="vision-mission-card">
+          <h3><lottie-player class="icon" src="" background="transparent" speed="1" loop autoplay></lottie-player> <span class="orange">Our Mission</span></h3>
+          <ul>
+            <li>✔ To craft tailor-made digital solutions that drive measurable results.</li>
+            <li>✔ To empower companies with automation and AI tools that save time and resources.</li>
+            <li>✔ To foster long-term partnerships built on trust, transparency, and innovation.</li>
+          </ul>
+        </div>
+      </div> 
+      <!-- <div class="why-choose-apitide">
+        <h2 style="color: var(--secondary-color);">Why Choose Apitide?</h3>
+        <div class="why-choose-grid">
+          <div class="why-choose-item">
+            <img class="gif-icon" src="images/Business team.gif" alt="Business Team">
+            <h4>Built on Friendship, Driven by Vision</h4>
+            <p>A strong team spirit at the core of our work.</p>
+          </div>
+          <div class="why-choose-item">
+            <lottie-player class="icon" src="https://assets2.lottiefiles.com/packages/lf20_5tkzkblw.json" background="transparent" speed="1" loop autoplay></lottie-player>
+            <h4>Innovation-First Mindset</h4>
+            <p>Always exploring the latest technologies to deliver smarter solutions.</p>
+          </div>
+          <div class="why-choose-item">
+            <img class="gif-icon" src="images/Reduce Costs.gif" alt="Reduce Costs">
+            <h4>Affordable & Scalable</h4>
+            <p>We ensure our solutions grow with your business.</p>
+          </div>
+          <div class="why-choose-item">
+            <img class="gif-icon" src="images/team.gif" alt="Team Support">
+            <h4>Dedicated Support</h4>
+            <p>From concept to execution, we walk the journey with you.</p>
+          </div>
+        </div>
+        <p class="about-conclusion">At Apitide, we’re more than just a tech company. We’re a story of friendship, vision, and the belief that technology can transform businesses for the better.</p>
+      </div> -->
+    </div>
+  </main>
+
+  <!-- STATS SECTION: Key Numbers/Points -->
+  <section id="why-stats">
+    <div class="container">
+      <h2 class="section-title">Our Numbers Speak for Themselves</h2>
+      <div class="stats-cards">
+        <div class="stat-card">
+          <div class="stat-number stat-secondary">40%</div>
+          <div class="stat-content">
+            <div class="stat-title">Lightning-Fast Delivery</div>
+            <div class="stat-desc">We deliver projects 40% faster than industry average without compromising quality.</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number stat-secondary">24/7</div>
+          <div class="stat-content">
+            <div class="stat-title">24/7 Expert Support</div>
+            <div class="stat-desc">Round-the-clock technical support and maintenance to keep your systems running smoothly.</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number stat-secondary">100%</div>
+          <div class="stat-content">
+            <div class="stat-title">Future-Proof Solutions</div>
+            <div class="stat-desc">Built with scalability in mind, our solutions grow with your business needs.</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number stat-secondary">98%</div>
+          <div class="stat-content">
+            <div class="stat-title">Proven Track Record</div>
+            <div class="stat-desc">Over 250+ successful projects with a 98% client satisfaction rate.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-cta">
+    <div class="container" style="max-width:1200px; margin:0 auto; padding:60px 20px; text-align:center;">
+      <h2 class="section-title" style="font-size:2.2rem; font-weight:700; color:#0a192f; margin-bottom:40px;">
+        Let’s Work Together
+      </h2>
+    
+      <div class="about-cta-grid" style="display:grid; grid-template-columns:repeat(2,1fr); gap:30px; margin-bottom:40px;">
+        
+        <!-- Card 1 -->
+        <div class="about-cta-card" style="background:#fff; border-radius:14px; padding:30px 25px; text-align:left; box-shadow:0 6px 16px rgba(0,0,0,0.06);">
+          <h3 style="font-size:1.4rem; font-weight:600; margin-bottom:15px; color:rgb(37, 37, 120);">Why connect with us?</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="font-size:1rem; color:#444; margin-bottom:10px; position:relative; padding-left:0px;">✔ Speed: Rapid discovery, design, and MVP delivery.</li>
+            <li style="font-size:1rem; color:#444; margin-bottom:10px; position:relative; padding-left:0px;">✔ Quality: Clean, scalable code and thoughtful UX.</li>
+            <li style="font-size:1rem; color:#444; margin-bottom:10px; position:relative; padding-left:0px;">✔ AI-first: Automations and intelligent features baked in.</li>
+            <li style="font-size:1rem; color:#444; margin-bottom:10px; position:relative; padding-left:0px;">✔ Partnership: Transparent process and proactive support.</li>
+          </ul>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="about-cta-card" style="background:#fff; border-radius:14px; padding:30px 25px; text-align:left; box-shadow:0 6px 16px rgba(0,0,0,0.06);">
+          <h3 style="font-size:1.4rem; font-weight:600; margin-bottom:15px; color:rgb(37, 37, 120)">What we can offer</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="font-size:1rem; color:#444; margin-bottom:10px; position:relative; padding-left:0px;">✔ Web and app development tailored to your goals.</li>
+            <li style="font-size:1rem; color:#444; margin-bottom:10px; position:relative; padding-left:0px;">✔ AI solutions for chat, insights, and operations.</li>
+            <li style="font-size:1rem; color:#444; margin-bottom:10px; position:relative; padding-left:0px;">✔ Performance, accessibility, and SEO best practices.</li>
+            <li style="font-size:1rem; color:#444; margin-bottom:10px; position:relative; padding-left:0px;">✔ End-to-end support from launch to growth.</li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Actions -->
+      <div class="about-cta-actions" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+        <a href="{% url 'contact' %}" 
+           style="display:inline-block; padding:14px 28px; border-radius:30px; font-size:1rem; font-weight:600; text-decoration:none; background:white; color:#e4620b; border:2px solid #FF6B35; transition:all 0.3s ease;"
+           onmouseover="this.style.backgroundColor='#e4620b'; this.style.color='white';" 
+           onmouseout="this.style.backgroundColor='white'; this.style.color='#e4620b';">
+          Start Your Free Consultation
+        </a>
+      
+        <a href="{% url 'projects' %}" 
+           style="display:inline-block; padding:14px 28px; border-radius:30px; font-size:1rem; font-weight:600; text-decoration:none; background:white; color:#e4620b; border:2px solid #FF6B35; transition:all 0.3s ease;"
+           onmouseover="this.style.backgroundColor='#e4620b'; this.style.color='white';" 
+           onmouseout="this.style.backgroundColor='#f3f4f6'; this.style.color='#e4620b';">
+          See Our Work
+        </a>
+      </div>
+      
+    </div>
+    
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52,583,67.32c69.27,15,138.3,24.22,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#0a192f"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,141.56,72.2V0Z" opacity=".5" fill="#0a192f"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,86c57.52-8.48,105-41.95,136.65-72.46,36.04-34.25,71.52-83,112.15-13.82V0Z" fill="#0a192f"></path>
+      </svg>
+    </div>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="brand-wrapper">
+            <h2 class="brand-name">
+              <img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img">
+            </h2>
+          </div>
+          <p class="brand-desc">Transforming businesses with cutting-edge technology solutions. Let's build the future together.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/apitide.info?igsh=N3BzZzhkajE3N3hw" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'index' %}#hero" class="footer-link">Home</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
+            <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'services' %}#web" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#mobile" class="footer-link">Mobile Apps</a></li>
+            <li><a href="{% url 'services' %}#ai" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#ecommerce" class="footer-link">E-commerce</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">IT Consulting</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h3 class="footer-heading">Get In Touch</h3>
+          <ul class="contact-info">
+            <li class="contact-item">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>MDV Colony, Bikaner, India</span>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-phone contact-icon"></i>
+              <a href="tel:+917877813270" class="contact-link">+91 7877813270</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-envelope contact-icon"></i>
+              <a href="mailto:info@apitide.com" class="contact-link">apitideinfo@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-clock contact-icon"></i>
+              <span>Mon - Fri: 9:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Apitide. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Mobile Menu Toggle (reuse from index.html)
+    (function() {
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navbar = document.querySelector('.navbar');
+      mobileMenuToggle.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+      });
+      const navLinks = document.querySelectorAll('.navbar a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navbar.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
