@@ -1,494 +1,307 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services - Apitide | Web, Mobile & AI Solutions</title>
-  <meta name="description" content="Comprehensive digital solutions including web development, mobile apps, AI, and digital marketing. Let's build your next big idea together!">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>AI Automation Services | APITIDE - n8n, AI Agents & Custom Software</title>
+  <meta name="description" content="Explore APITIDE's premium AI automation services including n8n workflow automation, AI voice agents, RAG chatbots, CRM automation, enterprise integrations, and custom web application development." />
+  <meta name="keywords" content="AI automation services, n8n automation, AI voice agent, RAG chatbot, CRM automation, custom software development, enterprise integration, WhatsApp automation" />
+  <meta name="author" content="APITIDE" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.apitide.com/services/" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.apitide.com/services/" />
+  <meta property="og:title" content="AI Automation Services | APITIDE" />
+  <meta property="og:description" content="AI workflows, voice agents, RAG chatbots, CRM automation, enterprise integrations, and custom software by APITIDE." />
+  <meta property="og:image" content="https://www.apitide.com/static/images/og-services.jpg" />
+  <meta property="og:site_name" content="APITIDE" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Automation Services | APITIDE" />
+  <meta name="twitter:description" content="AI workflows, voice agents, RAG chatbots, CRM automation, enterprise integrations, and custom software by APITIDE." />
+  <meta name="twitter:image" content="https://www.apitide.com/static/images/og-services.jpg" />
+
+  <!-- ===== SCHEMA.ORG — BREADCRUMB ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.apitide.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.apitide.com/services/"}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG — SERVICE ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI Automation & Custom Software Development",
+    "provider": {"@type": "Organization", "name": "APITIDE", "url": "https://www.apitide.com"},
+    "name": "AI Automation Services",
+    "description": "APITIDE provides AI workflow automation, n8n pipeline design, AI voice agents, RAG chatbots, CRM automation, enterprise integrations, and custom web application development.",
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Automation & AI Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "n8n Workflow Automation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Voice Agent"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "RAG Chatbot Development"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "CRM Automation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Web Application"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Enterprise Integration"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- ===== PERFORMANCE: PRECONNECT ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+  <!-- ===== PERFORMANCE: NON-BLOCKING GOOGLE FONTS ===== -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" /></noscript>
+
+  <!-- ===== PERFORMANCE: NON-BLOCKING FONT AWESOME ===== -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+
+  <!-- ===== PERFORMANCE: PRELOAD MAIN CSS ===== -->
+  <link rel="preload" as="style" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <!-- ===== PHASE 24: ANIMATION CSS ===== -->
+  <link rel="preload" as="style" href="{% static 'css/animations.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/animations.css' %}" />
+
+  <!-- ===== PERFORMANCE: INLINE CRITICAL CSS ===== -->
+  <style>:root{--bg-dark:#020617;--accent-blue:#2563EB;--accent-cyan:#06B6D4;--text-primary:#F8FAFC;--text-secondary:#94A3B8;--glass-border:rgba(255,255,255,.08);--border-radius:12px;--transition-smooth:all .4s cubic-bezier(.16,1,.3,1);--font-sans:'Outfit','Inter',sans-serif}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-sans);background-color:var(--bg-dark);color:var(--text-primary);line-height:1.6;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 24px}.header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:var(--transition-smooth)}.header .container{display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.4rem;letter-spacing:1px;color:white}.logo-img{height:38px;width:38px;object-fit:contain}.navbar{display:flex;gap:30px}.navbar a{color:var(--text-secondary);font-size:.92rem;font-weight:500;transition:color .3s}.navbar a:hover,.navbar a.active{color:white}.header-cta{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--accent-blue) 0%,#1D4ED8 100%);color:white;padding:10px 22px;border-radius:30px;font-size:.88rem;font-weight:600;white-space:nowrap}</style>
+
+  <!-- ===== PWA / MOBILE EXTRAS ===== -->
+  <meta name="theme-color" content="#020617" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
 <body>
+
   <!-- HEADER -->
   <header class="header">
-    <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img"></div>
-    <nav class="navbar">
-      <a href="{% url 'index' %}#hero">Home</a>
-      <a href="{% url 'services' %}" class="active">Services</a>
-      <a href="{% url 'about' %}">About</a>
-      <a href="{% url 'projects' %}">Projects</a>
-      <a href="{% url 'contact' %}">Contact</a>
-    </nav>
-    <div class="mobile-menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="container">
+      <a href="{% url 'index' %}" class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="APITIDE Logo" class="logo-img" width="38" height="38" loading="eager" decoding="async" />
+        <span>APITIDE</span>
+      </a>
+      <nav class="navbar">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'services' %}" class="active">Services</a>
+        <a href="{% url 'ai_tools' %}">AI Tools</a>
+        <a href="{% url 'resources' %}">Resources</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+      <a href="{% url 'contact' %}" class="header-cta">Book Consultation</a>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="hero" class="services-hero">
+  <!-- SERVICES HERO -->
+  <section class="hero services-hero" id="services-hero">
+    <div class="hero-glow-blob"></div>
     <div class="container">
       <div class="hero-content">
-        <h1><span style="color:#1D3557 ;">Smart</span> Digital <span style="color:#1D3557;">Solutions,</span>Tailored <span style="color:#1D3557;">for</span> You</h1>
-        <p>We design websites, apps, AI systems, and marketing strategies that help businesses grow faster, smarter, and stronger.</p>
-        <div class="hero-stats">
-        
-          <div class="stat-item">
-            <span class="stat-number">98%</span>
-            <span class="stat-label">Client Satisfaction</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Support Available</span>
-          </div>
-          
-        </div>
-        <div class="services-buttons">
-        <a href="{% url 'contact' %}" class="cta-btn primary">Start your Project</a>
-        <a href="{% url 'projects' %}" class="cta-btn secondary">View Our Work</a>
-      </div>
-      </div>
-      <!-- <div class="hero-image">
-        <img src="images/Service_Image.png" alt="Smart Digital Solutions" class="hero-gif">
-      </div> -->
-    </div>
-  </section>
-
-  <!-- SERVICES OVERVIEW -->
-  <section id="services" class="services-overview">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">Comprehensive digital solutions tailored to your business needs</p>
-      
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>Web Development</h3>
-          <p>Custom websites built with modern technologies and best practices</p>
-          <div class="service-features">
-            <span class="feature-tag">React</span>
-            <span class="feature-tag">Node.js</span>
-            <span class="feature-tag">Python</span>
-          </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-magic"></i></div>
-          <h3>No-Code Solutions</h3>
-          <p>Build powerful applications without writing a single line of code</p>
-          <div class="service-features">
-            <span class="feature-tag">Bubble</span>
-            <span class="feature-tag">Webflow</span>
-            <span class="feature-tag">Zapier</span>
-          </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fab fa-wordpress"></i></div>
-          <h3>WordPress Development</h3>
-          <p>Powerful websites with easy content management and SEO optimization</p>
-          <div class="service-features">
-            <span class="feature-tag">Custom Themes</span>
-            <span class="feature-tag">Plugins</span>
-            <span class="feature-tag">E-commerce</span>
-          </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-          <h3>Mobile App Development</h3>
-          <p>Native and cross-platform mobile solutions for iOS and Android</p>
-          <div class="service-features">
-            <span class="feature-tag">React Native</span>
-            <span class="feature-tag">Flutter</span>
-            <span class="feature-tag">Swift</span>
-          </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-robot"></i></div>
-          <h3>AI Solutions</h3>
-          <p>Intelligent automation and machine learning for business growth</p>
-          <div class="service-features">
-            <span class="feature-tag">ChatGPT API</span>
-            <span class="feature-tag">RAG Models</span>
-            <span class="feature-tag">Automation</span>
-          </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-comments"></i></div>
-          <h3>AI Chatbots</h3>
-          <p>24/7 automated customer support with intelligent responses</p>
-          <div class="service-features">
-            <span class="feature-tag">24/7 Support</span>
-            <span class="feature-tag">Multi-language</span>
-            <span class="feature-tag">Integration</span>
-          </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-          <h3>UI/UX Design</h3>
-          <p>Beautiful, intuitive user experiences that convert visitors to customers</p>
-          <div class="service-features">
-            <span class="feature-tag">Figma</span>
-            <span class="feature-tag">Prototyping</span>
-            <span class="feature-tag">User Testing</span>
-          </div>
-          <a href="contact.html" class="service-btn">Learn More</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Digital Marketing</h3>
-          <p>Data-driven strategies to grow your online presence and reach</p>
-          <div class="service-features">
-            <span class="feature-tag">SEO</span>
-            <span class="feature-tag">PPC</span>
-            <span class="feature-tag">Analytics</span>
-          </div>
-          <a href="contact.html" class="service-btn">Learn More</a>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-hashtag"></i></div>
-          <h3>Social Media Management</h3>
-          <p>Engage and grow your audience across all social platforms</p>
-          <div class="service-features">
-            <span class="feature-tag">Content Creation</span>
-            <span class="feature-tag">Community Management</span>
-            <span class="feature-tag">Growth Strategy</span>
-          </div>
-          <a href="contact.html" class="service-btn">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <div style="padding: 60px 20px; text-align: center; font-family: Arial, sans-serif; background-color: #f9fbfd;">
-  
-  <!-- Heading with underline -->
-  <h2 style="font-size: 2.5rem; font-weight: 700; color: #1a202c; margin-bottom: 10px; position: relative; display: inline-block;">
-    Our Proven Process
-    <span style="display: block; width: 100%; height: 4px; background: #ff6600; margin: 8px auto 0; border-radius: 2px;"></span>
-
-  </h2>
-  
-  <!-- Subheading -->
-  <p style="font-size: 1.2rem; color: #4a5568; max-width: 700px; margin: 20px auto 50px;">
-    We follow a structured approach to ensure your project's success from concept to completion.
-  </p>
-  
-  <!-- Process cards -->
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    
-    <!-- Card 1 -->
-    <div style="position: relative; background: white; padding: 30px 20px; border-radius: 8px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <div style="width: 60px; height: 60px; margin: 0 auto 20px; border-radius: 50%; background: #1a365d; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-        👥
-      </div>
-      <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a365d; margin-bottom: 10px;">Consultation & Discovery</h3>
-      <p style="font-size: 0.95rem; color: #4a5568;">We start with a deep dive into your business goals, target audience, and project requirements.</p>
-      <span style="position: absolute; top: -12px; right: -12px; background: #ff6600; color: white; font-size: 0.9rem; font-weight: bold; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">1</span>
-    </div>
-    
-    <!-- Card 2 -->
-    <div style="position: relative; background: white; padding: 30px 20px; border-radius: 8px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <div style="width: 60px; height: 60px; margin: 0 auto 20px; border-radius: 50%; background: #1a365d; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-        💡
-      </div>
-      <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a365d; margin-bottom: 10px;">Strategy & Planning</h3>
-      <p style="font-size: 0.95rem; color: #4a5568;">Our team creates a comprehensive strategy and project roadmap tailored to your objectives.</p>
-      <span style="position: absolute; top: -12px; right: -12px; background: #ff6600; color: white; font-size: 0.9rem; font-weight: bold; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">2</span>
-    </div>
-    
-    <!-- Card 3 -->
-    <div style="position: relative; background: white; padding: 30px 20px; border-radius: 8px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <div style="width: 60px; height: 60px; margin: 0 auto 20px; border-radius: 50%; background: #1a365d; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-        🎯
-      </div>
-      <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a365d; margin-bottom: 10px;">Design & Development</h3>
-      <p style="font-size: 0.95rem; color: #4a5568;">We bring your vision to life with cutting-edge design and development practices.</p>
-      <span style="position: absolute; top: -12px; right: -12px; background: #ff6600; color: white; font-size: 0.9rem; font-weight: bold; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">3</span>
-    </div>
-    
-    <!-- Card 4 -->
-    <div style="position: relative; background: white; padding: 30px 20px; border-radius: 8px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <div style="width: 60px; height: 60px; margin: 0 auto 20px; border-radius: 50%; background: #1a365d; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-        ✅
-      </div>
-      <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a365d; margin-bottom: 10px;">Testing & Launch</h3>
-      <p style="font-size: 0.95rem; color: #4a5568;">Thorough testing ensures quality delivery, followed by a smooth launch and ongoing support.</p>
-      <span style="position: absolute; top: -12px; right: -12px; background: #ff6600; color: white; font-size: 0.9rem; font-weight: bold; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">4</span>
-    </div>
-    
-  </div>
-</div>
-
-
-  
-  <section id="why-choose" class="why-choose-services">
-    <div class="container">
-      <h2 class="section-title">Why Choose Apitide?</h2>
-      <p class="section-subtitle">We deliver results that exceed expectations</p>
-      
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon"><i class="fas fa-clock"></i></div>
-          <h3 class="why-heading">Fast Delivery</h3>
-          <p class="why-content">We deliver projects 40% faster than industry average without compromising quality.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-icon"><i class="fas fa-headset"></i></div>
-          <h3 class="why-heading">24/7 Support</h3>
-          <p class="why-content">Round-the-clock technical support and maintenance to keep your systems running smoothly.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3 class="why-heading">Future-Proof</h3>
-          <p class="why-content">Built with scalability in mind, our solutions grow with your business needs.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-icon"><i class="fas fa-chart-bar"></i></div>
-          <h3 class="why-heading">Proven Results</h3>
-          <p class="why-content">Over 250+ successful projects with a 98% client satisfaction rate.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-icon"><i class="fas fa-dollar-sign"></i></div>
-          <h3 class="why-heading">Cost-Effective</h3>
-          <p class="why-content">Competitive pricing with transparent costs and no hidden fees.</p>
-        </div>
-        
-        <div class="why-card">
-          <div class="why-icon"><i class="fas fa-users"></i></div>
-          <h3 class="why-heading">Expert Team</h3>
-          <p class="why-content">Experienced developers, designers, and strategists dedicated to your success.</p>
-        </div>
-      </div>
-    </div>
-  </section> --
-  
-  <!-- CTA SECTION -->
-  <section class="services-cta">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Transform Your Digital Presence?</h2>
-        <p>Let's discuss your project and create something amazing together</p>
-        <div class="cta-buttons">
-          <a href="{% url 'contact' %}" class="cta-btn primary">Get Free Consultation</a>
+        <h1>Smart <span class="gradient-text-blue">AI Workflows</span> & Custom <span class="gradient-text-orange">Software</span></h1>
+        <p>We build automated pipelines, RAG chatbots, and high-converting software designed to scale your business operations while you sleep.</p>
+        <div class="hero-buttons">
+          <a href="{% url 'contact' %}" class="cta-btn primary">Start Your Project</a>
           <a href="{% url 'projects' %}" class="cta-btn secondary">View Our Work</a>
         </div>
       </div>
     </div>
   </section>
 
-
-
-  <!-- SERVICE MODALS -->
-  
-  <!-- Web Development Modal -->
-  <div id="web-dev-modal" class="service-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="modal-close" onclick="closeServiceModal('web-dev')">&times;</span>
-        <h2><i class="fas fa-laptop-code"></i> Web Development</h2>
-      </div>
-      <div class="modal-body">
-        <div class="service-details">
-          <h3>What We Offer</h3>
-          <ul>
-            <li>Custom website development</li>
-            <li>E-commerce solutions</li>
-            <li>Progressive Web Apps (PWA)</li>
-            <li>API development and integration</li>
-            <li>Performance optimization</li>
-            <li>SEO-friendly development</li>
-          </ul>
-          
-          <h3>Technologies We Use</h3>
-          <div class="tech-stack">
-            <span class="tech-tag">React.js</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Python/Django</span>
-            <span class="tech-tag">PHP/Laravel</span>
-            <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">PostgreSQL</span>
+  <!-- SERVICES MAIN GRID -->
+  <section class="section-dark-navy">
+    <div class="container">
+      <h2 class="section-title">Core Capabilities</h2>
+      <p class="section-subtitle">Intelligent solutions engineered for startups, small businesses, and enterprise operations.</p>
+      
+      <div class="services-grid">
+        <!-- 1. AI Workflow & N8N Automation -->
+        <div class="service-card glass-card" id="workflow">
+          <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>AI Workflow & N8N Automation</h3>
+          <p>Supercharge your operational efficiency. We construct custom n8n automation scenarios that link your CRM, email servers, databases, and third-party APIs. Perfect for B2B SaaS lead feeder networks and data aggregation operations.</p>
+          <div class="service-features">
+            <span class="feature-tag">N8N Workflows</span>
+            <span class="feature-tag">Zapier/Make</span>
+            <span class="feature-tag">API Hooking</span>
+            <span class="feature-tag">Google/Outlook APIs</span>
           </div>
-          
-          <h3>Why Choose Our Web Development?</h3>
-          <ul>
-            <li>Modern, responsive design</li>
-            <li>Fast loading times</li>
-            <li>Mobile-first approach</li>
-            <li>Scalable architecture</li>
-            <li>Security best practices</li>
-          </ul>
+          <a href="{% url 'contact' %}?service=n8n" class="service-btn">Get Started</a>
+        </div>
+
+        <!-- 2. Web & Mobile Apps -->
+        <div class="service-card glass-card" id="development">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Custom Web & Mobile Development</h3>
+          <p>We program fast, robust web and mobile applications from scratch. Whether you need a real-time messaging platform, a restaurant management portal, or a cross-platform mobile application, our systems scale seamlessly.</p>
+          <div class="service-features">
+            <span class="feature-tag">React.js</span>
+            <span class="feature-tag">Next.js</span>
+            <span class="feature-tag">Django/FastAPI</span>
+            <span class="feature-tag">MongoDB/MySQL</span>
+            <span class="feature-tag">Flutter</span>
+          </div>
+          <a href="{% url 'contact' %}?service=development" class="service-btn">Get Started</a>
+        </div>
+
+        <!-- 3. AI Solutions & RAG Systems -->
+        <div class="service-card glass-card" id="ai-solutions">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI Chatbots & RAG Systems</h3>
+          <p>We deploy Retrieval-Augmented Generation (RAG) models grounded in your proprietary documents (WHO datasets, medical guides, company manuals). Our models eliminate hallucinations, providing reliable, secure 24/7 business insights.</p>
+          <div class="service-features">
+            <span class="feature-tag">RAG Models</span>
+            <span class="feature-tag">Vector DBs</span>
+            <span class="feature-tag">OpenRouter</span>
+            <span class="feature-tag">Custom GPTs</span>
+          </div>
+          <a href="{% url 'contact' %}?service=ai" class="service-btn">Get Started</a>
+        </div>
+
+        <!-- 4. Luxury Branding & E-Commerce -->
+        <div class="service-card glass-card" id="branding">
+          <div class="service-icon"><i class="fas fa-gem"></i></div>
+          <h3>Luxury Branding & E-Commerce</h3>
+          <p>Beautiful product showcases and high-end e-commerce applications built with premium typography, micro-interactions, and visual excellence. Perfect for fragrance, jewelry, fitness, beauty, and organic foods brands.</p>
+          <div class="service-features">
+            <span class="feature-tag">Premium UI</span>
+            <span class="feature-tag">Stripe Checkout</span>
+            <span class="feature-tag">Tailwind CSS</span>
+            <span class="feature-tag">Micro-Animations</span>
+          </div>
+          <a href="{% url 'contact' %}?service=ecommerce" class="service-btn">Get Started</a>
+        </div>
+
+        <!-- 5. Business Process Automation -->
+        <div class="service-card glass-card" id="bpa">
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3>Business Process Automation</h3>
+          <p>Free up valuable hours by automating scheduling, email sorting, invoice generation, customer onboarding, and B2B cold outreach sequences. Let your machines run while you focus on growth.</p>
+          <div class="service-features">
+            <span class="feature-tag">Cold Calling Bots</span>
+            <span class="feature-tag">Email parsers</span>
+            <span class="feature-tag">Scheduler sync</span>
+            <span class="feature-tag">CRM Sync</span>
+          </div>
+          <a href="{% url 'contact' %}?service=bpa" class="service-btn">Get Started</a>
+        </div>
+
+        <!-- 6. SEO, Performance & CRO -->
+        <div class="service-card glass-card" id="seo">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>SEO & Conversion Optimization</h3>
+          <p>A beautiful site is useless without traffic. We audit your site speed, implement strict technical SEO schema markups, optimize page speed, and construct high-converting layouts designed to maximize your pipeline.</p>
+          <div class="service-features">
+            <span class="feature-tag">Speed Tuning</span>
+            <span class="feature-tag">SEO Schema</span>
+            <span class="feature-tag">Analytics</span>
+            <span class="feature-tag">CRO Audit</span>
+          </div>
+          <a href="{% url 'contact' %}?service=seo" class="service-btn">Get Started</a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- AI Solutions Modal -->
-  <div id="ai-modal" class="service-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="modal-close" onclick="closeServiceModal('ai')">&times;</span>
-        <h2><i class="fas fa-robot"></i> AI Solutions</h2>
-      </div>
-      <div class="modal-body">
-        <div class="service-details">
-          <h3>What We Offer</h3>
-          <ul>
-            <li>Custom AI chatbots</li>
-            <li>Machine learning models</li>
-            <li>Natural language processing</li>
-            <li>Predictive analytics</li>
-            <li>Process automation</li>
-            <li>Data analysis and insights</li>
-          </ul>
-          
-          <h3>Technologies We Use</h3>
-          <div class="tech-stack">
-            <span class="tech-tag">OpenAI GPT</span>
-            <span class="tech-tag">TensorFlow</span>
-            <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">LangChain</span>
-            <span class="tech-tag">RAG Models</span>
-            <span class="tech-tag">Python</span>
-          </div>
-          
-          <h3>Why Choose Our AI Solutions?</h3>
-          <ul>
-            <li>Custom-trained models</li>
-            <li>High accuracy and reliability</li>
-            <li>Scalable architecture</li>
-            <li>Real-time processing</li>
-            <li>Continuous learning</li>
-          </ul>
+  <!-- PROCESS / STATS DETAIL SECTION -->
+  <section class="section-light-slate">
+    <div class="container">
+      <h2 class="section-title">Our Operational Standards</h2>
+      <p class="section-subtitle">We hold our work to the highest standards, ensuring your projects are delivered fast and built to scale.</p>
+      
+      <div class="hero-stats-grid" style="max-width: 1000px; margin: 0 auto;">
+        <div class="hero-stat-item">
+          <span class="stat-number">40%</span>
+          <span class="stat-label">Faster Delivery</span>
+        </div>
+        <div class="hero-stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Satisfaction Rate</span>
+        </div>
+        <div class="hero-stat-item">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">System Monitoring</span>
+        </div>
+        <div class="hero-stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Scalable Hosting</span>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Mobile Development Modal -->
-  <div id="mobile-modal" class="service-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="modal-close" onclick="closeServiceModal('mobile')">&times;</span>
-        <h2><i class="fas fa-mobile-alt"></i> Mobile App Development</h2>
-      </div>
-      <div class="modal-body">
-        <div class="service-details">
-          <h3>What We Offer</h3>
-          <ul>
-            <li>Native iOS development</li>
-            <li>Native Android development</li>
-            <li>Cross-platform solutions</li>
-            <li>App store optimization</li>
-            <li>App maintenance and updates</li>
-            <li>Performance optimization</li>
-          </ul>
-          
-          <h3>Technologies We Use</h3>
-          <div class="tech-stack">
-            <span class="tech-tag">React Native</span>
-            <span class="tech-tag">Flutter</span>
-            <span class="tech-tag">Swift</span>
-            <span class="tech-tag">Kotlin</span>
-            <span class="tech-tag">Firebase</span>
-            <span class="tech-tag">AWS</span>
-          </div>
-          
-          <h3>Why Choose Our Mobile Development?</h3>
-          <ul>
-            <li>Native performance</li>
-            <li>Cross-platform compatibility</li>
-            <li>Modern UI/UX design</li>
-            <li>Offline functionality</li>
-            <li>Push notifications</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-wave">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52,583,67.32c69.27,15,138.3,24.22,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#0a192f"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,141.56,72.2V0Z" opacity=".5" fill="#0a192f"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,86c57.52-8.48,105-41.95,136.65-72.46,36.04-34.25,71.52-83,112.15-13.82V0Z" fill="#0a192f"></path>
-      </svg>
-    </div>
     <div class="footer-container">
       <div class="footer-grid">
-        <!-- Brand Column -->
         <div class="footer-brand">
-          <div class="brand-wrapper">
-            <h2 class="brand-name">
-              <img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img">
-            </h2>
-          </div>
-          <p class="brand-desc">Transforming businesses with cutting-edge technology solutions. Let's build the future together.</p>
+          <h2>APITIDE</h2>
+          <p class="brand-desc">Transforming business operations through AI workflow integration, custom software, and robust web applications.</p>
           <div class="social-links">
             <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/apitide.info?igsh=N3BzZzhkajE3N3hw" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/apitide.info" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-links">
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-nav">
-            <li><a href="{% url 'index' %}#hero" class="footer-link">Home</a></li>
-            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'index' %}" class="footer-link">Home</a></li>
             <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
             <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
             <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Services -->
         <div class="footer-links">
           <h3 class="footer-heading">Our Services</h3>
           <ul class="footer-nav">
-            <li><a href="{% url 'services' %}#web" class="footer-link">Web Development</a></li>
-            <li><a href="{% url 'services' %}#mobile" class="footer-link">Mobile Apps</a></li>
-            <li><a href="{% url 'services' %}#ai" class="footer-link">AI Solutions</a></li>
-            <li><a href="{% url 'services' %}#ecommerce" class="footer-link">E-commerce</a></li>
-            <li><a href="{% url 'services' %}#consulting" class="footer-link">IT Consulting</a></li>
+            <li><a href="{% url 'services' %}#workflow" class="footer-link">AI Workflows</a></li>
+            <li><a href="{% url 'services' %}#development" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#ai-solutions" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#branding" class="footer-link">Luxury Branding</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">Consulting</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
         <div class="footer-contact">
           <h3 class="footer-heading">Get In Touch</h3>
           <ul class="contact-info">
             <li class="contact-item">
               <i class="fas fa-map-marker-alt contact-icon"></i>
-              <span>MDV Colony, Bikaner, India</span>
+              <span>Bikaner, Rajasthan, India</span>
             </li>
             <li class="contact-item">
               <i class="fas fa-phone contact-icon"></i>
@@ -496,53 +309,29 @@
             </li>
             <li class="contact-item">
               <i class="fas fa-envelope contact-icon"></i>
-              <a href="mailto:info@apitide.com" class="contact-link">apitideinfo@gmail.com</a>
-            </li>
-            <li class="contact-item">
-              <i class="fas fa-clock contact-icon"></i>
-              <span>Mon - Fri: 9:00 - 18:00</span>
+              <a href="mailto:apitideinfo@gmail.com" class="contact-link">apitideinfo@gmail.com</a>
             </li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p class="copyright">&copy; 2025 Apitide. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 APITIDE. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+          <a href="#" class="legal-link">Privacy Policy</a>
           <span class="divider">|</span>
-          <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+          <a href="#" class="legal-link">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
-  
-  <script>
-  // Mobile Menu Toggle
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navbar = document.querySelector('.navbar');
-    
-    if (mobileMenuToggle && navbar) {
-      mobileMenuToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navbar.classList.toggle('active');
-      });
-    }
-    
-    // Close mobile menu when clicking a link
-    const navLinks = document.querySelectorAll('.navbar a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuToggle.classList.remove('active');
-        navbar.classList.remove('active');
-      });
-    });
-  });
 
-
-  </script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+  <!-- Custom main Javascript -->
+  <!-- ===== PHASE 24: GSAP + SCROLLTRIGGER + LENIS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
+  <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="{% static 'js/animations.js' %}" defer></script>
 </body>
 </html>

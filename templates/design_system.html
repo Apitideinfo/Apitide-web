@@ -1,0 +1,369 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System | APITIDE - Component Library</title>
+  <meta name="description" content="APITIDE Design System - typography, color tokens, glassmorphism components, spacing, and animation guide.">
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#020617" />
+
+  <!-- ===== PERFORMANCE: NON-BLOCKING FONT AWESOME ===== -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+
+  <!-- ===== PERFORMANCE: PRELOAD MAIN CSS ===== -->
+  <link rel="preload" as="style" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+  <style>
+    .token-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .color-swatch {
+      height: 100px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      transition: var(--transition-smooth);
+    }
+    .color-swatch:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+    .copy-tip {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+    .typo-spec {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 24px 0;
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .typo-label {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .spacing-box {
+      background: var(--accent-blue);
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="{% url 'index' %}" class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="APITIDE Logo" class="logo-img" width="38" height="38" loading="eager" decoding="async" />
+        <span>APITIDE</span>
+      </a>
+      <nav class="navbar">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'services' %}">Services</a>
+        <a href="{% url 'ai_tools' %}">AI Tools</a>
+        <a href="{% url 'resources' %}">Resources</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'design_system' %}" class="active">Design System</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+      <a href="{% url 'contact' %}" class="header-cta">Book Consultation</a>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero design-hero" id="design-hero" style="padding-bottom: 40px;">
+    <div class="hero-glow-blob"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>APITIDE <span class="gradient-text-blue">Design System</span></h1>
+        <p>A library of our visual tokens, custom spacing parameters, geometric typography scales, and CSS/JS micro-animations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT PALETTE -->
+  <main class="container" style="margin-bottom: 100px;">
+    
+    <!-- 1. COLORS -->
+    <section class="glass-card" style="margin-bottom: 40px;">
+      <h2>1. Brand Color System</h2>
+      <p style="margin-bottom: 24px;">Our color hierarchy uses deep slate background values paired with highly glowing accents. Click on any swatch to copy the hex value.</p>
+      
+      <div class="token-grid">
+        <div class="glass-card" style="padding: 15px;">
+          <div class="color-swatch" style="background: #020617;" onclick="copyHex('#020617')">
+            <span>#020617</span>
+            <span class="copy-tip"><i class="fas fa-copy"></i></span>
+          </div>
+          <h4 style="margin-top: 12px; margin-bottom: 4px;">Deep base</h4>
+          <p style="font-size: 0.8rem; margin: 0;">Main background</p>
+        </div>
+
+        <div class="glass-card" style="padding: 15px;">
+          <div class="color-swatch" style="background: #0F172A;" onclick="copyHex('#0F172A')">
+            <span>#0F172A</span>
+            <span class="copy-tip"><i class="fas fa-copy"></i></span>
+          </div>
+          <h4 style="margin-top: 12px; margin-bottom: 4px;">Primary Navy</h4>
+          <p style="font-size: 0.8rem; margin: 0;">Card backdrop</p>
+        </div>
+
+        <div class="glass-card" style="padding: 15px;">
+          <div class="color-swatch" style="background: #2563EB;" onclick="copyHex('#2563EB')">
+            <span>#2563EB</span>
+            <span class="copy-tip"><i class="fas fa-copy"></i></span>
+          </div>
+          <h4 style="margin-top: 12px; margin-bottom: 4px;">Electric Blue</h4>
+          <p style="font-size: 0.8rem; margin: 0;">CTAs, icons, details</p>
+        </div>
+
+        <div class="glass-card" style="padding: 15px;">
+          <div class="color-swatch" style="background: #06B6D4;" onclick="copyHex('#06B6D4')">
+            <span>#06B6D4</span>
+            <span class="copy-tip"><i class="fas fa-copy"></i></span>
+          </div>
+          <h4 style="margin-top: 12px; margin-bottom: 4px;">Glowing Cyan</h4>
+          <p style="font-size: 0.8rem; margin: 0;">Subheading accents</p>
+        </div>
+
+        <div class="glass-card" style="padding: 15px;">
+          <div class="color-swatch" style="background: #F97316;" onclick="copyHex('#F97316')">
+            <span>#F97316</span>
+            <span class="copy-tip"><i class="fas fa-copy"></i></span>
+          </div>
+          <h4 style="margin-top: 12px; margin-bottom: 4px;">Automation Orange</h4>
+          <p style="font-size: 0.8rem; margin: 0;">Timelines & highlights</p>
+        </div>
+
+        <div class="glass-card" style="padding: 15px;">
+          <div class="color-swatch" style="background: #10B981;" onclick="copyHex('#10B981')">
+            <span>#10B981</span>
+            <span class="copy-tip"><i class="fas fa-copy"></i></span>
+          </div>
+          <h4 style="margin-top: 12px; margin-bottom: 4px;">Emerald Success</h4>
+          <p style="font-size: 0.8rem; margin: 0;">Alert confirmations</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TYPOGRAPHY -->
+    <section class="glass-card" style="margin-bottom: 40px;">
+      <h2>2. Typographical Scale</h2>
+      <p style="margin-bottom: 24px;">Geometric and clean scales based on <b>Outfit</b> for displays and <b>Inter</b> for content readability.</p>
+      
+      <div class="typo-spec">
+        <div class="typo-label">
+          <span>Hero Header (h1)</span><br>
+          <span style="color: var(--text-light)">5rem / Weight 800</span>
+        </div>
+        <div>
+          <h1 style="font-size: 3.5rem; margin: 0; line-height: 1.1;">Build AI Systems That Work</h1>
+        </div>
+      </div>
+
+      <div class="typo-spec">
+        <div class="typo-label">
+          <span>Section Title (h2)</span><br>
+          <span style="color: var(--text-light)">3rem / Weight 800</span>
+        </div>
+        <div>
+          <h2 style="font-size: 2.2rem; margin: 0;">Our Proven Process</h2>
+        </div>
+      </div>
+
+      <div class="typo-spec">
+        <div class="typo-label">
+          <span>Card Header (h3)</span><br>
+          <span style="color: var(--text-light)">1.4rem / Weight 700</span>
+        </div>
+        <div>
+          <h3 style="font-size: 1.4rem; margin: 0;">AI Workflow & N8N Automation</h3>
+        </div>
+      </div>
+
+      <div class="typo-spec">
+        <div class="typo-label">
+          <span>Body copy (p)</span><br>
+          <span style="color: var(--text-light)">1rem / Weight 400</span>
+        </div>
+        <div>
+          <p style="margin: 0; line-height: 1.6; color: var(--text-secondary);">We automate repetitive business operations using AI, N8N, custom software, websites, and intelligent workflows. Increase conversion, improve CRO metrics, and scale your databases.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SPACING -->
+    <section class="glass-card" style="margin-bottom: 40px;">
+      <h2>3. Layout Spacing Grid</h2>
+      <p style="margin-bottom: 24px;">Defined spacing tokens to guarantee breathability throughout all pages.</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: center;">
+          <span class="typo-label">Spacer 12 (12px)</span>
+          <div class="spacing-box" style="width: 12px; background: rgba(37, 99, 235, 0.2); border: 1px solid var(--accent-blue);"></div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: center;">
+          <span class="typo-label">Spacer 30 (30px)</span>
+          <div class="spacing-box" style="width: 30px; background: rgba(37, 99, 235, 0.4); border: 1px solid var(--accent-blue);"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: center;">
+          <span class="typo-label">Spacer 60 (60px)</span>
+          <div class="spacing-box" style="width: 60px; background: rgba(37, 99, 235, 0.6); border: 1px solid var(--accent-blue);"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: center;">
+          <span class="typo-label">Spacer 100 (100px)</span>
+          <div class="spacing-box" style="width: 100px; background: var(--accent-blue);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INTERACTION & ANIMATIONS -->
+    <section class="glass-card">
+      <h2>4. Interactive Motion & Animation Testbed</h2>
+      <p style="margin-bottom: 24px;">Hover and move your mouse over these cards to test the 3D perspective tilts, count-up trigger animations, and radial gradient glow blobs.</p>
+      
+      <div class="services-grid">
+        <!-- Tilt Card 1 -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i class="fas fa-magic"></i></div>
+          <h3>3D Tilt Effect Card</h3>
+          <p>Hover over this card to experience the 3D perspective rotation logic implemented in main.js. Tilt angles auto-adjust depending on your cursor offset.</p>
+        </div>
+
+        <!-- Glow Card 2 -->
+        <div class="service-card glass-card">
+          <div class="service-icon" style="color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.2); background: rgba(6, 182, 212, 0.1);"><i class="fas fa-bolt"></i></div>
+          <h3>Radial Glow Card</h3>
+          <p>A radial gradient background mask matches your cursor coordinates relative to the card dimensions, creating a glowing backlight effect.</p>
+        </div>
+
+        <!-- Count Trigger Card 3 -->
+        <div class="service-card glass-card">
+          <div class="service-icon" style="color: var(--accent-orange); border-color: rgba(249, 115, 22, 0.2); background: rgba(249, 115, 22, 0.1);"><i class="fas fa-chart-line"></i></div>
+          <h3>Stat Count-Up</h3>
+          <div class="stat-number stat-number-value" data-target="98" data-suffix="%" style="color: var(--accent-orange); margin-bottom: 12px;">0</div>
+          <p>An IntersectionObserver runs in the background and animates counts from 0 up to their target parameters once they scroll into viewport.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>APITIDE</h2>
+          <p class="brand-desc">Transforming business operations through AI workflow integration, custom software, and robust web applications.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/apitide.info" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'index' %}" class="footer-link">Home</a></li>
+            <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
+            <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-nav">
+            <li><a href="{% url 'services' %}#workflow" class="footer-link">AI Workflows</a></li>
+            <li><a href="{% url 'services' %}#development" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#ai-solutions" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#branding" class="footer-link">Luxury Branding</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-heading">Get In Touch</h3>
+          <ul class="contact-info">
+            <li class="contact-item">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>Bikaner, Rajasthan, India</span>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-phone contact-icon"></i>
+              <a href="tel:+917877813270" class="contact-link">+91 7877813270</a>
+            </li>
+            <li class="contact-item">
+              <i class="fas fa-envelope contact-icon"></i>
+              <a href="mailto:apitideinfo@gmail.com" class="contact-link">apitideinfo@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 APITIDE. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <span class="divider">|</span>
+          <a href="#" class="legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Click to copy utility script -->
+  <script>
+    function copyHex(hexText) {
+      navigator.clipboard.writeText(hexText).then(() => {
+        alert('Copied color token: ' + hexText);
+      }).catch(err => {
+        console.error('Failed to copy color: ', err);
+      });
+    }
+  </script>
+  
+  <!-- Custom main Javascript -->
+  <script src="{% static 'js/main.js' %}" defer></script>
+</body>
+</html>

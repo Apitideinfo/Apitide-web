@@ -1,252 +1,2596 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apitide - Innovate. Automate. Scale.</span></title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Custom CSS -->
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>APITIDE | Build AI Systems That Work While You Sleep</title>
+  <meta name="description"
+    content="APITIDE builds intelligent AI automation systems, n8n workflows, custom software, and enterprise web applications that save businesses thousands of working hours every month." />
+  <meta name="keywords"
+    content="AI automation agency, n8n workflows, AI voice agent, RAG chatbot, business automation, custom software development, enterprise integration, WhatsApp automation, CRM automation" />
+  <meta name="author" content="APITIDE" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.apitide.com/" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.apitide.com/" />
+  <meta property="og:title" content="APITIDE | Build AI Systems That Work While You Sleep" />
+  <meta property="og:description"
+    content="We build intelligent automation systems, AI agents, enterprise software, and modern digital experiences that save thousands of working hours every month." />
+  <meta property="og:image" content="https://www.apitide.com/static/images/og-home.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="APITIDE" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@apitide" />
+  <meta name="twitter:title" content="APITIDE | Build AI Systems That Work While You Sleep" />
+  <meta name="twitter:description"
+    content="We build intelligent automation systems, AI agents, enterprise software, and modern digital experiences that save thousands of working hours every month." />
+  <meta name="twitter:image" content="https://www.apitide.com/static/images/og-home.jpg" />
+
+  <!-- ===== SCHEMA.ORG — ORGANIZATION ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "APITIDE",
+    "url": "https://www.apitide.com",
+    "logo": "https://www.apitide.com/static/images/logo.png",
+    "description": "APITIDE is a premium international AI automation agency building n8n workflows, AI voice agents, RAG chatbots, and enterprise web applications.",
+    "foundingDate": "2024",
+    "founders": [{"@type": "Person", "name": "Harshit Ramawat"}, {"@type": "Person", "name": "Karan Bithoo"}, {"@type": "Person", "name": "Rahul Khatri"}],
+    "contactPoint": {"@type": "ContactPoint", "telephone": "+91-7877813270", "contactType": "customer service", "email": "apitideinfo@gmail.com", "availableLanguage": "English"},
+    "sameAs": ["https://www.instagram.com/apitide.info", "https://github.com/Apitideinfo/Company-web"]
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG — LOCAL BUSINESS ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "APITIDE",
+    "image": "https://www.apitide.com/static/images/logo.png",
+    "url": "https://www.apitide.com",
+    "telephone": "+91-7877813270",
+    "email": "apitideinfo@gmail.com",
+    "address": {"@type": "PostalAddress", "streetAddress": "Bikaner", "addressLocality": "Bikaner", "addressRegion": "Rajasthan", "postalCode": "334001", "addressCountry": "IN"},
+    "priceRange": "$$$",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "47"}
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG — FAQ PAGE ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is APITIDE?", "acceptedAnswer": {"@type": "Answer", "text": "APITIDE is a premium international AI automation agency that builds n8n workflows, AI voice agents, RAG chatbots, custom software, and enterprise web applications."}},
+      {"@type": "Question", "name": "How long does a project take?", "acceptedAnswer": {"@type": "Answer", "text": "Most automation projects are delivered in under 14 days. Complex enterprise integrations typically take 4–8 weeks depending on scope."}},
+      {"@type": "Question", "name": "Do you work with international clients?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. APITIDE serves clients across 12+ countries including the USA, UK, UAE, Australia, and Europe."}},
+      {"@type": "Question", "name": "What industries do you serve?", "acceptedAnswer": {"@type": "Answer", "text": "We serve 15+ industries including Healthcare, Finance, Real Estate, Legal, Manufacturing, Restaurants, Retail, and Enterprise companies."}},
+      {"@type": "Question", "name": "Can you integrate with my existing tools?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We integrate with HubSpot, Salesforce, WhatsApp, Twilio, Stripe, Google Workspace, Slack, Notion, Airtable, and 300+ other platforms via APIs and n8n."}}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG — REVIEW ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "APITIDE AI Automation Services",
+    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "reviewCount": "47"},
+    "review": [
+      {"@type": "Review", "author": {"@type": "Person", "name": "James D."}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "APITIDE automated our entire B2B account enrichment pipeline. Outstanding technical expertise!"},
+      {"@type": "Review", "author": {"@type": "Person", "name": "Abhimanyu S."}, "reviewRating": {"@type": "Rating", "ratingValue": "5"}, "reviewBody": "The logistics web app completely overhauled our booking operations. Lightweight, rapid, and robust."}
+    ]
+  }
+  </script>
+
+  <!-- ===== PERFORMANCE: PRECONNECT ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+  <!-- ===== PERFORMANCE: NON-BLOCKING GOOGLE FONTS ===== -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
+  </noscript>
+
+  <!-- ===== PERFORMANCE: NON-BLOCKING FONT AWESOME ===== -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </noscript>
+
+  <!-- ===== PERFORMANCE: PRELOAD MAIN CSS ===== -->
+  <link rel="preload" as="style" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
+  <!-- ===== PHASE 24: ANIMATION CSS ===== -->
+  <link rel="preload" as="style" href="{% static 'css/animations.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/animations.css' %}" />
+
+  <!-- ===== PERFORMANCE: INLINE CRITICAL CSS ===== -->
+  <style>
+    :root {
+      --primary-color: #0F172A;
+      --bg-dark: #020617;
+      --accent-blue: #2563EB;
+      --accent-cyan: #06B6D4;
+      --accent-orange: #F97316;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --glass-border: rgba(255, 255, 255, .08);
+      --glass-glow: rgba(59, 130, 246, .12);
+      --border-radius: 12px;
+      --transition-smooth: all .4s cubic-bezier(.16, 1, .3, 1);
+      --font-sans: 'Outfit', 'Inter', sans-serif
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: var(--transition-smooth)
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: white
+    }
+
+    .logo-img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+      border-radius: 6px;
+      background: transparent;
+      mix-blend-mode: screen;
+      filter: drop-shadow(0 0 6px rgba(99,102,241,0.4));
+    }
+
+    .navbar {
+      display: flex;
+      gap: 30px
+    }
+
+    .navbar a {
+      color: var(--text-secondary);
+      font-size: .92rem;
+      font-weight: 500;
+      transition: color .3s
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: white
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--accent-blue) 0%, #1D4ED8 100%);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: .88rem;
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: var(--bg-dark);
+      overflow: hidden
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      gap: 8px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition-smooth)
+    }
+
+    .cta-btn.primary {
+      background: linear-gradient(135deg, var(--accent-blue) 0%, #1D4ED8 100%);
+      color: white;
+      border-color: rgba(255, 255, 255, .1);
+      box-shadow: 0 4px 20px rgba(37, 99, 235, .3)
+    }
+
+    .cta-btn.secondary {
+      background: rgba(255, 255, 255, .12);
+      color: #fff;
+      border-color: rgba(255, 255, 255, .35);
+      backdrop-filter: blur(8px);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .3)
+    }
+
+    .newsletter-box {
+      margin-top: 20px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      padding: 20px 25px;
+      border-radius: var(--border-radius);
+      text-align: center;
+      backdrop-filter: blur(15px);
+    }
+
+    .gradient-text-blue {
+      background: linear-gradient(135deg, #60A5FA 0%, #2563EB 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .gradient-text-cyan {
+      background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .gradient-text-orange {
+      background: linear-gradient(135deg, #FB923C 0%, #F97316 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+  </style>
+
+  <!-- ===== PWA / MOBILE EXTRAS ===== -->
+  <meta name="theme-color" content="#020617" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header class="header">
-    <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img"></div>
-    <nav class="navbar">
-      <a href="{% url 'index' %}#hero">Home</a>
-      <a href="{% url 'services' %}">Services</a>
-      <a href="{% url 'about' %}">About</a>
-      <a href="{% url 'projects' %}">Projects</a>
-      <a href="{% url 'contact' %}">Contact</a>
-    </nav>
-    <div class="mobile-menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="container">
+      <a href="{% url 'index' %}" class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="APITIDE Logo" class="logo-img" width="38" height="38"
+          fetchpriority="high" />
+        <span>APITIDE</span>
+      </a>
+      <nav class="navbar">
+        <a href="{% url 'index' %}" class="active">Home</a>
+        <a href="{% url 'services' %}">Services</a>
+        <a href="{% url 'ai_tools' %}">AI Tools</a>
+        <a href="{% url 'resources' %}">Resources</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+      <a href="{% url 'contact' %}" class="header-cta">Book Consultation</a>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1 style="color:white;">Innovate. <span class="orange">Automate.</span> <span
-          style="color:white;">Scale.</span></h1>
-      <p>Apitide delivers cutting-edge web, mobile, and AI solutions designed for the <span class="orange">future  of your business.</span></p>
-      <div class="hero-buttons">
-        <a href="{% url 'contact' %}" class="cta-btn primary">Start Free Consultation</a>
-        <a href="{% url 'projects' %}" class="cta-btn secondary">View Our Work</a>
+  <!-- HERO (ENTERPRISE HERO - PHASE 11) -->
+  <section class="hero" id="hero">
+    <!-- Background Video -->
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="{% static 'videos/hero-bg.mp4' %}" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-canvas-container">
+      <canvas id="particles-canvas"></canvas>
+    </div>
+    <div class="hero-glow-blob"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-headline">Build <span class="gradient-text-blue">AI Systems</span> That Work <span
+            class="typewriter-container"><span id="typewriter-text" class="gradient-text-orange">While You
+              Sleep.</span><span class="typewriter-cursor">|</span></span></h1>
+        <p>We build intelligent automation systems, AI agents, enterprise software, and modern digital experiences that
+          save thousands of working hours every month.</p>
+        <div class="hero-buttons">
+          <a href="{% url 'contact' %}" class="cta-btn primary">
+            <i class="fas fa-calendar-alt"></i> Book Consultation
+          </a>
+          <a href="{% url 'projects' %}" class="cta-btn secondary">View Portfolio</a>
+          <a href="#" id="watch-demo-btn" class="cta-btn secondary">
+            <i class="fas fa-play-circle"></i> Watch Demo
+          </a>
+        </div>
+
+        <!-- Floating Company Logos Ticker -->
+        <div class="logo-ticker-container">
+          <p class="ticker-label">AUTOMATING OPERATIONS ACROSS INDUSTRY LEADING PLATFORMS</p>
+          <div class="logo-ticker-track">
+            <!-- Set 1 -->
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe"
+                class="si-logo"> Stripe</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify"
+                class="si-logo"> Shopify</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" class="si-logo">
+              n8n</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier"
+                class="si-logo"> Zapier</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI"
+                class="si-logo"> OpenAI</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/slack/ECB22E" alt="Slack"
+                class="si-logo"> Slack</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/google/4285F4" alt="Google"
+                class="si-logo"> Google</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable"
+                class="si-logo"> Airtable</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp"
+                class="si-logo"> WhatsApp</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot"
+                class="si-logo"> HubSpot</div>
+            <div class="logo-ticker-item"><i class="fab fa-aws" style="color:#FF9900;font-size:1.2rem;"></i> AWS</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase"
+                class="si-logo"> Firebase</div>
+            <!-- Set 2 — exact duplicate for seamless loop -->
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe"
+                class="si-logo"> Stripe</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify"
+                class="si-logo"> Shopify</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" class="si-logo">
+              n8n</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier"
+                class="si-logo"> Zapier</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI"
+                class="si-logo"> OpenAI</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/slack/ECB22E" alt="Slack"
+                class="si-logo"> Slack</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/google/4285F4" alt="Google"
+                class="si-logo"> Google</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable"
+                class="si-logo"> Airtable</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp"
+                class="si-logo"> WhatsApp</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot"
+                class="si-logo"> HubSpot</div>
+            <div class="logo-ticker-item"><i class="fab fa-aws" style="color:#FF9900;font-size:1.2rem;"></i> AWS</div>
+            <div class="logo-ticker-item"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase"
+                class="si-logo"> Firebase</div>
+          </div>
+        </div>
+
+        <!-- Animated Statistics -->
+        <div class="hero-stats-grid">
+          <div class="hero-stat-item">
+            <span class="stat-number stat-number-value" data-target="100" data-suffix="+">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="stat-number stat-number-value" data-target="15" data-suffix="+">0</span>
+            <span class="stat-label">Countries</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="stat-number stat-number-value" data-target="50" data-suffix="+">0</span>
+            <span class="stat-label">Clients</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="stat-number stat-number-value" data-target="10000" data-suffix="+">0</span>
+            <span class="stat-label">Hours Saved</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="stat-number stat-number-value" data-target="1.2" data-suffix="M+">0</span>
+            <span class="stat-label">Revenue Generated</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated Scroll Down Indicator -->
+    <div class="scroll-indicator">
+      <a href="#process" aria-label="Scroll Down">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+      </a>
+    </div>
+  </section>
+  <!-- ═══════════════════════════════════════════════════
+       PHASE 24 — TECH ECOSYSTEM MARQUEE (Dual track)
+       ═══════════════════════════════════════════════════ -->
+  <div class="animated-divider"></div>
+  <section class="marquee-section" aria-label="Technology ecosystem">
+    <p class="marquee-label">Powered by the world's best tech stack</p>
+
+    <!-- Track 1: scrolls left -->
+    <div class="marquee-track-wrapper">
+      <div class="marquee-track">
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="si-logo"> React
+        </div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js" class="si-logo">
+          Next.js</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" class="si-logo">
+          Node.js</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" class="si-logo">
+          FastAPI</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="si-logo">
+          Python</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="si-logo">
+          Docker</div>
+        <div class="marquee-item"><i class="fab fa-aws" style="color:#FF9900;font-size:1.1rem;"></i> AWS</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase" class="si-logo">
+          Firebase</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI" class="si-logo">
+          OpenAI</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/langchain/ffffff" alt="LangChain"
+            class="si-logo"> LangChain</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" class="si-logo"> n8n</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL"
+            class="si-logo"> PostgreSQL</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel" class="si-logo">
+          Vercel</div>
+        <!-- Duplicate for infinite loop -->
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="si-logo"> React
+        </div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js" class="si-logo">
+          Next.js</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" class="si-logo">
+          Node.js</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" class="si-logo">
+          FastAPI</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="si-logo">
+          Python</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="si-logo">
+          Docker</div>
+        <div class="marquee-item"><i class="fab fa-aws" style="color:#FF9900;font-size:1.1rem;"></i> AWS</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase" class="si-logo">
+          Firebase</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI" class="si-logo">
+          OpenAI</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/langchain/ffffff" alt="LangChain"
+            class="si-logo"> LangChain</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" class="si-logo"> n8n</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL"
+            class="si-logo"> PostgreSQL</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel" class="si-logo">
+          Vercel</div>
+      </div>
+    </div>
+
+    <!-- Track 2: scrolls right (reverse) -->
+    <div class="marquee-track-wrapper">
+      <div class="marquee-track reverse">
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" class="si-logo">
+          MongoDB</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis" class="si-logo"> Redis
+        </div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" class="si-logo">
+          Supabase</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe" class="si-logo">
+          Stripe</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" class="si-logo">
+          WhatsApp API</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/twilio/F22F46" alt="Twilio" class="si-logo">
+          Twilio</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare"
+            class="si-logo"> Cloudflare</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Azure"
+            class="si-logo"> Azure</div>
+        <div class="marquee-item"><i class="fas fa-microchip" style="color:#00B5B8;font-size:1.1rem;"></i> Pinecone
+        </div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/anthropic/ffffff" alt="Claude AI"
+            class="si-logo"> Claude AI</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="Gemini"
+            class="si-logo"> Gemini</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" class="si-logo">
+          Laravel</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/qdrant/ffffff" alt="Qdrant" class="si-logo">
+          Qdrant</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify" class="si-logo">
+          Shopify</div>
+        <!-- Duplicate -->
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" class="si-logo">
+          MongoDB</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis" class="si-logo"> Redis
+        </div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" class="si-logo">
+          Supabase</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe" class="si-logo">
+          Stripe</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" class="si-logo">
+          WhatsApp API</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/twilio/F22F46" alt="Twilio" class="si-logo">
+          Twilio</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare"
+            class="si-logo"> Cloudflare</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Azure"
+            class="si-logo"> Azure</div>
+        <div class="marquee-item"><i class="fas fa-microchip" style="color:#00B5B8;font-size:1.1rem;"></i> Pinecone
+        </div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/anthropic/ffffff" alt="Claude AI"
+            class="si-logo"> Claude AI</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="Gemini"
+            class="si-logo"> Gemini</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel" class="si-logo">
+          Laravel</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/qdrant/ffffff" alt="Qdrant" class="si-logo">
+          Qdrant</div>
+        <div class="marquee-item"><img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify" class="si-logo">
+          Shopify</div>
       </div>
     </div>
   </section>
+  <div class="animated-divider"></div>
 
-  <div style="text-align:center; padding: 60px 20px; max-width: 900px; margin: 0 auto;">
-
-  <!-- Heading -->
-  <h2 style="font-size: 2.8rem; font-weight: 700; color: #1a202c; margin-bottom: 20px; line-height: 1.3;">
-    Built on a Foundation of 
-    <span style="color: #f97316;">Friendship</span> 
-    and 
-    <span style="color: #a78bfa;">Expertise</span>
-  </h2>
-
-  <!-- Paragraph -->
-  <p style="font-size: 1.2rem; line-height: 1.8; color: #4a5568; max-width: 800px; margin: 0 auto;">
-    Apitide began as a simple idea among college friends. We were united by a shared passion to create 
-    and a belief that our combined expertise could help businesses succeed. Today, that original 
-    partnership drives everything we do. We aren't just an agency; we're your dedicated team, 
-    ready to bring your vision to life.
-  </p>
-
-</div>
-
-
-  <!-- PROCESS -->
-  <!-- <section id="process">
-    <div class="process-container">
-      <h2 class="section-title">Our Proven Process</h2>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="process-number">01</div>
-          <h3 class="process-title">Discover</h3>
-          <p class="process-desc">We analyze your requirements and goals to understand your business needs and
-            objectives.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-number">02</div>
-          <h3 class="process-title">Design</h3>
-          <p class="process-desc">Create intuitive wireframes and beautiful design mockups tailored to your brand.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-number">03</div>
-          <h3 class="process-title">Develop</h3>
-          <p class="process-desc">Build and rigorously test your solution using modern technologies and best practices.
-          </p>
-        </div>
-        <div class="process-step">
-          <div class="process-number">04</div>
-          <h3 class="process-title">Launch</h3>
-          <p class="process-desc">Deploy your solution and monitor performance to ensure a successful launch.</p>
-        </div>
-      </div>
+  <!-- TRANSFORMATION SHOWCASE BANNER (FULL VIEWPORT WIDTH EDGE-TO-EDGE) -->
+  <section class="banner-showcase-section">
+    <div class="banner-showcase-wrapper">
+      <img src="{% static 'images/hero-visual.png' %}" alt="APITIDE - Code Transformation & AI Modernization"
+        class="transformation-banner-img" loading="lazy" />
     </div>
-  </section> -->
+  </section>
 
-  <section id="services" class="services-overview">
+  <!-- SERVICES OVERVIEW -->
+  <section class="section-dark-navy" id="services">
     <div class="container">
-      <h2 class="section-title">A Combination of  <span class="orange">Skills</span>, Built for Your  <span class="lavender">Growth</span></h2>
-      
+      <h2 class="section-title">A Combination of <span class="gradient-text-orange">Skills</span> Built for Your <span
+          class="gradient-text-blue">Growth</span></h2>
+      <p class="section-subtitle">We design websites, apps, AI systems, and marketing strategies that help businesses
+        grow faster, smarter, and stronger.</p>
 
       <div class="services-grid">
-        <div class="service-card">
+        <!-- AI Workflow Card -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>AI Workflow & N8N Automation</h3>
+          <p>Connect your business tools and let AI orchestrate the heavy lifting. We build automated data-pipelines,
+            sync leads across CRMs, and trigger tasks seamlessly.</p>
+          <div class="service-features">
+            <span class="feature-tag">N8N</span>
+            <span class="feature-tag">Make/Zapier</span>
+            <span class="feature-tag">REST APIs</span>
+            <span class="feature-tag">CRM Sync</span>
+          </div>
+          <a href="{% url 'services' %}#workflow" class="service-btn">Learn More</a>
+        </div>
+
+        <!-- Custom Web & Mobile Apps -->
+        <div class="service-card glass-card">
           <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3>Web Development</h3>
-          <p>Custom websites built with modern technologies and best practices</p>
+          <h3>Web & Mobile Development</h3>
+          <p>Custom full-stack web and mobile systems designed for lightning-fast performance, premium aesthetics, and
+            optimal conversion rates.</p>
           <div class="service-features">
-            <span class="feature-tag">React</span>
+            <span class="feature-tag">React.js</span>
+            <span class="feature-tag">Next.js</span>
+            <span class="feature-tag">Python/Django</span>
             <span class="feature-tag">Node.js</span>
-            <span class="feature-tag">Python</span>
+            <span class="feature-tag">Flutter</span>
           </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+          <a href="{% url 'services' %}#development" class="service-btn">Learn More</a>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-magic"></i></div>
-          <h3>No-Code Solutions</h3>
-          <p>Build powerful applications without writing a single line of code</p>
+        <!-- AI Solutions & Consulting -->
+        <div class="service-card glass-card">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI Consulting & RAG Chatbots</h3>
+          <p>Ground AI answers in your proprietary datasets. We implement Retrieval-Augmented Generation models that
+            guarantee high accuracy and secure operations.</p>
           <div class="service-features">
-            <span class="feature-tag">Bubble</span>
-            <span class="feature-tag">Webflow</span>
-            <span class="feature-tag">Zapier</span>
+            <span class="feature-tag">LLMs</span>
+            <span class="feature-tag">RAG Models</span>
+            <span class="feature-tag">OpenRouter</span>
+            <span class="feature-tag">LangChain</span>
           </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
+          <a href="{% url 'services' %}#ai-solutions" class="service-btn">Learn More</a>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="fab fa-wordpress"></i></div>
-          <h3>WordPress Development</h3>
-          <p>Powerful websites with easy content management and SEO optimization</p>
-          <div class="service-features">
-            <span class="feature-tag">Custom Themes</span>
-            <span class="feature-tag">Plugins</span>
-            <span class="feature-tag">E-commerce</span>
-          </div>
-          <a href="{% url 'contact' %}" class="service-btn">Learn More</a>
-        </div>
-
-
-
-
-
-
-
-
-
-
       </div>
-    </div>
     </div>
   </section>
 
+  <!-- DEDICATED AI SOLUTIONS CATALOG (ULTRA PREMIUM SAAS INTERFACE) -->
+  <section class="saas-solutions-section" id="ai-solutions">
+    <!-- Ambient Background Glows & Grid Layer -->
+    <div class="saas-bg-glow glow-blue"></div>
+    <div class="saas-bg-glow glow-purple"></div>
+    <div class="saas-grid-overlay"></div>
 
-  
+    <div class="saas-container">
 
+      <!-- Hero Header Stack -->
+      <div class="saas-hero-header">
+        <div class="hero-badge-pill">
+          <span class="badge-icon">⚡</span>
+          <span class="badge-text">AI Powered Automation</span>
+        </div>
 
+        <h2 class="saas-heading">
+          Custom Deployed <span class="text-electric-gradient">AI Solutions</span>
+        </h2>
 
-  <!-- WHY CHOOSE US SECTION -->
-  <section id="why">
+        <p class="saas-description">
+          We design and integrate specialized AI modules tailored for corporate productivity and software automation.
+        </p>
+      </div>
+
+      <!-- Main Glassmorphism Dashboard Container (28px Radius) -->
+      <div class="saas-dashboard-card">
+
+        <!-- Top Filter Bar -->
+        <div class="saas-filter-bar">
+          <!-- Left: All Solutions White Dropdown Button -->
+          <div class="saas-dropdown-wrapper">
+            <button class="saas-btn-dropdown solutions-tab-btn active" data-filter="all">
+              <i class="fas fa-th-large icon-left"></i>
+              <span>All Solutions (24)</span>
+            </button>
+          </div>
+
+          <!-- Right: Category Filter Pills -->
+          <div class="saas-category-pills">
+            <button class="saas-pill-btn active" data-filter="all">
+              <i class="fas fa-th-large"></i>
+              <span>All</span>
+              <span class="pill-badge">24</span>
+            </button>
+
+            <button class="saas-pill-btn" data-filter="communication">
+              <i class="fas fa-comments"></i>
+              <span>Communication</span>
+              <span class="pill-badge purple">4</span>
+            </button>
+
+            <button class="saas-pill-btn" data-filter="knowledge">
+              <i class="fas fa-book-open"></i>
+              <span>Document & Knowledge</span>
+              <span class="pill-badge cyan">6</span>
+            </button>
+
+            <button class="saas-pill-btn" data-filter="sales">
+              <i class="fas fa-chart-line"></i>
+              <span>Sales & Marketing</span>
+              <span class="pill-badge green">7</span>
+            </button>
+
+            <button class="saas-pill-btn" data-filter="operations">
+              <i class="fas fa-cogs"></i>
+              <span>Operations & Systems</span>
+              <span class="pill-badge orange">7</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dashboard Category Cards & Expandable Accordion Grids -->
+        <div class="saas-category-stack">
+
+          <!-- CATEGORY 1: Communication & Support (Purple Gradient) -->
+          <div class="saas-category-card theme-purple active" data-category="communication">
+            <div class="category-card-header">
+              <div class="header-left">
+                <div class="category-icon-box theme-purple">
+                  <i class="fas fa-comment-dots"></i>
+                </div>
+                <div class="category-info">
+                  <div class="title-row">
+                    <h3 class="category-title">Communication & Support</h3>
+                    <span class="service-badge theme-purple">4 Services</span>
+                  </div>
+                  <p class="category-subtitle">AI solutions to enhance customer communication and support operations.
+                  </p>
+                </div>
+              </div>
+              <button class="category-expand-btn theme-purple" aria-label="Toggle Category">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="category-expand-content">
+              <div class="services-grid-wrapper">
+
+                <!-- Service 1 -->
+                <div class="service-glass-card" data-card="01"
+                  data-desc="Real-time conversational agents designed to qualify inbound leads, schedule follow-ups, and automate customer voice touchpoints."
+                  data-tags="VAPI,Twilio,Voice Clone">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-purple"><i class="fas fa-phone-alt"></i></div>
+                    <span class="service-index">01</span>
+                  </div>
+                  <h4 class="service-title">AI Voice Agent</h4>
+                  <p class="service-desc">Real-time conversational agents designed to qualify inbound leads, schedule
+                    follow-ups, and automate customer voice touchpoints.</p>
+                  <div class="service-tags">
+                    <span class="tag">VAPI</span>
+                    <span class="tag">Twilio</span>
+                    <span class="tag">Voice Clone</span>
+                  </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-glass-card" data-card="02"
+                  data-desc="Automated front-desk routing systems that capture client specifications, book appointments, and log intake briefs to CRM pipelines."
+                  data-tags="Inbound Routing,Calendar Sync,API Hook">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-purple"><i class="fas fa-user-tie"></i></div>
+                    <span class="service-index">02</span>
+                  </div>
+                  <h4 class="service-title">AI Receptionist</h4>
+                  <p class="service-desc">Automated front-desk routing systems that capture client specifications, book
+                    appointments, and log intake briefs to CRM pipelines.</p>
+                  <div class="service-tags">
+                    <span class="tag">Inbound Routing</span>
+                    <span class="tag">Calendar Sync</span>
+                    <span class="tag">API Hook</span>
+                  </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-glass-card" data-card="03"
+                  data-desc="Multi-channel support agents answering technical inquiries, parsing client tickets, and escalating complex bugs automatically."
+                  data-tags="Zendesk API,LangChain,Auto-Escalate">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-purple"><i class="fas fa-headset"></i></div>
+                    <span class="service-index">03</span>
+                  </div>
+                  <h4 class="service-title">AI Customer Support</h4>
+                  <p class="service-desc">Multi-channel support agents answering technical inquiries, parsing client
+                    tickets, and escalating complex bugs automatically.</p>
+                  <div class="service-tags">
+                    <span class="tag">Zendesk API</span>
+                    <span class="tag">LangChain</span>
+                    <span class="tag">Auto-Escalate</span>
+                  </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-glass-card" data-card="09"
+                  data-desc="Direct integration with the official WhatsApp Business API, managing customer catalogs, orders, and automated intake chats."
+                  data-tags="WhatsApp API,Meta Cloud,Interactive Catalog">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-purple"><i class="fab fa-whatsapp"></i></div>
+                    <span class="service-index">09</span>
+                  </div>
+                  <h4 class="service-title">WhatsApp AI</h4>
+                  <p class="service-desc">Direct integration with the official WhatsApp Business API, managing customer
+                    catalogs, orders, and automated intake chats.</p>
+                  <div class="service-tags">
+                    <span class="tag">WhatsApp API</span>
+                    <span class="tag">Meta Cloud</span>
+                    <span class="tag">Interactive Catalog</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- CATEGORY 2: Document & Knowledge (Cyan Gradient) -->
+          <div class="saas-category-card theme-cyan active" data-category="knowledge">
+            <div class="category-card-header">
+              <div class="header-left">
+                <div class="category-icon-box theme-cyan">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <div class="category-info">
+                  <div class="title-row">
+                    <h3 class="category-title">Document & Knowledge</h3>
+                    <span class="service-badge theme-cyan">6 Services</span>
+                  </div>
+                  <p class="category-subtitle">Intelligent document processing, knowledge management and information
+                    extraction.</p>
+                </div>
+              </div>
+              <button class="category-expand-btn theme-cyan" aria-label="Toggle Category">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="category-expand-content">
+              <div class="services-grid-wrapper">
+
+                <!-- Service 5 -->
+                <div class="service-glass-card" data-card="04"
+                  data-desc="Retrieval-Augmented Generation models grounded in your proprietary databases to give hallucination-free factual answers."
+                  data-tags="Pinecone,Vector Embeddings,Semantic Search">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-cyan"><i class="fas fa-brain"></i></div>
+                    <span class="service-index">04</span>
+                  </div>
+                  <h4 class="service-title">RAG Chatbot</h4>
+                  <p class="service-desc">Retrieval-Augmented Generation models grounded in your proprietary databases
+                    to give hallucination-free factual answers.</p>
+                  <div class="service-tags">
+                    <span class="tag">Pinecone</span>
+                    <span class="tag">Vector Embeddings</span>
+                    <span class="tag">Semantic Search</span>
+                  </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-glass-card" data-card="05"
+                  data-desc="LlamaIndex integrations grounded in medical directories (e.g. WHO guidelines) to query verified diagnostic and operational data."
+                  data-tags="HIPAA Crypt,WHO Directory,Safe LLM">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-cyan"><i class="fas fa-plus-square"></i></div>
+                    <span class="service-index">05</span>
+                  </div>
+                  <h4 class="service-title">Healthcare AI</h4>
+                  <p class="service-desc">LlamaIndex integrations grounded in medical directories (e.g. WHO guidelines)
+                    to query verified diagnostic and operational data.</p>
+                  <div class="service-tags">
+                    <span class="tag">HIPAA Crypt</span>
+                    <span class="tag">WHO Directory</span>
+                    <span class="tag">Safe LLM</span>
+                  </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-glass-card" data-card="12"
+                  data-desc="Extract terms, liabilities, execution dates, and performance clauses from commercial lease and vendor contracts."
+                  data-tags="PDF Extract,LlamaParser,Risk Score">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-cyan"><i class="fas fa-file-alt"></i></div>
+                    <span class="service-index">12</span>
+                  </div>
+                  <h4 class="service-title">Document AI</h4>
+                  <p class="service-desc">Extract terms, liabilities, execution dates, and performance clauses from
+                    commercial lease and vendor contracts.</p>
+                  <div class="service-tags">
+                    <span class="tag">PDF Extract</span>
+                    <span class="tag">LlamaParser</span>
+                    <span class="tag">Risk Score</span>
+                  </div>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-glass-card" data-card="13"
+                  data-desc="Scan receipt images and physical cargo documentation to structure line items, taxing values, and vendor names."
+                  data-tags="Tesseract,JSON Schema,Invoice Parse">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-cyan"><i class="fas fa-qrcode"></i></div>
+                    <span class="service-index">13</span>
+                  </div>
+                  <h4 class="service-title">OCR Automation</h4>
+                  <p class="service-desc">Scan receipt images and physical cargo documentation to structure line items,
+                    taxing values, and vendor names.</p>
+                  <div class="service-tags">
+                    <span class="tag">Tesseract</span>
+                    <span class="tag">JSON Schema</span>
+                    <span class="tag">Invoice Parse</span>
+                  </div>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="service-glass-card" data-card="14"
+                  data-desc="Grounded internal documentation systems that let developers and team members query company databases securely."
+                  data-tags="Notion API,Confluence,Secure Key">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-cyan"><i class="fas fa-database"></i></div>
+                    <span class="service-index">14</span>
+                  </div>
+                  <h4 class="service-title">Knowledge Base AI</h4>
+                  <p class="service-desc">Grounded internal documentation systems that let developers and team members
+                    query company databases securely.</p>
+                  <div class="service-tags">
+                    <span class="tag">Notion API</span>
+                    <span class="tag">Confluence</span>
+                    <span class="tag">Secure Key</span>
+                  </div>
+                </div>
+
+                <!-- Service 10 -->
+                <div class="service-glass-card" data-card="15"
+                  data-desc="Transcribe corporate audio recordings, extract action items, classify speaker roles, and generate follow-up briefs."
+                  data-tags="Whisper API,Speaker Diarization,Auto Briefs">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-cyan"><i class="fas fa-microphone-alt"></i></div>
+                    <span class="service-index">15</span>
+                  </div>
+                  <h4 class="service-title">Meeting Summaries</h4>
+                  <p class="service-desc">Transcribe corporate audio recordings, extract action items, classify speaker
+                    roles, and generate follow-up briefs.</p>
+                  <div class="service-tags">
+                    <span class="tag">Whisper API</span>
+                    <span class="tag">Speaker Diarization</span>
+                    <span class="tag">Auto Briefs</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- CATEGORY 3: Sales & Marketing (Green Gradient) -->
+          <div class="saas-category-card theme-green active" data-category="sales">
+            <div class="category-card-header">
+              <div class="header-left">
+                <div class="category-icon-box theme-green">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="category-info">
+                  <div class="title-row">
+                    <h3 class="category-title">Sales & Marketing</h3>
+                    <span class="service-badge theme-green">7 Services</span>
+                  </div>
+                  <p class="category-subtitle">Automate outreach, engagement and marketing workflows to drive growth.
+                  </p>
+                </div>
+              </div>
+              <button class="category-expand-btn theme-green" aria-label="Toggle Category">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="category-expand-content">
+              <div class="services-grid-wrapper">
+
+                <!-- Service 11 -->
+                <div class="service-glass-card" data-card="06"
+                  data-desc="Continuous pipeline routing pipelines that qualify leads, assign sales reps, track touchpoints, and forecast monthly pipelines."
+                  data-tags="Salesforce Sync,Lead Routing,Metrics Analytics">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-green"><i class="fas fa-funnel-dollar"></i></div>
+                    <span class="service-index">06</span>
+                  </div>
+                  <h4 class="service-title">Sales Automation</h4>
+                  <p class="service-desc">Continuous pipeline routing pipelines that qualify leads, assign sales reps,
+                    track touchpoints, and forecast monthly pipelines.</p>
+                  <div class="service-tags">
+                    <span class="tag">Salesforce Sync</span>
+                    <span class="tag">Lead Routing</span>
+                    <span class="tag">Metrics Analytics</span>
+                  </div>
+                </div>
+
+                <!-- Service 12 -->
+                <div class="service-glass-card" data-card="10"
+                  data-desc="Automated personalized drafting agents that construct cold email lists, verify addresses, and write context-aware replies."
+                  data-tags="Instantly.ai,GPT Outreach,SMTP Verify">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-green"><i class="fas fa-envelope-open-text"></i></div>
+                    <span class="service-index">10</span>
+                  </div>
+                  <h4 class="service-title">Email Automation</h4>
+                  <p class="service-desc">Automated personalized drafting agents that construct cold email lists, verify
+                    addresses, and write context-aware replies.</p>
+                  <div class="service-tags">
+                    <span class="tag">Instantly.ai</span>
+                    <span class="tag">GPT Outreach</span>
+                    <span class="tag">SMTP Verify</span>
+                  </div>
+                </div>
+
+                <!-- Service 13 -->
+                <div class="service-glass-card" data-card="16"
+                  data-desc="Auto-generate customer quotations, scoping grids, and custom service level agreements based on CRM intake fields."
+                  data-tags="DocuSign API,Template Build,CRM Hydration">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-green"><i class="fas fa-file-signature"></i></div>
+                    <span class="service-index">16</span>
+                  </div>
+                  <h4 class="service-title">Proposal Generator</h4>
+                  <p class="service-desc">Auto-generate customer quotations, scoping grids, and custom service level
+                    agreements based on CRM intake fields.</p>
+                  <div class="service-tags">
+                    <span class="tag">DocuSign API</span>
+                    <span class="tag">Template Build</span>
+                    <span class="tag">CRM Hydration</span>
+                  </div>
+                </div>
+
+                <!-- Service 14 -->
+                <div class="service-glass-card" data-card="18"
+                  data-desc="Outreach lead qualification pipelines that scrape news logs, assess company growth triggers, and launch outreach campaigns."
+                  data-tags="Apollo.io,Trigger Scraper,Campaign Auto">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-green"><i class="fas fa-paper-plane"></i></div>
+                    <span class="service-index">18</span>
+                  </div>
+                  <h4 class="service-title">Cold Outreach</h4>
+                  <p class="service-desc">Outreach lead qualification pipelines that scrape news logs, assess company
+                    growth triggers, and launch outreach campaigns.</p>
+                  <div class="service-tags">
+                    <span class="tag">Apollo.io</span>
+                    <span class="tag">Trigger Scraper</span>
+                    <span class="tag">Campaign Auto</span>
+                  </div>
+                </div>
+
+                <!-- Service 15 -->
+                <div class="service-glass-card" data-card="19"
+                  data-desc="Monitor prospective profile activity, generate relevant comment drafts, and schedule custom connection request sequences."
+                  data-tags="LinkedIn API,Auto Comment,CRM Lead Feed">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-green"><i class="fab fa-linkedin"></i></div>
+                    <span class="service-index">19</span>
+                  </div>
+                  <h4 class="service-title">LinkedIn Automation</h4>
+                  <p class="service-desc">Monitor prospective profile activity, generate relevant comment drafts, and
+                    schedule custom connection request sequences.</p>
+                  <div class="service-tags">
+                    <span class="tag">LinkedIn API</span>
+                    <span class="tag">Auto Comment</span>
+                    <span class="tag">CRM Lead Feed</span>
+                  </div>
+                </div>
+
+                <!-- Service 16 -->
+                <div class="service-glass-card" data-card="20"
+                  data-desc="AI social media planners that script marketing posts, generate product layouts, and queue postings across social platforms."
+                  data-tags="Buffer API,AI Copy,Image Generator">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-green"><i class="fas fa-ad"></i></div>
+                    <span class="service-index">20</span>
+                  </div>
+                  <h4 class="service-title">Marketing Automation</h4>
+                  <p class="service-desc">AI social media planners that script marketing posts, generate product
+                    layouts, and queue postings across social platforms.</p>
+                  <div class="service-tags">
+                    <span class="tag">Buffer API</span>
+                    <span class="tag">AI Copy</span>
+                    <span class="tag">Image Generator</span>
+                  </div>
+                </div>
+
+                <!-- Service 17 -->
+                <div class="service-glass-card" data-card="21"
+                  data-desc="Evaluate incoming customer form details using GPT models to grade budgets, schedules, timelines, and technical match scores."
+                  data-tags="GPT-4 Classifier,CRM Scoring,Slack Notify">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-green"><i class="fas fa-filter"></i></div>
+                    <span class="service-index">21</span>
+                  </div>
+                  <h4 class="service-title">Lead Qualification</h4>
+                  <p class="service-desc">Evaluate incoming customer form details using GPT models to grade budgets,
+                    schedules, timelines, and technical match scores.</p>
+                  <div class="service-tags">
+                    <span class="tag">GPT-4 Classifier</span>
+                    <span class="tag">CRM Scoring</span>
+                    <span class="tag">Slack Notify</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- CATEGORY 4: Operations & Systems (Orange Gradient) -->
+          <div class="saas-category-card theme-orange active" data-category="operations">
+            <div class="category-card-header">
+              <div class="header-left">
+                <div class="category-icon-box theme-orange">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <div class="category-info">
+                  <div class="title-row">
+                    <h3 class="category-title">Operations & Systems</h3>
+                    <span class="service-badge theme-orange">7 Services</span>
+                  </div>
+                  <p class="category-subtitle">Streamline operations, integrate systems and automate business processes.
+                  </p>
+                </div>
+              </div>
+              <button class="category-expand-btn theme-orange" aria-label="Toggle Category">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="category-expand-content">
+              <div class="services-grid-wrapper">
+
+                <!-- Service 18 -->
+                <div class="service-glass-card" data-card="07"
+                  data-desc="Two-way sync configurations mapping customer profiles, transaction records, and communication histories across database silos."
+                  data-tags="HubSpot,Pipedrive,Webhooks">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-orange"><i class="fas fa-sync-alt"></i></div>
+                    <span class="service-index">07</span>
+                  </div>
+                  <h4 class="service-title">CRM Automation</h4>
+                  <p class="service-desc">Two-way sync configurations mapping customer profiles, transaction records,
+                    and communication histories across database silos.</p>
+                  <div class="service-tags">
+                    <span class="tag">HubSpot</span>
+                    <span class="tag">Pipedrive</span>
+                    <span class="tag">Webhooks</span>
+                  </div>
+                </div>
+
+                <!-- Service 19 -->
+                <div class="service-glass-card" data-card="08"
+                  data-desc="Applicant tracking pipelines that parse incoming resumes, check skill matches, and trigger onboarding sequences."
+                  data-tags="Resume Parser,Auto Screener,Workday Hook">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-orange"><i class="fas fa-users-cog"></i></div>
+                    <span class="service-index">08</span>
+                  </div>
+                  <h4 class="service-title">HR Automation</h4>
+                  <p class="service-desc">Applicant tracking pipelines that parse incoming resumes, check skill matches,
+                    and trigger onboarding sequences.</p>
+                  <div class="service-tags">
+                    <span class="tag">Resume Parser</span>
+                    <span class="tag">Auto Screener</span>
+                    <span class="tag">Workday Hook</span>
+                  </div>
+                </div>
+
+                <!-- Service 20 -->
+                <div class="service-glass-card" data-card="11"
+                  data-desc="Reconcile bank ledgers against accounting entries, identify anomalies, and sync cash logs across business accounts."
+                  data-tags="QuickBooks,Xero API,Ledger Sync">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-orange"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <span class="service-index">11</span>
+                  </div>
+                  <h4 class="service-title">Finance Automation</h4>
+                  <p class="service-desc">Reconcile bank ledgers against accounting entries, identify anomalies, and
+                    sync cash logs across business accounts.</p>
+                  <div class="service-tags">
+                    <span class="tag">QuickBooks</span>
+                    <span class="tag">Xero API</span>
+                    <span class="tag">Ledger Sync</span>
+                  </div>
+                </div>
+
+                <!-- Service 21 -->
+                <div class="service-glass-card" data-card="17"
+                  data-desc="Auto-generate client invoices, dispatch reminders for payment dues, and reconcile transactions inside Stripe billing engines."
+                  data-tags="Stripe Invoicing,Auto Reminder,Reconcile Loop">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-orange"><i class="fas fa-receipt"></i></div>
+                    <span class="service-index">17</span>
+                  </div>
+                  <h4 class="service-title">Invoice Automation</h4>
+                  <p class="service-desc">Auto-generate client invoices, dispatch reminders for payment dues, and
+                    reconcile transactions inside Stripe billing engines.</p>
+                  <div class="service-tags">
+                    <span class="tag">Stripe Invoicing</span>
+                    <span class="tag">Auto Reminder</span>
+                    <span class="tag">Reconcile Loop</span>
+                  </div>
+                </div>
+
+                <!-- Service 22 -->
+                <div class="service-glass-card" data-card="22"
+                  data-desc="Custom n8n workflow loops triggering notifications, validating data payloads, and syncing calendars automatically."
+                  data-tags="n8n Loops,Webhooks,JSON Parse">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-orange"><i class="fas fa-network-wired"></i></div>
+                    <span class="service-index">22</span>
+                  </div>
+                  <h4 class="service-title">Workflow Automation</h4>
+                  <p class="service-desc">Custom n8n workflow loops triggering notifications, validating data payloads,
+                    and syncing calendars automatically.</p>
+                  <div class="service-tags">
+                    <span class="tag">n8n Loops</span>
+                    <span class="tag">Webhooks</span>
+                    <span class="tag">JSON Parse</span>
+                  </div>
+                </div>
+
+                <!-- Service 23 -->
+                <div class="service-glass-card" data-card="23"
+                  data-desc="FastAPI custom wrappers that unify separate web platforms into consolidated endpoints with robust authorization scopes."
+                  data-tags="FastAPI,JWT Auth,Pydantic Schema">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-orange"><i class="fas fa-code"></i></div>
+                    <span class="service-index">23</span>
+                  </div>
+                  <h4 class="service-title">API Automation</h4>
+                  <p class="service-desc">FastAPI custom wrappers that unify separate web platforms into consolidated
+                    endpoints with robust authorization scopes.</p>
+                  <div class="service-tags">
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">JWT Auth</span>
+                    <span class="tag">Pydantic Schema</span>
+                  </div>
+                </div>
+
+                <!-- Service 24 -->
+                <div class="service-glass-card" data-card="24"
+                  data-desc="Unify legacy enterprise systems (ERPs, billing databases) with modern LLM agents and web integrations securely."
+                  data-tags="Legacy ERP,Database Bridge,AWS Gateway">
+                  <div class="service-card-top">
+                    <div class="service-icon-box theme-orange"><i class="fas fa-network-wired"></i></div>
+                    <span class="service-index">24</span>
+                  </div>
+                  <h4 class="service-title">Enterprise Integration</h4>
+                  <p class="service-desc">Unify legacy enterprise systems (ERPs, billing databases) with modern LLM
+                    agents and web integrations securely.</p>
+                  <div class="service-tags">
+                    <span class="tag">Legacy ERP</span>
+                    <span class="tag">Database Bridge</span>
+                    <span class="tag">AWS Gateway</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL PROMO & DISCOUNT OFFER BANNER (100% EDGE-TO-EDGE TOUCH) -->
+  <section class="ai-promo-banner-section">
+    <a href="{% url 'contact' %}" class="ai-promo-banner-link" title="Claim 20% Off Professional Software Development Services">
+      <div class="ai-promo-banner-card">
+        <img src="{% static 'images/software_discount_banner.png' %}" alt="Up to 20% Off on Professional Software Development Services" class="ai-promo-banner-img" loading="lazy">
+        <div class="ai-promo-banner-glow"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Service Details Glass Modal -->
+  <div class="solution-modal-overlay" id="solution-modal">
+    <div class="solution-modal-card">
+      <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon" id="modal-icon"></div>
+        <div>
+          <h3 id="modal-title">Service Title</h3>
+          <span class="modal-category-badge" id="modal-category">Category</span>
+        </div>
+      </div>
+      <p class="modal-desc" id="modal-desc">Service description goes here...</p>
+      <div class="modal-tags" id="modal-tags"></div>
+      <div class="modal-footer">
+        <a href="{% url 'contact' %}" class="modal-action-btn">Request Implementation <i
+            class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- N8N SHOWCASE (PHASE 13) -->
+  <section class="section-dark-navy" id="n8n-showcase">
     <div class="container">
-      <h2 class="section-title">Why Business Owners Choose Apitide</h2>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">👥</div>
-          <h3 class="why-heading">Dedicated Customer Support</h3>
-          <p class="why-content">We provide dedicated 24/7 support to answer your questions and keep your project on track.</p>
+      <h2 class="section-title">Automated <span class="gradient-text-orange">n8n Workflows</span></h2>
+      <p class="section-subtitle">We design corporate pipeline integrations that connect APIs and route enterprise data
+        automatically.</p>
+
+      <!-- Flow Metrics -->
+      <div class="flow-metrics-grid">
+        <div class="service-card glass-card flow-metric-card">
+          <h3 class="gradient-text-orange">160+</h3>
+          <p>Hours Saved / Month</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">⚡</div>
-          <h3 class="why-heading">Rapid Delivery</h3>
-          <p class="why-content">Our agile and efficient process is designed to get your project launched quickly without sacrificing quality.</p>
+        <div class="service-card glass-card flow-metric-card">
+          <h3 class="gradient-text-blue">350%</h3>
+          <p>Average Investment ROI</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">💬</div>
-          <h3 class="why-heading">Free Consultation</h3>
-          <p class="why-content">Your journey starts with a free, no-obligation consultation to discuss your idea and how we can help.</p>
+        <div class="service-card glass-card flow-metric-card">
+          <h3 class="gradient-text-cyan">&lt; 1.2s</h3>
+          <p>Pipeline Trigger Latency</p>
         </div>
-        <div class="why-card">
-          <div class="why-icon">🎯</div>
-          <h3 class="why-heading">MVP Approach</h3>
-          <p class="why-content">We focus on core features to get your idea to market fast and affordably, allowing you to test and grow.</p>
+      </div>
+
+      <!-- Flow Diagram -->
+      <div class="n8n-flow-container">
+        <!-- 1. Lead Capture -->
+        <div class="flow-node active">
+          <div class="flow-icon"><i class="fas fa-filter"></i></div>
+          <h4>1. Lead Capture</h4>
+          <span class="flow-tag">Webhook Trigger</span>
         </div>
-        <div class="why-card">
-          <div class="why-icon">🤖</div>
-          <h3 class="why-heading">AI-First Solutions</h3>
-          <p class="why-content">We integrate smart, AI-powered solutions to give your business a competitive edge for the future.</p>
+
+        <div class="flow-connector">
+          <div class="flow-pulse"></div>
         </div>
-        <div class="why-card">
-          <div class="why-icon">🌍</div>
-          <h3 class="why-heading">Global Scalability</h3>
-          <p class="why-content">Our solutions are built to scale seamlessly, helping your business grow locally and globally without limits.</p>
+
+        <!-- 2. CRM Staging -->
+        <div class="flow-node">
+          <div class="flow-icon"><i class="fas fa-sync-alt"></i></div>
+          <h4>2. CRM Staging</h4>
+          <span class="flow-tag">HubSpot API</span>
+        </div>
+
+        <div class="flow-connector">
+          <div class="flow-pulse"></div>
+        </div>
+
+        <!-- 3. AI Enrichment -->
+        <div class="flow-node">
+          <div class="flow-icon"><i class="fas fa-brain"></i></div>
+          <h4>3. AI Enrichment</h4>
+          <span class="flow-tag">GPT-4 Classify</span>
+        </div>
+
+        <div class="flow-connector">
+          <div class="flow-pulse"></div>
+        </div>
+
+        <!-- 4. Outreach Dispatch -->
+        <div class="flow-node">
+          <div class="flow-icon"><i class="fab fa-whatsapp"></i></div>
+          <h4>4. WhatsApp Out</h4>
+          <span class="flow-tag">Meta Cloud</span>
+        </div>
+
+        <div class="flow-connector">
+          <div class="flow-pulse"></div>
+        </div>
+
+        <!-- 5. Logging -->
+        <div class="flow-node">
+          <div class="flow-icon"><i class="fas fa-table"></i></div>
+          <h4>5. Logging</h4>
+          <span class="flow-tag">Google Sheets</span>
+        </div>
+
+        <div class="flow-connector">
+          <div class="flow-pulse"></div>
+        </div>
+
+        <!-- 6. Team Alert -->
+        <div class="flow-node">
+          <div class="flow-icon"><i class="fab fa-slack"></i></div>
+          <h4>6. Team Alert</h4>
+          <span class="flow-tag">Slack Channel</span>
+        </div>
+
+        <div class="flow-connector">
+          <div class="flow-pulse"></div>
+        </div>
+
+        <!-- 7. Analytics -->
+        <div class="flow-node">
+          <div class="flow-icon"><i class="fas fa-chart-bar"></i></div>
+          <h4>7. Analytics</h4>
+          <span class="flow-tag">Retool Sync</span>
         </div>
       </div>
     </div>
   </section>
-  
+
+  <!-- PROCESS SECTION (SDLC BASED) -->
+  <section class="section-light-slate" id="process">
+    <div class="container">
+      <h2 class="section-title">Our SDLC-Based <span class="gradient-text-blue">Process</span></h2>
+      <p class="section-subtitle">We follow the Software Development Life Cycle (SDLC) adapted for rapid AI & automation
+        engineering.</p>
+
+      <div class="process-container">
+        <!-- Scroll progress trace line (Phase 17) -->
+        <div class="process-progress-line"></div>
+
+        <!-- Step 1: Discovery -->
+        <div class="process-step">
+          <div class="process-step-marker">1</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 01 - SDLC Discovery</span>
+              <h3>Discovery & Audit</h3>
+              <p>We perform deep operational scans of your workflow, mapping team bottlenecks, identifying repetitive
+                manual tasks, and calculating automation feasibility parameters.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Research -->
+        <div class="process-step">
+          <div class="process-step-marker">2</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 02 - SDLC Research</span>
+              <h3>Technical Research</h3>
+              <p>We analyze tool integration APIs, audit legacy database constraints, inspect authentication flows, and
+                select the optimal tech stack for your systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Strategy -->
+        <div class="process-step">
+          <div class="process-step-marker">3</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 03 - SDLC Strategy</span>
+              <h3>Architecture Strategy</h3>
+              <p>We sequence data flow pipelines, establish secure access policies, diagram cloud infrastructure layers,
+                and define operational ROI target metrics.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Wireframe -->
+        <div class="process-step">
+          <div class="process-step-marker">4</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 04 - SDLC Wireframing</span>
+              <h3>System Wireframe</h3>
+              <p>We structure visual layout components, draft backend logic routes, map trigger-action flows, and wire
+                up database schema nodes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5: Design -->
+        <div class="process-step">
+          <div class="process-step-marker">5</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 05 - SDLC Design</span>
+              <h3>Premium UI/UX Design</h3>
+              <p>We convert wireframes into sleek, glassmorphic interfaces with custom palettes, rich styling tokens,
+                and micro-interaction curves.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 6: Development -->
+        <div class="process-step">
+          <div class="process-step-marker">6</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 06 - SDLC Development</span>
+              <h3>Development & Code</h3>
+              <p>Our developers code secure full-stack software interfaces, configure custom API gateways, and construct
+                production-ready n8n nodes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 7: Testing -->
+        <div class="process-step">
+          <div class="process-step-marker">7</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 07 - SDLC Testing</span>
+              <h3>Rigorous Testing</h3>
+              <p>We trigger end-to-end sandbox loads, test error-handling fail-safes, validate webhooks under load, and
+                implement prompt alignment filters.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 8: Deployment -->
+        <div class="process-step">
+          <div class="process-step-marker">8</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 08 - SDLC Deployment</span>
+              <h3>Production Deployment</h3>
+              <p>We deploy final assets onto scalable cloud instances (AWS, Railway, Vercel, Netlify), direct live
+                webhook pipelines, and implement DNS records.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 9: Monitoring -->
+        <div class="process-step">
+          <div class="process-step-marker">9</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 09 - SDLC Monitoring</span>
+              <h3>Continuous Monitoring</h3>
+              <p>We coordinate real-time error logger dispatches, inspect trace parameters, trigger warning alerts on
+                Slack channels, and trace status checks.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 10: Optimization -->
+        <div class="process-step">
+          <div class="process-step-marker">10</div>
+          <div class="process-step-content">
+            <div class="process-step-card">
+              <span class="process-number">Phase 10 - SDLC Optimization</span>
+              <h3>Iterative Optimization</h3>
+              <p>We tune prompt variables, cache database query structures to minimize latency, adjust resource
+                pipelines, and optimize operational speed limits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE TRANSFORM (PHASE 15) -->
+  <section class="section-dark-navy" id="industries">
+    <div class="container">
+      <h2 class="section-title">Industries We <span class="gradient-text-cyan">Transform</span></h2>
+      <p class="section-subtitle">We deploy custom workflow automations and B2B software solutions tailored to
+        sector-specific bottlenecks.</p>
+
+      <div class="industry-layout-container">
+        <!-- Sidebar Navigation (15 Industries) -->
+        <div class="industry-sidebar">
+          <button class="industry-tab-btn active" data-industry="healthcare"><i class="fas fa-notes-medical"></i>
+            Healthcare</button>
+          <button class="industry-tab-btn" data-industry="restaurants"><i class="fas fa-utensils"></i>
+            Restaurants</button>
+          <button class="industry-tab-btn" data-industry="manufacturing"><i class="fas fa-industry"></i>
+            Manufacturing</button>
+          <button class="industry-tab-btn" data-industry="education"><i class="fas fa-graduation-cap"></i>
+            Education</button>
+          <button class="industry-tab-btn" data-industry="finance"><i class="fas fa-wallet"></i> Finance</button>
+          <button class="industry-tab-btn" data-industry="realestate"><i class="fas fa-building"></i> Real
+            Estate</button>
+          <button class="industry-tab-btn" data-industry="legal"><i class="fas fa-balance-scale"></i> Legal</button>
+          <button class="industry-tab-btn" data-industry="construction"><i class="fas fa-hard-hat"></i>
+            Construction</button>
+          <button class="industry-tab-btn" data-industry="automotive"><i class="fas fa-car"></i> Automotive</button>
+          <button class="industry-tab-btn" data-industry="hospitality"><i class="fas fa-hotel"></i> Hospitality</button>
+          <button class="industry-tab-btn" data-industry="retail"><i class="fas fa-shopping-bag"></i> Retail</button>
+          <button class="industry-tab-btn" data-industry="jewellery"><i class="fas fa-gem"></i> Jewellery</button>
+          <button class="industry-tab-btn" data-industry="government"><i class="fas fa-university"></i>
+            Government</button>
+          <button class="industry-tab-btn" data-industry="startups"><i class="fas fa-rocket"></i> Startups</button>
+          <button class="industry-tab-btn" data-industry="enterprise"><i class="fas fa-sitemap"></i> Enterprise</button>
+        </div>
+
+        <!-- Detail Cards Container -->
+        <div class="industry-detail-container">
+
+          <!-- 1. Healthcare -->
+          <div class="service-card glass-card industry-detail-card active" id="ind-healthcare">
+            <div class="ind-detail-header">
+              <i class="fas fa-notes-medical"></i>
+              <h3>Healthcare & MedTech</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Manual intake data entry errors.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Patient charting backlog delays.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> HIPAA regulatory compliance friction.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> HIPAA-secure API bridges.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Grounded clinical RAG chatbots.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Automated diagnostic data parsers.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Patient Intake Form Submit
+                ➔ HIPAA-secure Data Encryption ➔ Auto-sync with local EHR database system ➔ Automated Slack clinical
+                staffing assignment.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>15+ working hours saved weekly per nurse practitioner; 40% scheduling overhead reduction.</p>
+            </div>
+          </div>
+
+          <!-- 2. Restaurants -->
+          <div class="service-card glass-card industry-detail-card" id="ind-restaurants">
+            <div class="ind-detail-header">
+              <i class="fas fa-utensils"></i>
+              <h3>Restaurants & Food Services</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Dine-in ordering delay bottlenecks during rush
+                    hours.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Order staging miscommunications between cashiers
+                    and kitchen.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Manual invoice matching lags.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Real-time WebSocket table booking and ordering.
+                  </li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Synchronized POS and kitchen display dashboards.
+                  </li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Automatic Stripe inventory reconcile syncs.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Table QR Order checkout
+                scan ➔ Immediate WebSocket dispatch to kitchen display ➔ Auto-reconcile ingredients catalog ➔ Auto
+                Stripe receipt dispatcher.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>35% dinner table rotation speed boost; 100% order synchronization accuracy.</p>
+            </div>
+          </div>
+
+          <!-- 3. Manufacturing -->
+          <div class="service-card glass-card industry-detail-card" id="ind-manufacturing">
+            <div class="ind-detail-header">
+              <i class="fas fa-industry"></i>
+              <h3>Manufacturing & Logistics</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Raw materials tracking bottlenecks.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Equipment maintenance diagnostic delays.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Lack of supplier database sync integration.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> n8n inventory tracking webhook loops.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Automated sensor anomaly triggers.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Supplier ERP API bridges.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Sensor reports machine
+                vibration threshold exceed ➔ Auto-trigger n8n maintenance ticket ➔ Query local inventory for replacement
+                parts ➔ Alert technician on Slack.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>25% reduction in production downtime; 4.5x faster purchase order cycles.</p>
+            </div>
+          </div>
+
+          <!-- 4. Education -->
+          <div class="service-card glass-card industry-detail-card" id="ind-education">
+            <div class="ind-detail-header">
+              <i class="fas fa-graduation-cap"></i>
+              <h3>Education & EdTech</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> High self-paced platform course dropout rates.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Delayed code script evaluations.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Static curriculums failing to adapt to student
+                    skills.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> OpenRouter LLM study guides.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Isolated Docker script code execution sandboxes.
+                  </li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Adaptive test grading analytics.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Student script submission ➔
+                Spin up isolated Docker sandbox container ➔ Execute script logic ➔ Pass stdout traces to OpenRouter API
+                ➔ Returnadaptive hints.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>45% graduation retention increase; less than 3s execution feedback loop speeds.</p>
+            </div>
+          </div>
+
+          <!-- 5. Finance -->
+          <div class="service-card glass-card industry-detail-card" id="ind-finance">
+            <div class="ind-detail-header">
+              <i class="fas fa-wallet"></i>
+              <h3>Finance & Accounting</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Time-consuming manual bank ledger reconciliations.
+                  </li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Delayed expense report compliance audits.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Billing errors on legacy accounting tools.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Automated QuickBooks/Xero ledger sync.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> OCR anomaly detection expense checkers.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Stripe invoicing automated loops.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Retrieve bank API
+                transaction statements daily ➔ Cross-reference records in database ➔ Auto-reconcile match in QuickBooks
+                ➔ Flag mismatch to Slack accounting channel.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>90% accounting entry overhead savings; monthly close cycle reduced from 10 days to 2.</p>
+            </div>
+          </div>
+
+          <!-- 6. Real Estate -->
+          <div class="service-card glass-card industry-detail-card" id="ind-realestate">
+            <div class="ind-detail-header">
+              <i class="fas fa-building"></i>
+              <h3>Real Estate & Property Management</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Manual lease contract evaluations consume hours.
+                  </li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Inbound property viewing lead delays.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Static catalog updates across directories.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> LlamaParser lease analyzer agents.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Auto SMS viewing appointment schedulers.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Central database catalog syndication.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Lease PDF uploaded to
+                portal ➔ LlamaParser extracts execution dates and rates ➔ DocuSign templates generate automatically ➔
+                Alert property manager.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>80% lease contract auditing speed increase; 50% increase in sales-qualified pipelines.</p>
+            </div>
+          </div>
+
+          <!-- 7. Legal -->
+          <div class="service-card glass-card industry-detail-card" id="ind-legal">
+            <div class="ind-detail-header">
+              <i class="fas fa-balance-scale"></i>
+              <h3>Legal Services</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Hours spent researching case precedents manually.
+                  </li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Proposal and service level agreement draft delays.
+                  </li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Missing regulatory compliance details.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Semantic vector search case search tools.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Proposal auto-generation pipelines.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> LLM compliance checkers.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">New case brief upload ➔
+                Retrieve matching case precedents from vector databases ➔ Auto-populate argument outline templates ➔
+                Sync draft docs to cloud.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>70% reduction in research times; 100% contract compliance index score validation.</p>
+            </div>
+          </div>
+
+          <!-- 8. Construction -->
+          <div class="service-card glass-card industry-detail-card" id="ind-construction">
+            <div class="ind-detail-header">
+              <i class="fas fa-hard-hat"></i>
+              <h3>Construction & Infrastructure</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Uncoordinated site reports and material receipt
+                    delays.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Contractor scheduling conflicts.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Manual accounting for onsite material deliveries.
+                  </li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> OCR-based material receipt parsers.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Automated schedule conflict solvers.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Site check-in database portals.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Material receipt image
+                upload ➔ Tesseract OCR structures cost details ➔ Auto-update construction ledger spreadsheet ➔ Ping
+                manager for sign-off.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>30% speedup in project budgeting cycles; zero manual receipt entry errors.</p>
+            </div>
+          </div>
+
+          <!-- 9. Automotive -->
+          <div class="service-card glass-card industry-detail-card" id="ind-automotive">
+            <div class="ind-detail-header">
+              <i class="fas fa-car"></i>
+              <h3>Automotive & Mobility</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Offline vehicle and charging specifications
+                    catalogs.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Slow distributor dealer application pipelines.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Outdated fleet mapping locator coordinates.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Dynamic specs search catalogs.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Automated dealer onboarding CRM staging.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Google Maps API charger coordinates cluster.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">User location query search
+                ➔ Maps API marker matching station capacity ➔ station detail card overlay ➔ Auto routing details
+                dispatch to smartphone.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>98% catalog responsiveness score; 400ms locator mapping query speeds.</p>
+            </div>
+          </div>
+
+          <!-- 10. Hospitality -->
+          <div class="service-card glass-card industry-detail-card" id="ind-hospitality">
+            <div class="ind-detail-header">
+              <i class="fas fa-hotel"></i>
+              <h3>Hospitality & Tourism</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Inbound booking query backlogs.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Guest checkout billing coordination delays.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Manual check-in log processing lags.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Conversational booking chatbots.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Stripe invoicing automation loops.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Auto check-in notification dispatches.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Inbound WhatsApp guest
+                message ➔ GPT checks room availability datasets ➔ Auto-populate check-in link ➔ Dispatch Stripe booking
+                invoice.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>50% front-desk task automation index; less than 1.2s response triggers.</p>
+            </div>
+          </div>
+
+          <!-- 11. Retail -->
+          <div class="service-card glass-card industry-detail-card" id="ind-retail">
+            <div class="ind-detail-header">
+              <i class="fas fa-shopping-bag"></i>
+              <h3>Retail & E-Commerce</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Product catalog inventory sync gaps across
+                    databases.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Manual copy editing for seasonal campaigns.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> High customer ticket response delays.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Shopify to local ERP API sync pipelines.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Stable Diffusion visual graphic generators.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Multi-channel customer service bots.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">New item SKU update ➔ SDXL
+                model renders aesthetic backdrop graphic ➔ GPT writes product descriptions ➔ Shopify catalog pushes
+                go-live.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>90% visual photoshoot budget savings; 4.2x faster content testing velocities.</p>
+            </div>
+          </div>
+
+          <!-- 12. Jewellery -->
+          <div class="service-card glass-card industry-detail-card" id="ind-jewellery">
+            <div class="ind-detail-header">
+              <i class="fas fa-gem"></i>
+              <h3>Luxury Jewellery</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Default layouts degrading the brand's custom lookup
+                    value.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> High e-commerce page visitor bounce rates.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Manual intake records for bespoke jewelry orders.
+                  </li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Premium visual showcase portals with parallax
+                    reveals.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Double-tap zoom specification details.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> WhatsApp custom order intake routers.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Diamond catalog item select
+                ➔ Framer Motion visual parallax reveal ➔ Click-to-quote routes client details directly to WhatsApp sales
+                support.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>25% average session duration boost; 30% increase in purchase queries.</p>
+            </div>
+          </div>
+
+          <!-- 13. Government -->
+          <div class="service-card glass-card industry-detail-card" id="ind-government">
+            <div class="ind-detail-header">
+              <i class="fas fa-university"></i>
+              <h3>Government & Public Sector</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Citizens request backlogs across agency
+                    departments.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Legacy data base silos preventing records matching.
+                  </li>
+                  <li><i class="fas fa-circle-notch text-light"></i> High data access security risks.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Auto form classification and routing systems.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Encrypted API wrapper gateways.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> JWT token authorization setups.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Application submit ➔
+                Encrypted API validation check ➔ Auto form category score ➔ Secure database transfer alert to local
+                department.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>65% citizens query processing speed increase; 100% data audit safety index.</p>
+            </div>
+          </div>
+
+          <!-- 14. Startups -->
+          <div class="service-card glass-card industry-detail-card" id="ind-startups">
+            <div class="ind-detail-header">
+              <i class="fas fa-rocket"></i>
+              <h3>Startups & SaaS Groups</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> High outbound SDR overhead budgets.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Lead qualification pipeline latency.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Sales appointment booking friction.</li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Outbound conversational AI calling bots.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Continuous prospect scraper pipelines.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Calendly sync intake booking widgets.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Lead list scrape ➔ AI voice
+                bot qualifications check ➔ Objections logic resolves query ➔ Calendly locked slot ➔ Slack notifications
+                alert.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>300% sales outreach volume scaling; 3.5x faster outbound pipeline velocity.</p>
+            </div>
+          </div>
+
+          <!-- 15. Enterprise -->
+          <div class="service-card glass-card industry-detail-card" id="ind-enterprise">
+            <div class="ind-detail-header">
+              <i class="fas fa-sitemap"></i>
+              <h3>Enterprise Corporates</h3>
+            </div>
+            <div class="ind-detail-grid">
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-exclamation-triangle orange"></i> Pain Points</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Isolated legacy ERP databases.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Cross-department information transfer lags.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Compliance and data protection vulnerabilities.
+                  </li>
+                </ul>
+              </div>
+              <div class="ind-detail-box">
+                <h4><i class="fas fa-check-circle blue"></i> Solutions</h4>
+                <ul>
+                  <li><i class="fas fa-circle-notch text-light"></i> Robust FastAPI wrappers.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> Corporate n8n sync loops.</li>
+                  <li><i class="fas fa-circle-notch text-light"></i> AWS database bridge secure gateways.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="ind-detail-box" style="margin-bottom: 30px;">
+              <h4><i class="fas fa-code-branch cyan"></i> Example Automation</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Retrieve records from
+                legacy databases hourly ➔ Parse schema payloads ➔ Push clean entries via FastAPI wrapped endpoints ➔
+                Sync AWS cloud logs.</p>
+            </div>
+            <div class="roi-badge">
+              <h4>Expected ROI</h4>
+              <p>160+ working hours saved monthly per pipeline; 100% database sync accuracy.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section-light-slate" id="why">
+    <div class="container">
+      <h2 class="section-title">Why Business Owners Choose <span class="gradient-text-orange">APITIDE</span></h2>
+      <p class="section-subtitle">We design smart, scalable digital architectures that provide businesses a distinct
+        competitive edge.</p>
+
+      <!-- Premium Comparison Table (Phase 16) -->
+      <div class="comparison-table-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Operational Dimension</th>
+              <th>Traditional Development Agency</th>
+              <th class="apitide-column">Apitide AI Agency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="dimension-title">Operations Scale</span>
+                <span class="dimension-subtitle">How work is executed</span>
+              </td>
+              <td class="traditional-cell"><i class="fas fa-times-circle traditional-cross"></i> Manual work, human
+                bottlenecking, and slow input speeds.</td>
+              <td class="apitide-cell"><i class="fas fa-check-circle apitide-check"></i> High-velocity automation
+                running infinitely on autopilot.</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="dimension-title">System Architecture</span>
+                <span class="dimension-subtitle">The backend foundation</span>
+              </td>
+              <td class="traditional-cell"><i class="fas fa-times-circle traditional-cross"></i> Static websites, rigid
+                templates, and non-dynamic displays.</td>
+              <td class="apitide-cell"><i class="fas fa-check-circle apitide-check"></i> Intelligent AI platforms,
+                custom vector indexes, and active context retrieval.</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="dimension-title">Customer Support</span>
+                <span class="dimension-subtitle">Inbound ticket handling</span>
+              </td>
+              <td class="traditional-cell"><i class="fas fa-times-circle traditional-cross"></i> Slow support ticket
+                backlogs, weekend gaps, and capacity ceilings.</td>
+              <td class="apitide-cell"><i class="fas fa-check-circle apitide-check"></i> Autonomous AI Agents answering
+                objections and logs under 800ms.</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="dimension-title">Resource Deployment</span>
+                <span class="dimension-subtitle">Productivity capabilities</span>
+              </td>
+              <td class="traditional-cell"><i class="fas fa-times-circle traditional-cross"></i> Overpaid human
+                employees, SDR turnover, and resource limits.</td>
+              <td class="apitide-cell"><i class="fas fa-check-circle apitide-check"></i> Scalable digital workforce
+                running parallel cron loops 24/7.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
   <section class="services-cta">
     <div class="container">
       <div class="cta-content">
-        <h2>Let's Start Your Project</h2>
-        <p>We are excited to hear about your project and help you turn your great ideas into digital reality. </p>
-        <div class="cta-buttons">
-          <a href="{% url 'contact' %}" class="cta-btn primary">Get Free Consultation</a>
-          
+        <h2>Let's Start Your Transformation</h2>
+        <p>Ready to build intelligent systems and automate repetitive tasks? Let's discuss your targets.</p>
+        <div class="cta-buttons" style="justify-content: center; display: flex; gap: 15px;">
+          <a href="{% url 'contact' %}" class="cta-btn orange-btn">Get Free Consultation</a>
+          <a href="{% url 'projects' %}" class="cta-btn secondary">View Our Work</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- TECHNOLOGY ECOSYSTEM (MATCHING REFERENCE TICKER ROW 100%) -->
+  <section class="section-dark-navy" id="tech-ecosystem" style="padding: 75px 0; overflow: hidden; position: relative; background: linear-gradient(180deg, #050C1A 0%, #0B172E 50%, #050C1A 100%); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div class="container" style="text-align: center; margin-bottom: 30px;">
+      <h2 class="section-title">Our Technical <span class="gradient-text-cyan">Ecosystem</span></h2>
+      <p class="section-subtitle">We build automation networks and custom software using industry-standard engineering tools.</p>
+    </div>
+
+    <div class="tech-marquee-container">
+      <!-- Track 1: Smooth Infinite Running Row -->
+      <div class="tech-marquee-wrapper">
+        <div class="tech-marquee-track">
+          <!-- Exact Items from Reference Image -->
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/google/4285F4" alt="Google" class="si-logo"> <span>Google</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable" class="si-logo"> <span>Airtable</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" class="si-logo"> <span>WhatsApp</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" class="si-logo"> <span>HubSpot</span></div>
+          <div class="tech-marquee-item"><i class="fab fa-aws" style="color:#FF9900; font-size: 1.5rem;"></i> <span>AWS</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase" class="si-logo"> <span>Firebase</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe" class="si-logo"> <span>Stripe</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify" class="si-logo"> <span>Shopify</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" class="si-logo"> <span>n8n</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" class="si-logo"> <span>Zapier</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI" class="si-logo"> <span>OpenAI</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="si-logo"> <span>React</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js" class="si-logo"> <span>Next.js</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="si-logo"> <span>Python</span></div>
+
+          <!-- Duplicate Set for Smooth Loop -->
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/google/4285F4" alt="Google" class="si-logo"> <span>Google</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable" class="si-logo"> <span>Airtable</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" class="si-logo"> <span>WhatsApp</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" class="si-logo"> <span>HubSpot</span></div>
+          <div class="tech-marquee-item"><i class="fab fa-aws" style="color:#FF9900; font-size: 1.5rem;"></i> <span>AWS</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase" class="si-logo"> <span>Firebase</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe" class="si-logo"> <span>Stripe</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify" class="si-logo"> <span>Shopify</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" class="si-logo"> <span>n8n</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" class="si-logo"> <span>Zapier</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI" class="si-logo"> <span>OpenAI</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="si-logo"> <span>React</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js" class="si-logo"> <span>Next.js</span></div>
+          <div class="tech-marquee-item"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="si-logo"> <span>Python</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BUILDERS & TESTIMONIALS (PHASE 20) -->
+  <section class="section-light-slate" id="testimonials">
+    <div class="container" style="text-align: center;">
+
+      <!-- Partner Logos -->
+      <div class="partner-logo-container">
+        <h3 class="section-subtitle"
+          style="text-transform: uppercase; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 25px; letter-spacing: 2px;">
+          Powering Integrations For Leading Brands</h3>
+        <div class="partner-grid">
+          <div class="partner-logo"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" class="partner-brand-img"> <span>n8n</span></div>
+          <div class="partner-logo"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI" class="partner-brand-img"> <span>OpenAI</span></div>
+          <div class="partner-logo"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS" class="partner-brand-img"> <span>AWS</span></div>
+          <div class="partner-logo"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" class="partner-brand-img"> <span>HubSpot</span></div>
+          <div class="partner-logo"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe" class="partner-brand-img"> <span>Stripe</span></div>
+          <div class="partner-logo"><img src="https://cdn.simpleicons.org/twilio/F22F46" alt="Twilio" class="partner-brand-img"> <span>Twilio</span></div>
+        </div>
+      </div>
+
+
+      <!-- Impact Stats Grid (7 parameters) -->
+      <h2 class="section-title" style="margin-top: 60px;">Our Impact <span class="gradient-text-cyan">In Numbers</span>
+      </h2>
+      <p class="section-subtitle">A verified track record of operational performance metrics built for business owners
+        globally.</p>
+
+      <div class="trust-stats-grid">
+        <!-- 1. Project Count -->
+        <div class="service-card glass-card trust-stat-card scroll-reveal">
+          <span class="stat-number-value" data-target="120" data-suffix="+">0</span>
+          <p>Projects Delivered</p>
+        </div>
+        <!-- 2. Countries Served -->
+        <div class="service-card glass-card trust-stat-card scroll-reveal">
+          <span class="stat-number-value" data-target="12" data-suffix="+">0</span>
+          <p>Countries Served</p>
+        </div>
+        <!-- 3. Industries Served -->
+        <div class="service-card glass-card trust-stat-card scroll-reveal">
+          <span class="stat-number-value" data-target="15" data-suffix="+">0</span>
+          <p>Industries Served</p>
+        </div>
+        <!-- 4. Years Experience -->
+        <div class="service-card glass-card trust-stat-card scroll-reveal">
+          <span class="stat-number-value" data-target="3" data-suffix="+">0</span>
+          <p>Years Experience</p>
+        </div>
+      </div>
+      <div class="trust-stats-grid-bottom">
+        <!-- 5. Average Delivery Time -->
+        <div class="service-card glass-card trust-stat-card scroll-reveal">
+          <span class="stat-number-value" data-target="14" data-prefix="&lt; " data-suffix=" Days">0</span>
+          <p>Average Delivery Time</p>
+        </div>
+        <!-- 6. Client Satisfaction -->
+        <div class="service-card glass-card trust-stat-card scroll-reveal">
+          <span class="stat-number-value" data-target="99.2" data-suffix="%">0</span>
+          <p>Client Satisfaction</p>
+        </div>
+        <!-- 7. Repeat Clients -->
+        <div class="service-card glass-card trust-stat-card scroll-reveal">
+          <span class="stat-number-value" data-target="88" data-suffix="%">0</span>
+          <p>Repeat Clients</p>
+        </div>
+      </div>
+
+
+
+      <!-- Client Testimonials & Success Stories (4 Square Cards Auto-Slider) -->
+      <h2 class="section-title" style="margin-top: 40px;">Client <span class="gradient-text-blue">Success</span> Stories</h2>
+      <p class="section-subtitle">Read detailed operational reviews from business leaders who automated tasks with us.</p>
+
+      <div class="testimonials-slider-wrapper">
+        <div class="testimonials-slider-track" id="testimonialTrack">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card glass-card testimonial-card-square">
+            <div class="stars-row">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-quote">"APITIDE completely transformed our interstate transport operations. Their custom Django & n8n reservation portal automated lead processing across 14 hubs, boosting online bookings by 150%."</p>
+            <div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #06B6D4, #2563EB);">AS</div>
+                <div class="testimonial-meta">
+                  <h4>Abhimanyu Singh</h4>
+                  <p>Managing Director, Rajputana Roadlines</p>
+                </div>
+              </div>
+              <a href="{% url 'projects' %}#rajputana-modal" class="story-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card glass-card testimonial-card-square">
+            <div class="stars-row">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-quote">"Their grounded RAG vector models cut clinical support query latency to sub-second speeds while eliminating hallucinations by 95% for 40,000+ patients. Extremely secure WHO lookup."</p>
+            <div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #F97316, #EF4444);">ML</div>
+                <div class="testimonial-meta">
+                  <h4>Marcus Lindqvist</h4>
+                  <p>VP of Engineering, Nordic Health Tech</p>
+                </div>
+              </div>
+              <a href="{% url 'projects' %}#rag-modal" class="story-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card glass-card testimonial-card-square">
+            <div class="stars-row">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-quote">"We automated our entire multi-channel lead enrichment CRM pipeline with APITIDE, scaling daily qualified prospect routing from 100 to 2,500 accounts effortlessly."</p>
+            <div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #3B82F6, #8B5CF6);">SJ</div>
+                <div class="testimonial-meta">
+                  <h4>Sarah Jenkins</h4>
+                  <p>Chief Operating Officer, Apex Global Logistics</p>
+                </div>
+              </div>
+              <a href="{% url 'projects' %}#saas-feeder-modal" class="story-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card glass-card testimonial-card-square">
+            <div class="stars-row">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-quote">"APITIDE built our real-time AI outbound voice and email response engine using Twilio, OpenAI, and FastAPI, boosting sales team appointment conversion rate by 42% in month 1."</p>
+            <div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #10B981, #06B6D4);">DK</div>
+                <div class="testimonial-meta">
+                  <h4>David Kravitz</h4>
+                  <p>CEO & Co-Founder, SaaSScale B2B</p>
+                </div>
+              </div>
+              <a href="{% url 'projects' %}" class="story-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="testimonial-slider-controls">
+          <button class="slider-arrow prev" id="sliderPrevBtn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots" id="testimonialDots"></div>
+          <button class="slider-arrow next" id="sliderNextBtn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEAD GENERATION RESOURCE HUB & NEWSLETTER (PHASE 21) -->
+  <section class="section-dark-navy" id="resource-hub" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="section-title">Resource <span class="gradient-text-cyan">Hub</span> & Lead Magnets</h2>
+      <p class="section-subtitle">Unlock custom engineering assets, download company indexes, and request free technical blueprints.</p>
+
+      <div class="resource-grid">
+        <!-- 1. Free AI Audit & Blueprint -->
+        <div class="service-card glass-card resource-card scroll-reveal">
+          <span class="resource-badge">Free Resource</span>
+          <h3>AI Audit &amp; Automation Blueprint</h3>
+          <p>Get a custom-engineered operational map highlighting bottlenecks, integration pathways, and n8n workflow steps specific to your business.</p>
+          <a href="{% url 'contact' %}" class="cta-btn primary small"><i class="fas fa-magic"></i> Request Free Audit</a>
+        </div>
+
+        <!-- 2. Download Company Profile -->
+        <div class="service-card glass-card resource-card scroll-reveal">
+          <span class="resource-badge">Company File</span>
+          <h3>Company Profile &amp; Portfolio</h3>
+          <p>Download our complete company profile, detailing client case studies, founder stories, and our core technical standards.</p>
+          <a href="{% url 'contact' %}?resource=profile" class="cta-btn secondary small"><i class="fas fa-file-pdf"></i> Request Company Profile</a>
+        </div>
+
+        <!-- 3. Capability Deck -->
+        <div class="service-card glass-card resource-card scroll-reveal">
+          <span class="resource-badge">B2B Presentation</span>
+          <h3>Enterprise Capability Deck</h3>
+          <p>A detailed systems architecture outline, database security features, and custom FastAPI wrapper frameworks for enterprise leaders.</p>
+          <a href="{% url 'contact' %}?resource=deck" class="cta-btn secondary small"><i class="fas fa-download"></i> Request Capability Deck</a>
+        </div>
+      </div>
+
+      <!-- Weekly Newsletter -->
+      <div class="newsletter-box scroll-reveal">
+        <h3>Join Our Weekly AI Digest</h3>
+        <p>Get weekly, dev-written guides on self-hosting n8n workflows, prompt tuning, and B2B software architectures. No spam, just raw code engineering.</p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
+          {% csrf_token %}
+          <div class="newsletter-name-row">
+            <input type="text" id="newsletter_first_name" name="first_name" class="newsletter-input" placeholder="First Name" style="max-width: 200px;" />
+            <input type="email" id="newsletter_email" name="email" class="newsletter-input" placeholder="Enter your business email" required />
+          </div>
+          <button type="submit" class="cta-btn primary" style="padding: 14px 28px;"><i class="fas fa-rocket"></i> Subscribe Now</button>
+        </form>
+        <p id="newsletter-msg" class="newsletter-msg" style="display:none;"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESOURCE HUB PROMO BANNER (100% EDGE-TO-EDGE FULL WIDTH) -->
+  <section class="resource-promo-banner-section" style="margin: 0; padding: 0;">
+    <div class="resource-promo-banner-inner">
+      <img src="{% static 'images/resource_promo_banner.png' %}" alt="Resource Hub Promotion Banner" class="resource-promo-banner-img" />
+    </div>
+  </section>
+
+
+
+
+  <!-- FAQ SECTION -->
+  <section class="section-dark-navy" id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked <span class="gradient-text-blue">Questions</span></h2>
+      <p class="section-subtitle">Quick answers to common inquiries about our SDLC workflow, integrations, and data
+        security.</p>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What primary technologies and tools do you use?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We build our core workflow pipelines in n8n, Zapier, and custom Python scripts. Our full-stack web
+              architectures are built on modern technologies like React, Next.js, FastAPI, Node.js, and Django. For AI
+              systems, we utilize vector databases (Pinecone, ChromaDB), OpenAI API models, and HIPAA-compliant private
+              cloud deployments.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does your SDLC process translate to AI engineering?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We map traditional Software Development Life Cycle (SDLC) phases (Planning, Architecture, Code, QA,
+              Deploy, Maintain) directly into our sprints. For AI applications, this guarantees structured requirements
+              gathering, data model designs, payload verification, strict guardrails testing (to prevent
+              hallucinations), and continuous monitoring.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do you handle data privacy and security constraints?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Security is baked into our system designs from day one. We use secure environment variable masking for
+              credentials, configure local isolated database instances, and comply with HIPAA/GDPR standards. We verify
+              all integration routes to ensure no proprietary customer data leaks into public LLM training sets.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How long does a typical automation project take?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Most automation projects are delivered in under 14 days. A simple n8n workflow integration typically
+              takes 3–7 days. A full-stack web application or complex multi-system integration typically takes 4–8 weeks
+              depending on scope, integrations required, and feedback cycles. We provide a detailed timeline estimate
+              after our initial discovery call.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer ongoing support after project delivery?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, absolutely. All delivered projects include a 30-day post-launch support window for bug fixes and
+              minor adjustments at no additional cost. For ongoing maintenance, monitoring, and iterative improvements,
+              we offer our monthly retainer plans (Starter, Growth, Enterprise) which include dedicated Slack channels,
+              weekly audits, and SLA-backed response times.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-wave">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path
-          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52,583,67.32c69.27,15,138.3,24.22,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-          opacity=".25" fill="#0a192f"></path>
-        <path
-          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,141.56,72.2V0Z"
-          opacity=".5" fill="#0a192f"></path>
-        <path
-          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,86c57.52-8.48,105-41.95,136.65-72.46,36.04-34.25,71.52-83,112.15-13.82V0Z"
-          fill="#0a192f"></path>
-      </svg>
-    </div>
     <div class="footer-container">
       <div class="footer-grid">
         <!-- Brand Column -->
         <div class="footer-brand">
-          <div class="brand-wrapper">
-            <h2 class="brand-name">
-              <img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img">
-            </h2>
-          </div>
-          <p class="brand-desc">Transforming businesses with cutting-edge technology solutions. Let's build the future
-            together.</p>
+          <h2>APITIDE</h2>
+          <p class="brand-desc">Transforming business operations through AI workflow integration, custom software, and
+            robust web applications.</p>
           <div class="social-links">
             <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/apitide.info?igsh=N3BzZzhkajE3N3hw" class="social-icon"
-              aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/apitide.info" class="social-icon" aria-label="Instagram"><i
+                class="fab fa-instagram"></i></a>
             <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i
                 class="fab fa-github"></i></a>
           </div>
@@ -256,9 +2600,9 @@
         <div class="footer-links">
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-nav">
-            <li><a href="{% url 'index' %}#hero" class="footer-link">Home</a></li>
-            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'index' %}" class="footer-link">Home</a></li>
             <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
             <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
             <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
           </ul>
@@ -268,11 +2612,11 @@
         <div class="footer-links">
           <h3 class="footer-heading">Our Services</h3>
           <ul class="footer-nav">
-            <li><a href="{% url 'services' %}#web" class="footer-link">Web Development</a></li>
-            <li><a href="{% url 'services' %}#mobile" class="footer-link">Mobile Apps</a></li>
-            <li><a href="{% url 'services' %}#ai" class="footer-link">AI Solutions</a></li>
-            <li><a href="{% url 'services' %}#ecommerce" class="footer-link">E-commerce</a></li>
-            <li><a href="{% url 'services' %}#consulting" class="footer-link">IT Consulting</a></li>
+            <li><a href="{% url 'services' %}#workflow" class="footer-link">AI Workflows</a></li>
+            <li><a href="{% url 'services' %}#development" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#ai-solutions" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#branding" class="footer-link">Luxury Branding</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">Consulting</a></li>
           </ul>
         </div>
 
@@ -282,7 +2626,7 @@
           <ul class="contact-info">
             <li class="contact-item">
               <i class="fas fa-map-marker-alt contact-icon"></i>
-              <span>MDV Colony, Bikaner, India</span>
+              <span>Bikaner, Rajasthan, India</span>
             </li>
             <li class="contact-item">
               <i class="fas fa-phone contact-icon"></i>
@@ -290,150 +2634,140 @@
             </li>
             <li class="contact-item">
               <i class="fas fa-envelope contact-icon"></i>
-              <a href="mailto:info@apitide.com" class="contact-link">apitideinfo@gmail.com</a>
-            </li>
-            <li class="contact-item">
-              <i class="fas fa-clock contact-icon"></i>
-              <span>Mon - Fri: 9:00 - 18:00</span>
+              <a href="mailto:apitideinfo@gmail.com" class="contact-link">apitideinfo@gmail.com</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p class="copyright">&copy; 2025 Apitide. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 APITIDE. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+          <a href="#" class="legal-link">Privacy Policy</a>
           <span class="divider">|</span>
-          <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+          <a href="#" class="legal-link">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- WATCH DEMO MODAL -->
+  <div class="video-modal" id="video-demo-modal">
+    <div class="video-modal-container">
+      <span class="video-modal-close">&times;</span>
+      <iframe id="demo-video-iframe" src="" title="APITIDE Demo Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- STICKY FLOATING CTA BAR (PHASE 21) -->
+  <div class="sticky-cta-bar">
+    <div class="sticky-brand">
+      <div class="sticky-dot"></div>
+      <div class="sticky-title">
+        APITIDE AI
+        <span>Need Custom Automations?</span>
+      </div>
+    </div>
+    <div class="sticky-actions">
+      <a href="https://wa.me/917877813270" target="_blank" rel="noopener noreferrer" class="cta-btn secondary small"
+        style="border-color: rgba(37, 211, 102, 0.4); color: #25d366; background: rgba(37, 211, 102, 0.05);"><i
+          class="fab fa-whatsapp"></i> Chat</a>
+      <button onclick="openCalendlyModal()" class="cta-btn primary small"><i class="fas fa-calendar-alt"></i> Book
+        Consultation</button>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON (PHASE 21) -->
+  <a href="https://wa.me/917877813270?text=Hello%20APITIDE%21%20I%27m%20interested%20in%20AI%20automation%20services."
+    target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-float-tooltip">Chat with us on WhatsApp</span>
+  </a>
+
+  <!-- BOOK CONSULTATION MODAL (PHASE 21 - CALENDLY) -->
+  <div class="calendly-modal" id="calendly-modal" role="dialog" aria-modal="true" aria-label="Book a Consultation">
+    <div class="calendly-modal-inner">
+      <div class="calendly-modal-header">
+        <h3><i class="fas fa-calendar-check"></i> Book Free AI Consultation</h3>
+        <button class="calendly-close" onclick="closeCalendlyModal()" aria-label="Close modal">&times;</button>
+      </div>
+      <!-- Consultation intake form (replace Calendly widget URL when available) -->
+      <form class="consultation-form" onsubmit="handleConsultationSubmit(event)">
+        <div class="consultation-row">
+          <input type="text" class="consultation-input" placeholder="Your Full Name *" required />
+          <input type="email" class="consultation-input" placeholder="Business Email *" required />
+        </div>
+        <div class="consultation-row">
+          <input type="tel" class="consultation-input" placeholder="Phone / WhatsApp" />
+          <select class="consultation-select" required>
+            <option value="" disabled selected>Select Service Area *</option>
+            <option value="ai-workflows">AI Workflow Automation</option>
+            <option value="voice-agent">AI Voice Agent</option>
+            <option value="rag-chatbot">RAG Chatbot / Knowledge Base</option>
+            <option value="web-app">Custom Web Application</option>
+            <option value="crm-automation">CRM Automation</option>
+            <option value="sales-automation">Sales / Lead Automation</option>
+            <option value="enterprise-integration">Enterprise Integration</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <textarea class="consultation-input consultation-textarea"
+          placeholder="Briefly describe what you want to automate or build..."></textarea>
+        <div class="consultation-row">
+          <select class="consultation-select">
+            <option value="" disabled selected>Preferred meeting time</option>
+            <option>Monday 10 AM – 12 PM IST</option>
+            <option>Tuesday 2 PM – 4 PM IST</option>
+            <option>Wednesday 10 AM – 12 PM IST</option>
+            <option>Thursday 3 PM – 5 PM IST</option>
+            <option>Friday 11 AM – 1 PM IST</option>
+          </select>
+          <select class="consultation-select">
+            <option value="" disabled selected>Budget range</option>
+            <option>Under $500</option>
+            <option>$500 – $2,000</option>
+            <option>$2,000 – $10,000</option>
+            <option>$10,000+</option>
+            <option>Retainer / Monthly</option>
+          </select>
+        </div>
+        <button type="submit" class="cta-btn primary" style="width: 100%; justify-content: center; padding: 15px;">
+          <i class="fas fa-paper-plane"></i> Request Free Consultation
+        </button>
+        <p style="font-size: 0.78rem; color: var(--text-secondary); text-align: center; margin-top: 8px;">
+          We'll reply within 2 business hours. Your data is kept private and never sold.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Custom main Javascript -->
+  <!-- ===== PHASE 24: GSAP + SCROLLTRIGGER + LENIS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
+  <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="{% static 'js/animations.js' %}" defer></script>
   <script>
-    // Mobile Menu Toggle
-    (function () {
-      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-      const navbar = document.querySelector('.navbar');
-
-      mobileMenuToggle.addEventListener('click', function () {
-        navbar.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
-      });
-
-      // Close menu when clicking on a link
-      const navLinks = document.querySelectorAll('.navbar a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          navbar.classList.remove('active');
-          mobileMenuToggle.classList.remove('active');
-        });
-      });
-    })();
-
-    (function () {
-      const slides = Array.from(document.querySelectorAll('.why-slider.multi .why-slide'));
-      const slidesPerView = 3;
-      let current = 0;
-      let interval;
-      const totalSets = Math.ceil(slides.length / slidesPerView);
-
-      function showSlides(idx) {
-        slides.forEach((slide, i) => {
-          slide.classList.remove('active', 'inactive', 'visible');
-          if (i >= idx * slidesPerView && i < (idx + 1) * slidesPerView) {
-            slide.classList.add('visible');
-          } else {
-            slide.classList.add('inactive');
-          }
-        });
-      }
-
-      function nextSlideSet() {
-        showSlides((current + 1) % totalSets);
-      }
-
-      function startAuto() {
-        interval = setInterval(nextSlideSet, 3500);
-      }
-      function stopAuto() {
-        clearInterval(interval);
-      }
-
-      // Create dots
-      // Removed Why section slider JS
-
-      showSlides(0);
-      startAuto();
-    })();
-
-    // Infinite carousel for Why section
-    (function () {
-      const slider = document.querySelector('.why-slider.infinite-loop');
-      const track = slider.querySelector('.why-track');
-      const slides = Array.from(track.children);
-      let slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap || 32);
-      let animationId;
-      let pos = 0;
-
-      function animate() {
-        pos -= 1; // speed: 1px per frame
-        if (Math.abs(pos) >= slideWidth) {
-          // Move first slide to end
-          track.appendChild(track.children[0]);
-          pos += slideWidth;
-        }
-        track.style.transform = `translateX(${pos}px)`;
-        animationId = requestAnimationFrame(animate);
-      }
-
-      // Responsive: recalculate slideWidth on resize
-      function updateSlideWidth() {
-        const slide = track.children[0];
-        slideWidth = slide.offsetWidth + parseInt(getComputedStyle(track).gap || 32);
-      }
-      window.addEventListener('resize', updateSlideWidth);
-
-      // Pause on hover
-      slider.addEventListener('mouseenter', () => cancelAnimationFrame(animationId));
-      slider.addEventListener('mouseleave', () => animate());
-
-      updateSlideWidth();
-      animate();
-    })();
-
-    // Scroll-in animation for why-slide boxes
-    (function () {
-      const slides = document.querySelectorAll('.why-slider.infinite-loop .why-slide');
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animated');
-            }
-          });
-        }, { threshold: 0.2 });
-        slides.forEach(slide => observer.observe(slide));
-      } else {
-        // Fallback: show all
-        slides.forEach(slide => slide.classList.add('animated'));
-      }
-    })();
-
-    // Header scroll effect
-    (function () {
-      const header = document.querySelector('.header');
-      function onScroll() {
-        if (window.scrollY > 10) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      }
-      window.addEventListener('scroll', onScroll);
-      onScroll();
-    })();
+    function openCalendlyModal() {
+      document.getElementById('calendly-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCalendlyModal() {
+      document.getElementById('calendly-modal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('calendly-modal').addEventListener('click', function (e) {
+      if (e.target === this) closeCalendlyModal();
+    });
+    function handleConsultationSubmit(e) {
+      e.preventDefault();
+      closeCalendlyModal();
+      const waMsg = encodeURIComponent("Hello APITIDE! I've submitted a consultation request from your website. Please reach out to schedule the call.");
+      window.open('https://wa.me/917877813270?text=' + waMsg, '_blank');
+    }
   </script>
 </body>
 

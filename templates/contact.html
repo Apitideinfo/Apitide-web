@@ -1,50 +1,136 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Apitide</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- ===== PRIMARY SEO META ===== -->
+  <title>Book Free Consultation | APITIDE - AI Automation Agency</title>
+  <meta name="description" content="Book a free AI automation consultation with APITIDE. Tell us about your project, choose a meeting time, and let our experts design a custom automation blueprint for your business." />
+  <meta name="keywords" content="book AI consultation, free automation audit, APITIDE contact, n8n automation consultation, AI strategy session" />
+  <meta name="author" content="APITIDE" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.apitide.com/contact/" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.apitide.com/contact/" />
+  <meta property="og:title" content="Book Free AI Consultation | APITIDE" />
+  <meta property="og:description" content="Schedule a free discovery call with APITIDE's automation engineers. We'll design a custom AI workflow blueprint specific to your business needs." />
+  <meta property="og:image" content="https://www.apitide.com/static/images/og-contact.jpg" />
+  <meta property="og:site_name" content="APITIDE" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book Free AI Consultation | APITIDE" />
+  <meta name="twitter:description" content="Schedule a free discovery call with APITIDE's automation engineers. Custom AI workflow blueprint for your business." />
+  <meta name="twitter:image" content="https://www.apitide.com/static/images/og-contact.jpg" />
+
+  <!-- ===== SCHEMA.ORG — BREADCRUMB ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.apitide.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.apitide.com/contact/"}
+    ]
+  }
+  </script>
+
+  <!-- ===== SCHEMA.ORG — CONTACT PAGE ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact APITIDE",
+    "description": "Book a free AI automation consultation with APITIDE. Get a custom workflow blueprint for your business.",
+    "url": "https://www.apitide.com/contact/",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "APITIDE",
+      "telephone": "+91-7877813270",
+      "email": "apitideinfo@gmail.com",
+      "address": {"@type": "PostalAddress", "addressLocality": "Bikaner", "addressRegion": "Rajasthan", "addressCountry": "IN"}
+    }
+  }
+  </script>
+
+  <!-- ===== PERFORMANCE: PRECONNECT ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+  <!-- ===== PERFORMANCE: NON-BLOCKING GOOGLE FONTS ===== -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" /></noscript>
+
+  <!-- ===== PERFORMANCE: NON-BLOCKING FONT AWESOME ===== -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+
+  <!-- ===== PERFORMANCE: PRELOAD MAIN CSS ===== -->
+  <link rel="preload" as="style" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <!-- ===== PHASE 24: ANIMATION CSS ===== -->
+  <link rel="preload" as="style" href="{% static 'css/animations.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/animations.css' %}" />
+
+  <!-- ===== PERFORMANCE: INLINE CRITICAL CSS ===== -->
+  <style>:root{--bg-dark:#020617;--accent-blue:#2563EB;--accent-cyan:#06B6D4;--text-primary:#F8FAFC;--text-secondary:#94A3B8;--glass-border:rgba(255,255,255,.08);--border-radius:12px;--transition-smooth:all .4s cubic-bezier(.16,1,.3,1);--font-sans:'Outfit','Inter',sans-serif}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-sans);background-color:var(--bg-dark);color:var(--text-primary);line-height:1.6;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 24px}.header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:var(--transition-smooth)}.header .container{display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.4rem;letter-spacing:1px;color:white}.logo-img{height:38px;width:38px;object-fit:contain}.navbar{display:flex;gap:30px}.navbar a{color:var(--text-secondary);font-size:.92rem;font-weight:500;transition:color .3s}.navbar a:hover,.navbar a.active{color:white}.header-cta{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--accent-blue) 0%,#1D4ED8 100%);color:white;padding:10px 22px;border-radius:30px;font-size:.88rem;font-weight:600;white-space:nowrap}</style>
+
+  <!-- ===== PWA / MOBILE EXTRAS ===== -->
+  <meta name="theme-color" content="#020617" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
 <body class="contact-page">
+
+  <!-- HEADER -->
   <header class="header">
-    <div class="logo"><img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img"></div>
-    <nav class="navbar">
-      <a href="{% url 'index' %}">Home</a>
-      <a href="{% url 'services' %}">Services</a>
-      <a href="{% url 'about' %}">About</a>
-      <a href="{% url 'projects' %}">Projects</a>
-      <a href="{% url 'contact' %}">Contact</a>
-    </nav>
-    <div class="mobile-menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="container">
+      <a href="{% url 'index' %}" class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="APITIDE Logo" class="logo-img" width="38" height="38" loading="eager" decoding="async" />
+        <span>APITIDE</span>
+      </a>
+      <nav class="navbar">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'services' %}">Services</a>
+        <a href="{% url 'ai_tools' %}">AI Tools</a>
+        <a href="{% url 'resources' %}">Resources</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'contact' %}" class="active">Contact</a>
+      </nav>
+      <a href="{% url 'contact' %}" class="header-cta">Book Consultation</a>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
-  <section class="contact-hero" style=" background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); ">
-    <div class="contact-hero-inner">
-      <h1 style="color: var(--secondary-color);">Tell Us About Your Project</h1>
-      <p style="color: var(--primary-color);">Get Your Free Consultation Within 24 Hours <b>free consultation</b>.</p>
-    </div>
-    <div class="contact-hero-art" aria-hidden="true">
-      <svg viewBox="0 0 600 200" preserveAspectRatio="none" role="img" focusable="false">
-        <defs>
-          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#C4B6F7;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <path d="M0,120 C150,180 450,60 600,120 L600,200 L0,200 Z" fill="url(#grad)"></path>
-      </svg>
+  <!-- CONTACT HERO -->
+  <section class="hero contact-hero" id="contact-hero">
+    <div class="hero-glow-blob"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Let's Build Something <span class="gradient-text-blue">Incredible</span> Together</h1>
+        <p>Get your free consultation within 24 hours. Submit your details, or lock in a time slot directly using the scheduler below.</p>
+      </div>
     </div>
   </section>
 
-  <main class="contact-main">
+  <!-- CONTACT CONTENT GRID -->
+  <main class="container" style="margin-top: -40px; margin-bottom: 100px;">
+    
+    <!-- Messages alert box -->
     {% if messages %}
     <div class="messages">
       {% for message in messages %}
@@ -52,114 +138,257 @@
       {% endfor %}
     </div>
     {% endif %}
-    <section class="contact-form-section">
-      <h2 class="section-title">Send Us a Message</h2>
-      <form class="contact-form" action="{% url 'contact' %}" method="post">
-        {% csrf_token %}
-        <div class="form-row">
-          <label for="full_name">Full Name <span class="req">*</span></label>
-          <input type="text" id="full_name" name="full_name" placeholder="Your Name" required />
-        </div>
-        <div class="form-row">
-          <label for="email">Email Address <span class="req">*</span></label>
-          <input type="email" id="email" name="email" placeholder="you@company.com" required />
-        </div>
-        <div class="form-row">
-          <label for="phone">Phone Number <span class="req">*</span></label>
-          <input type="tel" id="phone" name="phone" placeholder="+ 555 123 4567" />
-        </div>
-        <div class="form-row">
-          <label for="project_type">Project Type</label>
-          <select id="project_type" name="project_type">
-            <option>Web Development</option>
-            <option>App Development</option>
-            <option>AI Solutions</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="details">Tell Us About Your Project</label>
-          <textarea id="details" name="details" rows="6" placeholder="Share your goals, timeline, and any references..."></textarea>
-        </div>
-        <button type="submit" class="cta-btn primary submit-btn">Send Message</button>
-      </form>
-    </section>
 
-    <section class="contact-direct">
-      <h2 class="section-title">Get in Touch Directly</h2>
-      <div class="direct-grid">
-        <div class="direct-card">
-          <i class="fas fa-envelope"></i>
-          <p>You can also reach our <b>team</b> directly at:</p>
-          <a class="direct-link" href="mailto:apitideinfo@gmail.com">apitideinfo@gmail.com</a>
+    <div class="contact-grid">
+      
+      <!-- Left side: Contact Form -->
+      <section class="contact-form-section glass-card" style="padding: 0px; background: transparent; border: none; backdrop-filter: none;">
+        <div class="glass-card">
+          <h2>Project Intake Form</h2>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 28px;">Fill in your details below and we'll send you a custom automation blueprint within 24 hours.</p>
+          <form class="contact-form" id="contactForm" action="{% url 'contact' %}" method="post" novalidate>
+            {% csrf_token %}
+            
+            <div class="form-row-2col">
+              <div class="form-row">
+                <label for="full_name">Full Name <span class="req">*</span></label>
+                <input type="text" id="full_name" name="full_name" placeholder="Your Full Name" required autocomplete="name" />
+                <span class="field-hint">First and last name</span>
+              </div>
+              <div class="form-row">
+                <label for="email">Business Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" />
+                <span class="field-hint">We'll reply to this address</span>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-row">
+                <label for="phone">Phone / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+                <span class="field-hint">Include country code</span>
+              </div>
+              <div class="form-row">
+                <label for="country">Country <span class="req">*</span></label>
+                <div class="select-wrapper">
+                  <select id="country" name="country" required>
+                    <option value="" disabled selected>— Select your country —</option>
+                    <option value="United States">🇺🇸 United States</option>
+                    <option value="United Kingdom">🇬🇧 United Kingdom</option>
+                    <option value="Canada">🇨🇦 Canada</option>
+                    <option value="Australia">🇦🇺 Australia</option>
+                    <option value="United Arab Emirates">🇦🇪 United Arab Emirates</option>
+                    <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
+                    <option value="Germany">🇩🇪 Germany</option>
+                    <option value="France">🇫🇷 France</option>
+                    <option value="Netherlands">🇳🇱 Netherlands</option>
+                    <option value="Singapore">🇸🇬 Singapore</option>
+                    <option value="India">🇮🇳 India</option>
+                    <option value="Pakistan">🇵🇰 Pakistan</option>
+                    <option value="Bangladesh">🇧🇩 Bangladesh</option>
+                    <option value="South Africa">🇿🇦 South Africa</option>
+                    <option value="Nigeria">🇳🇬 Nigeria</option>
+                    <option value="Kenya">🇰🇪 Kenya</option>
+                    <option value="New Zealand">🇳🇿 New Zealand</option>
+                    <option value="Ireland">🇮🇪 Ireland</option>
+                    <option value="Sweden">🇸🇪 Sweden</option>
+                    <option value="Norway">🇳🇴 Norway</option>
+                    <option value="Denmark">🇩🇰 Denmark</option>
+                    <option value="Other">🌍 Other</option>
+                  </select>
+                  <i class="fas fa-chevron-down select-arrow"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-row">
+                <label for="project_type">Service Required <span class="req">*</span></label>
+                <div class="select-wrapper">
+                  <select id="project_type" name="project_type" required>
+                    <option value="" disabled selected>— Select a service —</option>
+                    <option value="AI Workflow & N8N Automation">⚙️ AI Workflow &amp; N8N Automation</option>
+                    <option value="Web & Mobile Development">💻 Web &amp; Mobile Development</option>
+                    <option value="AI Chatbots / RAG Systems">🤖 AI Chatbots &amp; RAG Systems</option>
+                    <option value="AI Voice Agent">📞 AI Voice Agent</option>
+                    <option value="CRM / Sales Automation">📈 CRM &amp; Sales Automation</option>
+                    <option value="WhatsApp / Email Automation">💬 WhatsApp &amp; Email Automation</option>
+                    <option value="Document AI / OCR">📄 Document AI &amp; OCR</option>
+                    <option value="Enterprise Integration">🏢 Enterprise Integration</option>
+                    <option value="Consulting & Audit">🔍 Workflow Consulting &amp; Audit</option>
+                    <option value="Other">✨ Other Custom Solution</option>
+                  </select>
+                  <i class="fas fa-chevron-down select-arrow"></i>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="industry">Your Industry <span class="req">*</span></label>
+                <div class="select-wrapper">
+                  <select id="industry" name="industry" required>
+                    <option value="" disabled selected>— Select your industry —</option>
+                    <option value="Healthcare & MedTech">🏥 Healthcare &amp; MedTech</option>
+                    <option value="Finance & Accounting">💰 Finance &amp; Accounting</option>
+                    <option value="Real Estate">🏠 Real Estate &amp; Property</option>
+                    <option value="Legal Services">⚖️ Legal Services</option>
+                    <option value="Manufacturing & Logistics">🏭 Manufacturing &amp; Logistics</option>
+                    <option value="Education & EdTech">🎓 Education &amp; EdTech</option>
+                    <option value="Restaurants & Food Services">🍽️ Restaurants &amp; Food Services</option>
+                    <option value="Retail & E-Commerce">🛍️ Retail &amp; E-Commerce</option>
+                    <option value="Hospitality & Hotels">🏨 Hospitality &amp; Hotels</option>
+                    <option value="Construction & Infrastructure">🏗️ Construction &amp; Infrastructure</option>
+                    <option value="Automotive">🚗 Automotive</option>
+                    <option value="Government & Public Sector">🏛️ Government &amp; Public Sector</option>
+                    <option value="SaaS & Technology">💡 SaaS &amp; Technology</option>
+                    <option value="Startups">🚀 Startups</option>
+                    <option value="Enterprise & Corporations">🏢 Enterprise &amp; Corporations</option>
+                    <option value="Marketing & Advertising">📣 Marketing &amp; Advertising</option>
+                    <option value="Other">🌐 Other</option>
+                  </select>
+                  <i class="fas fa-chevron-down select-arrow"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="budget_range">Estimated Budget <span class="req">*</span></label>
+              <div class="select-wrapper">
+                <select id="budget_range" name="budget_range" required>
+                  <option value="" disabled selected>— Select your budget range —</option>
+                  <option value="Under $500">💵 Under $500</option>
+                  <option value="$500 – $2,000">💵 $500 – $2,000</option>
+                  <option value="$2,000 – $5,000">💰 $2,000 – $5,000</option>
+                  <option value="$5,000 – $15,000">💰 $5,000 – $15,000</option>
+                  <option value="$15,000 – $50,000">💎 $15,000 – $50,000</option>
+                  <option value="$50,000+">🏆 $50,000+ (Enterprise)</option>
+                  <option value="Let's Discuss">🤝 Let's Discuss</option>
+                </select>
+                <i class="fas fa-chevron-down select-arrow"></i>
+              </div>
+              <span class="field-hint">This helps us tailor the right solution for you</span>
+            </div>
+            
+            <div class="form-row">
+              <label for="details">Project Details</label>
+              <textarea id="details" name="details" rows="5" placeholder="Describe your current bottleneck, tools you use (N8N, Salesforce, HubSpot, etc.), and what outcome you want to achieve..."></textarea>
+              <span class="field-hint">The more detail you share, the more precise our blueprint will be</span>
+            </div>
+            
+            <button type="submit" class="cta-btn primary submit-btn" id="contactSubmitBtn">
+              <i class="fas fa-paper-plane"></i> Send My Request
+            </button>
+            <p class="form-disclaimer"><i class="fas fa-lock"></i> Your data is secure and never shared. We respond within 24 hours.</p>
+          </form>
         </div>
-        <div class="direct-card">
-          <i class="fas fa-phone"></i>
-          <p>Give us a call to discuss your <b>digital solution</b>:</p>
-          <a class="direct-link" href="tel:+91 9216344282">+91  7877813270
-          </a>
+      </section>
+
+
+      <!-- Right side: Cal.com simulation widget -->
+      <section class="scheduler-panel glass-card">
+        <h2>Schedule Instantly</h2>
+        <p>Choose a day and time slot to sync with our technical architect team.</p>
+        
+        <!-- Day Grid -->
+        <div class="cal-grid">
+          <div class="cal-day" data-date="Monday">
+            <span class="cal-day-name">Mon</span>
+            <span class="cal-day-num">20</span>
+          </div>
+          <div class="cal-day" data-date="Tuesday">
+            <span class="cal-day-name">Tue</span>
+            <span class="cal-day-num">21</span>
+          </div>
+          <div class="cal-day" data-date="Wednesday">
+            <span class="cal-day-name">Wed</span>
+            <span class="cal-day-num">22</span>
+          </div>
+          <div class="cal-day" data-date="Thursday">
+            <span class="cal-day-name">Thu</span>
+            <span class="cal-day-num">23</span>
+          </div>
+          <div class="cal-day" data-date="Friday">
+            <span class="cal-day-name">Fri</span>
+            <span class="cal-day-num">24</span>
+          </div>
         </div>
+
+        <!-- Time slots -->
+        <div class="time-slots">
+          <div class="cal-time">10:00 AM</div>
+          <div class="cal-time">11:30 AM</div>
+          <div class="cal-time">02:00 PM</div>
+          <div class="cal-time">03:30 PM</div>
+          <div class="cal-time">05:00 PM</div>
+        </div>
+
+        <!-- Selection Summary -->
+        <div class="selected-summary-box" id="selected-date-summary">
+          <!-- Populated by JS -->
+        </div>
+
+        <button type="button" class="cta-btn primary confirm-booking-btn" id="confirm-booking">Confirm Booking Slot</button>
+      </section>
+
+    </div>
+
+    <!-- Direct contact info cards -->
+    <div class="contact-direct">
+      <div class="direct-card glass-card scroll-reveal">
+        <i class="fas fa-envelope"></i>
+        <p>Send an email directly to our founder team for inquiries:</p>
+        <a class="direct-link" href="mailto:apitideinfo@gmail.com">apitideinfo@gmail.com</a>
       </div>
-    </section>
+      
+      <div class="direct-card glass-card scroll-reveal">
+        <i class="fas fa-phone"></i>
+        <p>Talk to a technical architect directly to discuss details:</p>
+        <a class="direct-link" href="tel:+917877813270">+91 7877813270</a>
+      </div>
+    </div>
+
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-wave">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512,52,583,67.32c69.27,15,138.3,24.22,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#0a192f"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,141.56,72.2V0Z" opacity=".5" fill="#0a192f"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,86c57.52-8.48,105-41.95,136.65-72.46,36.04-34.25,71.52-83,112.15-13.82V0Z" fill="#0a192f"></path>
-      </svg>
-    </div>
     <div class="footer-container">
       <div class="footer-grid">
-        <!-- Brand Column -->
         <div class="footer-brand">
-          <div class="brand-wrapper">
-            <h2 class="brand-name">
-              <img src="{% static 'images/logo.png' %}" alt="Apitide Logo" class="logo-img">
-            </h2>
-          </div>
-          <p class="brand-desc">Transforming businesses with cutting-edge technology solutions. Let's build the future together.</p>
+          <h2>APITIDE</h2>
+          <p class="brand-desc">Transforming business operations through AI workflow integration, custom software, and robust web applications.</p>
           <div class="social-links">
             <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/apitide.info?igsh=N3BzZzhkajE3N3hw" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/apitide.info" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/Apitideinfo/Company-web" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-links">
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-nav">
-            <li><a href="{% url 'index' %}#hero" class="footer-link">Home</a></li>
-            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
+            <li><a href="{% url 'index' %}" class="footer-link">Home</a></li>
             <li><a href="{% url 'services' %}" class="footer-link">Services</a></li>
+            <li><a href="{% url 'about' %}" class="footer-link">About Us</a></li>
             <li><a href="{% url 'projects' %}" class="footer-link">Portfolio</a></li>
             <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Services -->
         <div class="footer-links">
           <h3 class="footer-heading">Our Services</h3>
           <ul class="footer-nav">
-            <li><a href="{% url 'services' %}#web" class="footer-link">Web Development</a></li>
-            <li><a href="{% url 'services' %}#mobile" class="footer-link">Mobile Apps</a></li>
-            <li><a href="{% url 'services' %}#ai" class="footer-link">AI Solutions</a></li>
-            <li><a href="{% url 'services' %}#ecommerce" class="footer-link">E-commerce</a></li>
-            <li><a href="{% url 'services' %}#consulting" class="footer-link">IT Consulting</a></li>
+            <li><a href="{% url 'services' %}#workflow" class="footer-link">AI Workflows</a></li>
+            <li><a href="{% url 'services' %}#development" class="footer-link">Web Development</a></li>
+            <li><a href="{% url 'services' %}#ai-solutions" class="footer-link">AI Solutions</a></li>
+            <li><a href="{% url 'services' %}#branding" class="footer-link">Luxury Branding</a></li>
+            <li><a href="{% url 'services' %}#consulting" class="footer-link">Consulting</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
         <div class="footer-contact">
           <h3 class="footer-heading">Get In Touch</h3>
           <ul class="contact-info">
             <li class="contact-item">
               <i class="fas fa-map-marker-alt contact-icon"></i>
-              <span>MDV Colony, Bikaner, India</span>
+              <span>Bikaner, Rajasthan, India</span>
             </li>
             <li class="contact-item">
               <i class="fas fa-phone contact-icon"></i>
@@ -167,44 +396,29 @@
             </li>
             <li class="contact-item">
               <i class="fas fa-envelope contact-icon"></i>
-              <a href="mailto:info@apitide.com" class="contact-link">apitideinfo@gmail.com</a>
-            </li>
-            <li class="contact-item">
-              <i class="fas fa-clock contact-icon"></i>
-              <span>Mon - Fri: 9:00 - 18:00</span>
+              <a href="mailto:apitideinfo@gmail.com" class="contact-link">apitideinfo@gmail.com</a>
             </li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p class="copyright">&copy; 2025 Apitide. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 APITIDE. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="privacy-policy.html" class="legal-link">Privacy Policy</a>
+          <a href="#" class="legal-link">Privacy Policy</a>
           <span class="divider">|</span>
-          <a href="terms-of-service.html" class="legal-link">Terms of Service</a>
+          <a href="#" class="legal-link">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    (function() {
-      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-      const navbar = document.querySelector('.navbar');
-      mobileMenuToggle.addEventListener('click', function() {
-        navbar.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
-      });
-      const navLinks = document.querySelectorAll('.navbar a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          navbar.classList.remove('active');
-          mobileMenuToggle.classList.remove('active');
-        });
-      });
-    })();
-  </script>
+  <!-- Custom main Javascript -->
+  <!-- ===== PHASE 24: GSAP + SCROLLTRIGGER + LENIS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
+  <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="{% static 'js/animations.js' %}" defer></script>
 </body>
 </html>
-

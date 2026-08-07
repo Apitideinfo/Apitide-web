@@ -1,0 +1,648 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources Hub – Blogs, Guides & Automation Templates | APITIDE</title>
+  <meta name="description" content="Access our full resource center: technical blogs, AI case studies, enterprise whitepapers, step-by-step automation guides, ready-made templates, and free blueprints." />
+  <meta name="robots" content="index, follow" /><link rel="canonical" href="https://www.apitide.com/resources/" />
+  <meta property="og:type" content="website" /><meta property="og:title" content="Resources Hub – Blogs, Case Studies & Blueprints | APITIDE" />
+  <meta property="og:description" content="Explore APITIDE's library of AI automation resources, technical whitepapers, workflow templates, and guides." />
+  <meta property="og:url" content="https://www.apitide.com/resources/" />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Resources Hub – APITIDE" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.apitide.com/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://www.apitide.com/resources/"}]}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="preload" as="style" href="{% static 'css/style.css' %}" /><link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="preload" as="style" href="{% static 'css/animations.css' %}" /><link rel="stylesheet" href="{% static 'css/animations.css' %}" />
+  <meta name="theme-color" content="#020617" />
+  <style>
+:root{--success:#10B981;}
+/* ── CRITICAL STRUCTURE ── */
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Outfit','Inter',sans-serif;background:#020617;color:#F8FAFC;line-height:1.6;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 24px}.header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:all .4s}.header .container{display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.4rem;color:white}.logo-img{height:38px;width:38px;object-fit:contain}.navbar{display:flex;gap:30px}.navbar a{color:#94A3B8;font-size:.92rem;font-weight:500;transition:color .3s}.navbar a:hover,.navbar a.active{color:white}.header-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#2563EB,#1D4ED8);color:white;padding:10px 22px;border-radius:30px;font-size:.88rem;font-weight:600}.cta-btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;border-radius:30px;font-size:.95rem;font-weight:600;gap:8px;cursor:pointer;border:1px solid transparent;transition:all .4s}.cta-btn.primary{background:linear-gradient(135deg,#2563EB,#1D4ED8);color:white;border-color:rgba(255,255,255,.1);box-shadow:0 4px 20px rgba(37,99,235,.3)}.cta-btn.secondary{background:rgba(255,255,255,.05);color:#F8FAFC;border-color:rgba(255,255,255,.08)}.gradient-text-blue{background:linear-gradient(135deg,#60A5FA,#2563EB);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.gradient-text-cyan{background:linear-gradient(135deg,#22D3EE,#06B6D4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.gradient-text-orange{background:linear-gradient(135deg,#FB923C,#F97316);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+/* ── RESOURCES PAGE ── */
+.res-hero{min-height:60vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(6,182,212,.15) 0%,transparent 70%),#020617;padding-top:120px;padding-bottom:60px;text-align:center;}
+.search-box-wrap{max-width:560px;margin:32px auto 0;position:relative;}
+.search-input{width:100%;background:rgba(15,23,42,.6);border:1px solid rgba(255,255,255,.08);border-radius:50px;padding:16px 24px 16px 54px;color:white;font-size:1rem;outline:none;font-family:'Outfit',sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:all .3s;}
+.search-input:focus{border-color:rgba(6,182,212,.5);box-shadow:0 10px 30px rgba(6,182,212,.15);}
+.search-icon{position:absolute;left:22px;top:50%;transform:translateY(-50%);color:#64748B;font-size:1.1rem;}
+/* Tabs */
+.res-tabs-wrap{border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:12px;margin-bottom:48px;}
+.res-tabs{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;}
+.res-tabs::-webkit-scrollbar{display:none;}
+.res-tab{padding:8px 20px;border-radius:30px;font-size:.85rem;font-weight:600;border:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);color:#94A3B8;cursor:pointer;white-space:nowrap;transition:all .3s;}
+.res-tab.active{background:#2563EB;border-color:#2563EB;color:white;}
+.res-tab:hover:not(.active){border-color:rgba(6,182,212,.3);color:white;}
+/* Grid */
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:80px;}
+.res-card{background:rgba(15,23,42,.6);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:all .4s cubic-bezier(.16,1,.3,1);cursor:default;}
+.res-card:hover{transform:translateY(-6px);border-color:rgba(6,182,212,.3);box-shadow:0 20px 40px rgba(0,0,0,.4);}
+.res-card-image{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#0F172A,#1E293B);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.05);}
+.res-card-glow{position:absolute;width:120px;height:120px;border-radius:50%;filter:blur(40px);opacity:.3;}
+.res-card-icon{font-size:3rem;position:relative;z-index:1;}
+.res-card-body{padding:24px;display:flex;flex-direction:column;flex:1;}
+.res-card-badge{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:20px;margin-bottom:14px;align-self:flex-start;}
+.badge-blog{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:#60A5FA;}
+.badge-case{background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);color:#10B981;}
+.badge-white{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);color:#A78BFA;}
+.badge-guide{background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.3);color:#F97316;}
+.badge-library{background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.3);color:#06B6D4;}
+.badge-template{background:rgba(236,72,153,.1);border:1px solid rgba(236,72,153,.3);color:#F472B6;}
+.badge-download{background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.3);color:#38BDF8;}
+.res-card h3{font-size:1.1rem;font-weight:700;color:white;margin-bottom:10px;line-height:1.4;}
+.res-card p{font-size:.85rem;color:#94A3B8;line-height:1.6;margin-bottom:20px;flex:1;}
+.res-card-footer{padding-top:16px;border-top:1px solid rgba(255,255,255,.05);display:flex;align-items:center;justify-content:between;gap:10px;}
+.res-action-btn{font-size:.82rem;font-weight:600;color:#06B6D4;cursor:pointer;background:none;border:none;display:inline-flex;align-items:center;gap:6px;transition:gap .3s;}
+.res-action-btn:hover{gap:10px;}
+.res-meta-text{font-size:.72rem;color:#64748B;}
+/* Modal Styles */
+.modal-overlay{position:fixed;inset:0;background:rgba(2,6,18,.8);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;}
+.modal-overlay.active{display:flex;opacity:1;}
+.modal-card{background:#0F172A;border:1px solid rgba(255,255,255,.08);border-radius:24px;width:90%;max-width:540px;padding:36px;box-shadow:0 25px 60px rgba(0,0,0,.5);position:relative;transform:scale(.9);transition:transform .3s;}
+.modal-overlay.active .modal-card{transform:scale(1);}
+.modal-close{position:absolute;top:20px;right:22px;background:none;border:none;color:#94A3B8;font-size:1.3rem;cursor:pointer;transition:color .3s;}
+.modal-close:hover{color:white;}
+.modal-card h3{font-size:1.4rem;font-weight:800;color:white;margin-bottom:8px;}
+.modal-card p{font-size:.9rem;color:#94A3B8;margin-bottom:24px;line-height:1.6;}
+.modal-form-group{margin-bottom:18px;}
+.modal-form-group label{display:block;font-size:.82rem;font-weight:600;color:#E2E8F0;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;}
+.modal-input{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:12px 16px;color:white;font-size:.9rem;outline:none;transition:border-color .3s;}
+.modal-input:focus{border-color:rgba(6,182,212,.5);}
+.modal-btn{width:100%;background:linear-gradient(135deg,#2563EB,#1D4ED8);color:white;border:none;border-radius:10px;padding:14px;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .3s;}
+.modal-btn:hover{opacity:.9;}
+/* Code Inspect panel */
+.code-box{background:rgba(2,6,18,.9);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:16px;font-family:monospace;font-size:.8rem;color:#93C5FD;max-height:220px;overflow-y:auto;white-space:pre;margin-bottom:16px;}
+.copy-confirm{display:none;color:#10B981;font-size:.78rem;font-weight:700;align-items:center;gap:6px;}
+.no-results{grid-column:1/-1;text-align:center;padding:60px 0;color:#94A3B8;display:none;}
+.no-results i{font-size:2.5rem;color:#64748B;margin-bottom:14px;}
+@media(max-width:900px){.res-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.res-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="{% url 'index' %}" class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="APITIDE Logo" class="logo-img" width="38" height="38" loading="eager" decoding="async" />
+        <span>APITIDE</span>
+      </a>
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'services' %}">Services</a>
+        <a href="{% url 'ai_tools' %}">AI Tools</a>
+        <a href="{% url 'resources' %}" class="active">Resources</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </nav>
+      <a href="{% url 'contact' %}" class="header-cta"><i class="fas fa-calendar-alt"></i> Book Consultation</a>
+      <div class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="res-hero">
+    <div class="container">
+      <div class="section-eyebrow eyebrow-cyan" style="display:inline-flex;margin-bottom:16px;"><i class="fas fa-folder-open"></i> Resource Center</div>
+      <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.2;margin-bottom:16px;">
+        Blogs, Guides & <span class="gradient-text-cyan">Automation Library</span>
+      </h1>
+      <p style="font-size:1.05rem;color:#94A3B8;max-width:600px;margin:0 auto 24px;">Explore our library of enterprise whitepapers, step-by-step guides, workflow blueprints, and free automation templates.</p>
+      
+      <div class="search-box-wrap">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-input" id="search-bar" placeholder="Search resources, topics, platforms..." autocomplete="off" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESOURCES HUB CONTENT ═══ -->
+  <section style="background:#020617;padding-bottom:100px;">
+    <div class="container">
+      
+      <div class="res-tabs-wrap">
+        <div class="res-tabs" id="res-tabs">
+          <button class="res-tab active" data-filter="all">All Resources</button>
+          <button class="res-tab" data-filter="blog">Blogs</button>
+          <button class="res-tab" data-filter="case">Case Studies</button>
+          <button class="res-tab" data-filter="white">Whitepapers</button>
+          <button class="res-tab" data-filter="guide">Guides</button>
+          <button class="res-tab" data-filter="library">Automation Library</button>
+          <button class="res-tab" data-filter="template">Templates</button>
+          <button class="res-tab" data-filter="download">Free Downloads</button>
+        </div>
+      </div>
+
+      <div class="res-grid" id="res-grid">
+        
+        <!-- Blog 1 -->
+        <div class="res-card" data-type="blog">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#3B82F6;top:10%;left:20%;"></div>
+            <div class="res-card-icon">🧠</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-blog">Blog</div>
+            <h3>How Vector DBs Power Context-Aware AI Chatbots</h3>
+            <p>A deep dive into embeddings, Pinecone vs. Qdrant vector databases, and how retrieval-augmented generation (RAG) prevents AI hallucinations.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="far fa-calendar"></i> Jul 15, 2026</span>
+              <button class="res-action-btn" onclick="readResource('blog-vector')">Read Post <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 1 -->
+        <div class="res-card" data-type="case">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#10B981;bottom:10%;right:20%;"></div>
+            <div class="res-card-icon">📊</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-case">Case Study</div>
+            <h3>SaaS Account Provisioning Automation</h3>
+            <p>See how we automated account setup and CRM sync for a fast-growing B2B company, resolving 92% of setup tickets and saving 45 hours weekly.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="fas fa-chart-line"></i> +92% Efficiency</span>
+              <button class="res-action-btn" onclick="readResource('case-saas')">Read Case Study <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Whitepaper 1 -->
+        <div class="res-card" data-type="white">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#8B5CF6;top:20%;right:10%;"></div>
+            <div class="res-card-icon">📄</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-white">Whitepaper</div>
+            <h3>Enterprise AI Security & Data Governance</h3>
+            <p>A comprehensive guide on securely deploying LLMs, protecting PII data, structuring localized vector databases, and SOC2 compliance.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="fas fa-file-pdf"></i> 14 Pages</span>
+              <button class="res-action-btn" onclick="openDownloadModal('Enterprise AI Security Whitepaper')">Download PDF <i class="fas fa-download"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guide 1 -->
+        <div class="res-card" data-type="guide">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#F97316;bottom:20%;left:10%;"></div>
+            <div class="res-card-icon">⚙️</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-guide">Guide</div>
+            <h3>Step-by-Step n8n + OpenAI Setup</h3>
+            <p>Learn how to connect n8n workflow variables to OpenAI API endpoints, parse structured responses, and write custom validation rules.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="fas fa-clock"></i> 8 Min Read</span>
+              <button class="res-action-btn" onclick="readResource('guide-n8n')">Read Guide <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Library 1 -->
+        <div class="res-card" data-type="library">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#06B6D4;top:30%;left:40%;"></div>
+            <div class="res-card-icon">⚡</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-library">Automation Library</div>
+            <h3>Slack + Zendesk AI Support Escalation</h3>
+            <p>Visual workflow structure to parse Zendesk tickets with LLM, evaluate priority, and post real-time alerts to Slack channels with direct action items.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="fas fa-code"></i> YAML Config</span>
+              <button class="res-action-btn" onclick="inspectWorkflow('slack-escalation')">Inspect Code <i class="fas fa-code"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template 1 -->
+        <div class="res-card" data-type="template">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#EC4899;top:10%;right:30%;"></div>
+            <div class="res-card-icon">📋</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-template">Template</div>
+            <h3>HubSpot Lead Enrichment Webhook</h3>
+            <p>Ready-to-use webhook structure to auto-enrich fresh HubSpot signups using external lead APIs and n8n orchestration.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="fas fa-puzzle-piece"></i> JSON Template</span>
+              <button class="res-action-btn" onclick="inspectWorkflow('hubspot-enrich')">Inspect Code <i class="fas fa-code"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download 1 -->
+        <div class="res-card" data-type="download">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#0EA5E9;bottom:10%;left:30%;"></div>
+            <div class="res-card-icon">🚀</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-download">Free Download</div>
+            <h3>Free Automation ROI Calculator</h3>
+            <p>An interactive spreadsheet template to calculate hours saved, cost reductions, and exact payback periods for your AI projects.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="fas fa-file-excel"></i> XLSX Calculator</span>
+              <button class="res-action-btn" onclick="openDownloadModal('Free Automation ROI Calculator')">Download XLSX <i class="fas fa-download"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download 2 (Free AI Audit Blueprint) -->
+        <div class="res-card" data-type="download">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#0EA5E9;top:20%;left:20%;"></div>
+            <div class="res-card-icon">📐</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-download">Free Download</div>
+            <h3>AI Automation Audit Blueprint</h3>
+            <p>Our official framework detailing how to assess operational bottlenecks, audit manual workflows, and plan high-yield AI integrations.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="fas fa-file-pdf"></i> PDF Guide</span>
+              <button class="res-action-btn" onclick="openDownloadModal('AI Automation Audit Blueprint')">Download PDF <i class="fas fa-download"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guide 2 (Claude 3.5 System Prompting) -->
+        <div class="res-card" data-type="guide">
+          <div class="res-card-image">
+            <div class="res-card-glow" style="background:#F97316;top:10%;right:10%;"></div>
+            <div class="res-card-icon">📝</div>
+          </div>
+          <div class="res-card-body">
+            <div class="res-card-badge badge-guide">Guide</div>
+            <h3>Advanced Prompting for Agentic Workflows</h3>
+            <p>How to construct stateful system prompts, configure tools schema, and write output parsers for Claude 3.5 and GPT-4o agent models.</p>
+            <div class="res-card-footer">
+              <span class="res-meta-text"><i class="fas fa-clock"></i> 10 Min Read</span>
+              <button class="res-action-btn" onclick="readResource('guide-prompting')">Read Guide <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results -->
+        <div class="no-results" id="no-results-panel">
+          <i class="fas fa-search-minus"></i>
+          <h3>No resources found</h3>
+          <p>Try searching for different keywords or select another filter category.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ MODAL CONTAINER ═══════════════ -->
+  <div class="modal-overlay" id="download-modal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <div id="modal-content-form">
+        <div class="section-eyebrow eyebrow-orange" style="margin-bottom:12px;"><i class="fas fa-download"></i> Lead Magnet</div>
+        <h3 id="modal-title-text">Download Resource</h3>
+        <p>Enter your details to receive the download link and exclusive AI insights straight to your inbox.</p>
+        
+        <form onsubmit="handleDownloadSubmit(event)">
+          <div class="modal-form-group">
+            <label for="lead-name">Full Name</label>
+            <input type="text" class="modal-input" id="lead-name" placeholder="John Doe" required />
+          </div>
+          <div class="modal-form-group">
+            <label for="lead-email">Business Email</label>
+            <input type="email" class="modal-input" id="lead-email" placeholder="john@company.com" required />
+          </div>
+          <button type="submit" class="modal-btn" id="modal-submit-btn">Get Download Link</button>
+        </form>
+      </div>
+
+      <!-- Success step -->
+      <div id="modal-content-success" style="display:none;text-align:center;">
+        <i class="fas fa-check-circle" style="font-size:4rem;color:#10B981;margin-bottom:16px;display:block;"></i>
+        <h3>Download Ready!</h3>
+        <p style="margin-bottom:24px;">Thank you! We have sent a copy to your email. Click the button below to start your direct download immediately.</p>
+        <button class="modal-btn" onclick="triggerDirectDownload()"><i class="fas fa-cloud-download-alt"></i> Start Download</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CODE INSPECTION MODAL ═══════════════ -->
+  <div class="modal-overlay" id="code-modal">
+    <div class="modal-card" style="max-width:600px;">
+      <button class="modal-close" onclick="closeCodeModal()"><i class="fas fa-times"></i></button>
+      <div class="section-eyebrow eyebrow-cyan" style="margin-bottom:12px;"><i class="fas fa-code"></i> Workflow Inspector</div>
+      <h3 id="code-title-text">Inspect Workflow Schema</h3>
+      <p style="margin-bottom:16px;">Preview or copy the ready-to-import orchestration code for your automation platform.</p>
+      
+      <div class="code-box" id="code-box-content"></div>
+      
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <button class="cta-btn primary" onclick="copyCode()" style="padding:10px 20px;font-size:.85rem;"><i class="far fa-copy"></i> Copy YAML Code</button>
+        <span class="copy-confirm" id="copy-confirm-text"><i class="fas fa-check"></i> Copied to clipboard!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ READ MODAL ═══════════════ -->
+  <div class="modal-overlay" id="read-modal">
+    <div class="modal-card" style="max-width:680px;max-height:85vh;overflow-y:auto;">
+      <button class="modal-close" onclick="closeReadModal()"><i class="fas fa-times"></i></button>
+      <div id="read-badge-wrap" class="res-card-badge">Badge</div>
+      <h3 id="read-title-text" style="font-size:1.6rem;margin-top:10px;">Post Title</h3>
+      <p id="read-meta-text" style="font-size:.78rem;color:#64748B;margin-bottom:20px;">Meta info</p>
+      <div id="read-body-content" style="font-size:.92rem;line-height:1.75;color:#E2E8F0;white-space:pre-line;">
+        Article body goes here...
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="{% url 'index' %}" class="logo"><img src="{% static 'images/logo.png' %}" alt="APITIDE" class="logo-img" width="38" height="38" loading="lazy" /><span>APITIDE</span></a><p>Build AI Systems That Work While You Sleep.</p></div>
+        <div class="footer-col"><h4>Pages</h4><ul><li><a href="{% url 'index' %}">Home</a></li><li><a href="{% url 'services' %}">Services</a></li><li><a href="{% url 'ai_tools' %}">AI Tools</a></li><li><a href="{% url 'resources' %}">Resources</a></li><li><a href="{% url 'about' %}">About</a></li><li><a href="{% url 'projects' %}">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>AI Solutions</h4><ul><li><a href="{% url 'ai_tools' %}#tools">AI Chatbot</a></li><li><a href="{% url 'ai_tools' %}#tools">Document AI</a></li><li><a href="{% url 'ai_tools' %}#tools">Sales AI</a></li><li><a href="{% url 'ai_tools' %}#tools">Analytics AI</a></li><li><a href="{% url 'ai_tools' %}#pricing">Pricing</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 APITIDE. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
+  <script src="{% static 'js/main.js' %}" defer></script>
+  <script src="{% static 'js/animations.js' %}" defer></script>
+
+  <script>
+  {% verbatim %}
+  // ── RESOURCES DATABASE ──
+  const resourceArticles = {
+    'blog-vector': {
+      title: 'How Vector DBs Power Context-Aware AI Chatbots',
+      badge: 'Blog',
+      badgeCls: 'badge-blog',
+      meta: 'Published on Jul 15, 2026 by APITIDE Engineering',
+      body: `Vector databases have emerged as the foundational layer of modern generative AI applications, specifically in building robust, context-aware AI agents and chatbots.
+
+      Standard databases query data by exact match. However, AI queries rely on semantic similarity — understanding that "How is the weather?" and "Is it raining outside?" share the same underlying query intent.
+
+      This is accomplished in three distinct stages:
+      1. Embeddings Generation: We convert raw document structures into high-dimensional numerical coordinates (embeddings) utilizing models like OpenAI's text-embedding-3-large.
+      2. Vector Storage: These numerical outputs are indexed in vector databases like Pinecone or Qdrant.
+      3. Semantic Search: When a user poses a question, we compute its embedding, query the database for the closest corresponding coordinate nodes, retrieve the text snippets, and feed them into the LLM as verified context.
+
+      By integrating vector search retrieval (RAG) into support chatbots, businesses eliminate hallucination and guarantee that answers are strictly based on actual business documentation, rather than standard generative fallback rules.`
+    },
+    'case-saas': {
+      title: 'SaaS Account Provisioning Automation Case Study',
+      badge: 'Case Study',
+      badgeCls: 'badge-case',
+      meta: 'Client: FinTech Growth Platform | Technology: n8n, Supabase, HubSpot',
+      body: `Challenge:
+      A fast-growing B2B FinTech company was onboarding 80+ new corporate customers weekly. Manual account provisioning, permission mapping, and syncing database logs to HubSpot took customer success agents 45+ hours every week, delaying activation.
+
+      Solution:
+      We engineered a stateless n8n workflow mapping signups from their frontend webhooks:
+      1. Verify user profile and workspace metadata in Supabase.
+      2. Trigger Slack alert to onboarding channels with quick-action activation buttons.
+      3. Instantiate custom user profiles, billing rules in Stripe, and permission databases via REST API hooks.
+      4. Auto-update pipeline stages in HubSpot CRM and log user tags.
+
+      Results:
+      • Setup time reduced from 2.5 hours to 3.8 seconds per corporate account.
+      • Onboarding ticket escalation reduced by 92%.
+      • Recovered 45 customer support hours weekly, redirecting teams to active retention accounts.`
+    },
+    'guide-n8n': {
+      title: 'n8n Workflow Setup: Connecting OpenAI API with Structured Validation',
+      badge: 'Guide',
+      badgeCls: 'badge-guide',
+      meta: 'Platform: n8n Workflow Automation | Estimated: 8 Min Read',
+      body: `Connecting LLMs like OpenAI to workflows is simple, but ensuring structured outputs (like JSON schemas) is where engineering challenges occur.
+
+      This guide walks you through setting up a validation layer in n8n:
+      1. Set up an n8n Webhook Node to listen to fresh data events.
+      2. Construct an HTTP Request Node calling the OpenAI Chat Completion endpoint.
+      3. Configure 'Response Format' parameter to 'json_object' and supply a strict system instruction defining the schema rules.
+      4. Parse the output in an n8n Code Node using JavaScript:
+         const data = JSON.parse($input.first().json.choices[0].message.content);
+      5. Insert a conditional Switch Node to validate that all required fields are present and structurally correct.
+      6. Handle fallbacks cleanly: if validation fails, route details to an LLM correction node rather than failing the execution stream.
+
+      This system ensures your automated pipelines never push broken data structures to your databases or downstream platforms.`
+    },
+    'guide-prompting': {
+      title: 'Advanced System Prompting and Tools Configuration for Agentic Workflows',
+      badge: 'Guide',
+      badgeCls: 'badge-guide',
+      meta: 'Author: AI Strategy Team | Estimated: 10 Min Read',
+      body: `Building agentic workflows requires moving past chat prompts to state-based engineering.
+
+      Essential principles of agentic prompting:
+      1. Role Definition & Boundaries: Clearly define the agent's constraints. E.g., "You are an agent processing invoices. Do NOT make assumptions. If dates are missing, return missing field indicators."
+      2. Structured Tool schemas: Supply prompt parameters describing precisely what tools are accessible, their JSON parameter requirements, and output formats.
+      3. Thought-Action-Observation Loops: Direct LLMs to reflect on input before acting (Chain of Thought), select a tool, record execution outcomes, and re-evaluate.
+      4. Error Mitigation: Explicitly instruct models how to react when tools fail (e.g. timeout fallback limits).
+
+      Structuring state sequences correctly turns normal models into robust tools capable of executing multi-step business logic.`
+    }
+  };
+
+  const workflowCodes = {
+    'slack-escalation': `# APITIDE Support Escalation n8n Workflow
+nodes:
+  - name: Webhook
+    type: n8n-nodes-base.webhook
+    position: [100, 300]
+  - name: OpenAI Parser
+    type: n8n-nodes-base.openAi
+    position: [300, 300]
+    parameters:
+      model: gpt-4o
+      responseFormat: json_object
+      prompt: "Extract ticket severity (High, Med, Low) and category."
+  - name: Check Severity
+    type: n8n-nodes-base.switch
+    position: [500, 300]
+    parameters:
+      rules:
+        - value1: "High"
+          output: 0
+  - name: Slack Alert
+    type: n8n-nodes-base.slack
+    position: [700, 200]
+    parameters:
+      channel: "#incident-escalation"
+      text: "🚨 High severity ticket received! Customer CSAT risk."`,
+    'hubspot-enrich': `{
+  "meta": {
+    "instanceId": "apitide-n8n-instance-prod"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "path": "hubspot-enrichment-webhook",
+        "options": {}
+      },
+      "name": "HubSpot Hook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [250, 350]
+    },
+    {
+      "parameters": {
+        "url": "https://api.lead-data-source.com/enrich",
+        "sendQuery": true,
+        "queryParameters": {
+          "email": "={{$node["HubSpot Hook"].json["email"]}}"
+        }
+      },
+      "name": "Fetch API",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [450, 350]
+    }
+  ]
+}`
+  };
+
+  // Search and Filter Logic
+  const searchInput = document.getElementById('search-bar');
+  const resGrid = document.getElementById('res-grid');
+  const resCards = document.querySelectorAll('.res-card');
+  const noResults = document.getElementById('no-results-panel');
+  let currentCategory = 'all';
+
+  function filterResources() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    resCards.forEach(card => {
+      const type = card.dataset.type;
+      const text = card.textContent.toLowerCase();
+      const matchesCategory = (currentCategory === 'all' || type === currentCategory);
+      const matchesSearch = text.includes(query);
+
+      if (matchesCategory && matchesSearch) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResults.style.display = 'block';
+    } else {
+      noResults.style.display = 'none';
+    }
+  }
+
+  searchInput.addEventListener('input', filterResources);
+
+  document.querySelectorAll('.res-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.res-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentCategory = tab.dataset.filter;
+      filterResources();
+    });
+  });
+
+  // Modal actions
+  let currentDownloadTitle = '';
+  function openDownloadModal(title) {
+    currentDownloadTitle = title;
+    document.getElementById('modal-title-text').textContent = 'Download: ' + title;
+    document.getElementById('modal-content-form').style.display = 'block';
+    document.getElementById('modal-content-success').style.display = 'none';
+    document.getElementById('download-modal').classList.add('active');
+  }
+
+  function closeModal() {
+    document.getElementById('download-modal').classList.remove('active');
+  }
+
+  function handleDownloadSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('modal-submit-btn');
+    btn.textContent = 'Generating link...';
+    btn.disabled = true;
+
+    // Simulate lead capture saving
+    setTimeout(() => {
+      btn.textContent = 'Get Download Link';
+      btn.disabled = false;
+      document.getElementById('modal-content-form').style.display = 'none';
+      document.getElementById('modal-content-success').style.display = 'block';
+    }, 1500);
+  }
+
+  function triggerDirectDownload() {
+    alert('Simulating download starting for: ' + currentDownloadTitle);
+    closeModal();
+  }
+
+  // Code inspection actions
+  let currentCode = '';
+  function inspectWorkflow(id) {
+    currentCode = workflowCodes[id] || '';
+    document.getElementById('code-title-text').textContent = id === 'slack-escalation' ? 'Inspect Support Escalation Workflow' : 'Inspect HubSpot Enrichment Webhook';
+    const box = document.getElementById('code-box-content');
+    box.textContent = currentCode;
+    document.getElementById('copy-confirm-text').style.display = 'none';
+    document.getElementById('code-modal').classList.add('active');
+  }
+
+  function closeCodeModal() {
+    document.getElementById('code-modal').classList.remove('active');
+  }
+
+  function copyCode() {
+    navigator.clipboard.writeText(currentCode).then(() => {
+      const confirm = document.getElementById('copy-confirm-text');
+      confirm.style.display = 'inline-flex';
+      setTimeout(() => { confirm.style.display = 'none'; }, 2000);
+    });
+  }
+
+  // Read article action
+  function readResource(id) {
+    const art = resourceArticles[id];
+    if (!art) return;
+    document.getElementById('read-badge-wrap').textContent = art.badge;
+    document.getElementById('read-badge-wrap').className = `res-card-badge ${art.badgeCls}`;
+    document.getElementById('read-title-text').textContent = art.title;
+    document.getElementById('read-meta-text').textContent = art.meta;
+    document.getElementById('read-body-content').textContent = art.body;
+    document.getElementById('read-modal').classList.add('active');
+  }
+
+  function closeReadModal() {
+    document.getElementById('read-modal').classList.remove('active');
+  }
+
+  // Close modals on overlay clicks
+  window.addEventListener('click', e => {
+    if (e.target.classList.contains('modal-overlay')) {
+      closeModal();
+      closeCodeModal();
+      closeReadModal();
+    }
+  });
+  {% endverbatim %}
+  </script>
+
+</body>
+</html>

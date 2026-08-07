@@ -4,7 +4,7 @@ Django settings for company_web project.
 
 from pathlib import Path
 import os
-from decouple import config
+from decouple import config  # type: ignore
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,9 +12,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-me')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['*', '.onrender.com']
+ALLOWED_HOSTS = ['*', '.onrender.com', '.vercel.app', 'localhost', '127.0.0.1']
+
+# Vercel sets VERCEL_URL at runtime — add it to allowed hosts
+VERCEL_URL = os.environ.get('VERCEL_URL')
+if VERCEL_URL:
+    ALLOWED_HOSTS.append(VERCEL_URL)
+
 
 
 # Application definition
@@ -30,6 +36,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.gzip.GZipMiddleware',          # Phase 23: compress responses
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,8 +79,19 @@ DATABASES = {
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
+# Phase 23 Performance: WhiteNoise cache headers (1 year for hashed assets)
+WHITENOISE_MAX_AGE = 31536000          # 1 year in seconds
+WHITENOISE_ALLOW_ALL_ORIGINS = True
+
+# Phase 23 Performance: Security + caching headers
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# Phase 23 Performance: DB connection pooling
+DATABASES['default']['CONN_MAX_AGE'] = 60
 
 # Email settings
 EMAIL_HOST = 'smtp.gmail.com'
