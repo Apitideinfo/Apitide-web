@@ -494,37 +494,35 @@ a {
 
 /* Floating Company Logos Ticker — full viewport width without layout shift */
 .logo-ticker-container {
-  margin-top: 40px;
-  margin-bottom: 50px;
-  width: 100vw;
-  max-width: 100vw;
+  margin-top: 35px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1100px;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   overflow: hidden;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
-/* Fade-out masks on left & right edges */
+/* Fade-out masks on left & right edges with video overlay blending */
 .logo-ticker-container::before,
 .logo-ticker-container::after {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 120px;
+  width: 80px;
   z-index: 2;
   pointer-events: none;
 }
 
 .logo-ticker-container::before {
   left: 0;
-  background: linear-gradient(to right, var(--bg-dark), transparent);
+  background: linear-gradient(to right, rgba(2, 6, 23, 0.85), transparent);
 }
 
 .logo-ticker-container::after {
   right: 0;
-  background: linear-gradient(to left, var(--bg-dark), transparent);
+  background: linear-gradient(to left, rgba(2, 6, 23, 0.85), transparent);
 }
 
 .ticker-label {
@@ -713,27 +711,34 @@ a {
 .hero-stats-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  gap: 12px;
+  width: 100%;
+  max-width: 1100px;
   margin-top: 20px;
 }
 
 .hero-stat-item {
-  background: rgba(15, 23, 42, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  padding: 20px;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 10px;
   border-radius: 12px;
   backdrop-filter: blur(10px);
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .stat-number {
-  font-size: 2.2rem;
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
   font-weight: 800;
   color: var(--text-primary);
   display: block;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 1px;
