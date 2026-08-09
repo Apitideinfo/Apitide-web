@@ -1,6 +1,4 @@
-*.pyc
-__pycache__/
+node_modules/
 .env
-db.sqlite3
 .DS_Store
 *.log
