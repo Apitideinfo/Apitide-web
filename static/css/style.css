@@ -2351,13 +2351,18 @@ section {
   border-radius: 50%;
   background: var(--bg-dark);
   border: 3px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-secondary);
+  color: #ffffff;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 0.9rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1;
+  text-align: center;
+  overflow: hidden;
+  user-select: none;
   transition: var(--transition-smooth);
 }
 
