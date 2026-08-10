@@ -8762,6 +8762,46 @@ body {
   align-items: baseline;
   color: #FFFFFF;
   margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.original-strikethrough {
+  font-size: 1.2rem;
+  color: #64748B;
+  text-decoration: line-through;
+  margin-right: 6px;
+  font-weight: 600;
+}
+
+.discount-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-left: 6px;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+}
+
+.discount-badge.text-green {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10B981;
+}
+
+.discount-badge.text-orange {
+  background: rgba(249, 115, 22, 0.15);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  color: #F97316;
+}
+
+.discount-badge.text-cyan {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
 }
 
 .plan-price-wrap .currency {
@@ -8786,6 +8826,7 @@ body {
 .plan-price-wrap.custom-price {
   font-size: 2.4rem;
   font-weight: 800;
+  align-items: center;
 }
 
 .plan-desc {
