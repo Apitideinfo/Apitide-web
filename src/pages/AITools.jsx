@@ -1166,7 +1166,7 @@ export default function AITools() {
                 Flexible <span className="aitools-gradient-blue">AI Tool Deployment</span>
               </h2>
               <p className="aitools-section-subtitle">
-                Limited-time <strong className="text-green">30% OFF</strong> applied across all monthly plans. Includes 14-day free evaluation pilot.
+                Limited-time <strong className="text-green">35% OFF</strong> applied across all monthly plans. Includes 14-day free evaluation pilot.
               </p>
             </div>
 
@@ -1178,9 +1178,9 @@ export default function AITools() {
                 <div className="plan-price-wrap">
                   <span className="original-strikethrough">$99</span>
                   <span className="currency">$</span>
-                  <span className="amount">69</span>
+                  <span className="amount">64</span>
                   <span className="period">/mo</span>
-                  <span className="discount-badge text-green">30% OFF</span>
+                  <span className="discount-badge text-green">35% OFF</span>
                 </div>
                 <p className="plan-desc">Ideal for small businesses deploying their first AI tool with full integration.</p>
 
@@ -1204,9 +1204,9 @@ export default function AITools() {
                 <div className="plan-price-wrap">
                   <span className="original-strikethrough">$299</span>
                   <span className="currency">$</span>
-                  <span className="amount">209</span>
+                  <span className="amount">194</span>
                   <span className="period">/mo</span>
-                  <span className="discount-badge text-orange">30% OFF</span>
+                  <span className="discount-badge text-orange">35% OFF</span>
                 </div>
                 <p className="plan-desc">Full-stack AI suite for growing enterprises automating multiple departments simultaneously.</p>
 
@@ -1229,7 +1229,7 @@ export default function AITools() {
                 <div className="plan-name text-cyan">ENTERPRISE</div>
                 <div className="plan-price-wrap custom-price">
                   <span>Custom</span>
-                  <span className="discount-badge text-cyan" style={{ marginLeft: '10px', fontSize: '0.72rem' }}>30% OFF APPLIED</span>
+                  <span className="discount-badge text-cyan" style={{ marginLeft: '10px', fontSize: '0.72rem' }}>35% OFF APPLIED</span>
                 </div>
                 <p className="plan-desc">Bespoke AI architecture for enterprise leaders needing unlimited scale, white-labeling, and on-premise deployments.</p>
 
