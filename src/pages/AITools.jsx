@@ -1138,19 +1138,17 @@ export default function AITools() {
         </section>
 
         {/* ──────────────────────────────────────────────────────────────────────────
-           6. PROMOTIONAL OFFER BANNER
+           6. PROMOTIONAL OFFER BANNER (FULL WIDTH EDGE-TO-EDGE)
            ────────────────────────────────────────────────────────────────────────── */}
-        <section className="aitools-section aitools-bg-darker" id="promo-banner">
-          <div className="aitools-container">
-            <div className="aitools-promo-banner-wrap">
-              <Link to="/contact">
-                <img
-                  src="/static/images/industry_banner.png"
-                  alt="Up to 35% Off on Professional Software Development Services"
-                  className="aitools-promo-banner-img"
-                />
-              </Link>
-            </div>
+        <section className="aitools-section aitools-fullwidth-promo" id="promo-banner">
+          <div className="aitools-promo-banner-wrap">
+            <Link to="/contact">
+              <img
+                src="/static/images/industry_banner.png"
+                alt="Up to 35% Off on Professional Software Development Services"
+                className="aitools-promo-banner-img"
+              />
+            </Link>
           </div>
         </section>
 
