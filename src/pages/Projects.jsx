@@ -121,6 +121,24 @@ const PROJECTS_DATA = [
       { val: '✓', label: 'Personalized learning paths with progress tracking' }
     ],
     tech: ['GPT-4o', 'Docker APIs', 'React', 'Node.js']
+  },
+  {
+    id: 'fitness-modal',
+    title: 'Fitness & Supplement Website – Muscle Fuel Express',
+    subtitle: 'Conversion-focused landing page and product storefront for nutrition',
+    category: 'E-Commerce & Fitness',
+    icon: '🏋️',
+    image: '/static/images/fitness_detail.png',
+    description: 'A premium, high-conversion fitness and supplement store designed for Muscle Fuel Express. Optimizes sales of sports nutrition products with interactive feature layouts.',
+    problem: 'Client required a reliable, scalable, and user-friendly solution tailored to business requirements.',
+    solution: 'Designed and engineered a conversion-focused fitness and supplement landing page.',
+    results: [
+      { val: 'Higher', label: 'Conversions through optimized customer flows' },
+      { val: 'Better', label: 'Engagement keeping athletes coming back' },
+      { val: 'Increased', label: 'Trust via verified ingredients transparency' },
+      { val: 'Growth', label: 'In digital supplement product sales' }
+    ],
+    tech: ['React.js', 'TailwindCSS', 'Framer Motion', 'Stripe API']
   }
 ];
 
@@ -252,30 +270,16 @@ export default function Projects() {
         </section>
 
         {/* ──────────────────────────────────────────────────────────────────────────
-           4. CONVERSION CTA
+           4. CONVERSION CTA (FULL-WIDTH BANNER)
            ────────────────────────────────────────────────────────────────────────── */}
-        <section className="proj-section proj-cta-section">
-          <div className="proj-container">
-            <div className="proj-card-cta">
-              <span className="proj-eyebrow text-orange mb-3">
-                <i className="fas fa-hands-helping"></i> PARTNER WITH US
-              </span>
-              <h2>
-                Have a Project in Mind? <span className="proj-gradient-orange">Let's Build Something Great.</span>
-              </h2>
-              <p>
-                We collaborate with modern companies to automate repetitive operations, ground LLM systems, and build robust digital tools.
-              </p>
-              <div className="proj-cta-actions">
-                <Link to="/contact" className="proj-btn proj-btn-primary">
-                  <i className="fas fa-calendar-check"></i> Start Your Free Consultation
-                </Link>
-                <Link to="/services" className="proj-btn proj-btn-secondary">
-                  Explore Our Services
-                </Link>
-              </div>
-            </div>
-          </div>
+        <section className="proj-banner-section">
+          <Link to="/contact" className="proj-banner-link" aria-label="Start Your Project">
+            <img 
+              src="/static/images/fitness_banner.png" 
+              alt="Muscle Fuel Express Fitness Supplement Website Banner" 
+              className="proj-banner-img" 
+            />
+          </Link>
         </section>
 
       </main>

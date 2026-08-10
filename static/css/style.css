@@ -10905,3 +10905,30 @@ body {
     border-radius: 16px;
   }
 }
+
+/* FULL WIDTH PORTFOLIO BANNER */
+.proj-banner-section {
+  width: 100%;
+  padding: 40px 0 100px;
+  background: #020617;
+}
+
+.proj-banner-link {
+  display: block;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  position: relative;
+}
+
+.proj-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.proj-banner-link:hover .proj-banner-img {
+  transform: scale(1.015);
+}
