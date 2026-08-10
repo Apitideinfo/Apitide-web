@@ -152,7 +152,7 @@ export default function Projects() {
   return (
     <div className="projects-page">
       <main>
-        
+
         {/* ──────────────────────────────────────────────────────────────────────────
            1. HERO SECTION
            ────────────────────────────────────────────────────────────────────────── */}
@@ -201,7 +201,7 @@ export default function Projects() {
                 </div>
                 <h3 className="featured-title">{featuredProject.title}</h3>
                 <p className="featured-desc">{featuredProject.description}</p>
-                
+
                 <div className="featured-tech-wrap">
                   {featuredProject.tech.map((t, idx) => (
                     <span key={idx} className="tech-badge">{t}</span>
@@ -274,10 +274,10 @@ export default function Projects() {
            ────────────────────────────────────────────────────────────────────────── */}
         <section className="proj-banner-section">
           <Link to="/contact" className="proj-banner-link" aria-label="Start Your Project">
-            <img 
-              src="/static/images/projects_bottom_banner_new.png" 
-              alt="Apitide Custom Solutions Portfolio Banner" 
-              className="proj-banner-img" 
+            <img
+              src="/static/images/projects_bottom_banner.jpg"
+              alt="Apitide Custom Solutions Portfolio Banner"
+              className="proj-banner-img"
             />
           </Link>
         </section>
@@ -293,7 +293,7 @@ export default function Projects() {
             <button className="proj-modal-close" onClick={() => setActiveModal(null)}>
               <i className="fas fa-times"></i>
             </button>
-            
+
             <div className="modal-header">
               <span className="modal-icon">{activeModal.icon}</span>
               <span className="modal-category">{activeModal.category}</span>
