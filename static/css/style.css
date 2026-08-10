@@ -11664,3 +11664,8 @@ body {
     font-size: 0.95rem;
   }
 }
+
+/* NAVBAR UTILITIES */
+.mobile-menu-cta {
+  display: none;
+}
