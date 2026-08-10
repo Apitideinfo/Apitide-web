@@ -22,72 +22,71 @@ const PROJECTS_DATA = [
   },
   {
     id: 'agentic-modal',
-    title: 'Agentic AI – Smart Business Assistant',
-    subtitle: 'Autonomous email and meeting management system',
-    category: 'AI Agents & Automation',
-    icon: '🤖',
+    title: 'Corporate Website – Premium Landing Page & Branding',
+    subtitle: 'High-conversion corporate landing page for modern SaaS & Enterprise brands',
+    category: 'Web Design & Branding',
+    icon: '🏢',
     image: '/static/images/team_img1.jpg',
-    description: 'A smart autonomous assistant that manages emails and schedules meetings. It automates repetitive tasks, saves hours of work weekly, and ensures error-free scheduling with seamless business integration.',
-    problem: 'Professionals wasted hours manually managing emails & scheduling meetings.',
-    solution: 'Built an autonomous AI agent that reads emails, checks calendar availability, schedules meetings, and sends confirmations.',
+    description: 'A premium corporate website designed for high conversions and professional brand positioning. Features interactive user interfaces, clean typography, and optimized loading speed.',
+    problem: 'The enterprise brand lacked a professional online presence that effectively communicated its SaaS value proposition and converted visitors.',
+    solution: 'Designed and built an editorial, high-performance corporate landing page with interactive dashboard mockups and responsive design.',
     results: [
-      { val: '100%', label: 'Automated scheduling workflow' },
-      { val: '5+', label: 'Hours saved per week per professional' },
-      { val: '80%', label: 'Reduced scheduling errors' },
-      { val: '✓', label: 'Scalable for real-world business use' }
+      { val: '50%', label: 'Increase in page engagement rate' },
+      { val: '35%', label: 'Boost in lead conversion rates' },
+      { val: '1.1s', label: 'Speed index load time optimization' }
     ],
-    tech: ['LangChain', 'OpenAI API', 'Google Workspace API', 'n8n']
+    tech: ['React.js', 'CSS Grid', 'Figma Design', 'SEO Best Practices']
   },
   {
     id: 'ev-modal',
-    title: 'ElectricFutureIndia.com – Informative EV Website',
-    subtitle: 'Lightweight, responsive website for EV startup',
-    category: 'Web Development',
-    icon: '⚡',
+    title: 'Organic Food Brand – Custom E-Commerce Store',
+    subtitle: 'Tasteful digital storefront for natural & organic consumer goods',
+    category: 'E-Commerce & Branding',
+    icon: '🍯',
     image: '/static/images/team_img2.jpg',
-    description: 'A lightweight and responsive website created for an EV startup. Designed with clean UI, smooth animations, and fast loading speed, it boosts the client\'s credibility and provides a polished online presence.',
-    problem: 'Client needed a lightweight, professional EV website with fast performance.',
-    solution: 'Built a static responsive site with clean UI, smooth animations, and lightweight interactivity.',
+    description: 'An elegant and premium e-commerce design built for organic products and natural food brands. Focuses on visual storytelling, product authenticity, and frictionless checkout.',
+    problem: 'A local organic brand needed a digital storefront that reflected its premium quality and supported direct-to-consumer sales.',
+    solution: 'Created a beautiful organic-themed custom web store with immersive visuals, organic color palettes, and secure payment pathways.',
     results: [
-      { val: '1.2s', label: 'Load time across devices' },
-      { val: '↑', label: 'Increased client credibility with polished presence' },
-      { val: '60%', label: 'Reduced maintenance overhead' }
+      { val: '60%', label: 'Growth in direct online sales' },
+      { val: '99.9%', label: 'Checkout success rate with Stripe' },
+      { val: '2.5x', label: 'Higher customer return/retention rate' }
     ],
-    tech: ['HTML5', 'Vanilla CSS', 'JavaScript', 'SEO Optimized']
+    tech: ['Shopify SDK', 'TailwindCSS', 'React', 'Stripe Payments']
   },
   {
     id: 'health-modal',
-    title: 'HealthDominus – AI Medicine Recommender',
-    subtitle: 'AI-powered disease prediction and medicine recommendation',
-    category: 'AI & Healthcare',
-    icon: '🏥',
+    title: 'Jainism Educational Platform – Heritage & Philosophy',
+    subtitle: 'Interactive digital resource for history, ethics, and philosophy',
+    category: 'Education & Culture',
+    icon: '📿',
     image: '/static/images/team_img3.jpg',
-    description: 'An AI-powered system that predicts diseases from symptoms and recommends basic medicines. Especially impactful in rural areas, it ensures safe, instant, and reliable healthcare guidance 24/7.',
-    problem: 'Patients lacked instant, reliable medical guidance—especially in rural areas.',
-    solution: 'AI-powered system predicting diseases from symptoms & recommending basic medicines.',
+    description: 'A clean, cultural, and educational website exploring the history, philosophy, and timeless wisdom of Jainism. Features rich interactive sections, scripture access, and mobile responsiveness.',
+    problem: 'An educational foundation needed a modern digital resource to document ancient scriptures and philosophy for a global audience.',
+    solution: 'Built a lightweight, highly readable educational platform with search systems, scripture archives, and minimal design aesthetics.',
     results: [
-      { val: '85%', label: 'Accuracy in medical insights' },
-      { val: '50%', label: 'Reduced reliance on unsafe internet searches' },
-      { val: '24/7', label: 'Access for rural/remote users' }
+      { val: '10k+', label: 'Monthly active learners globally' },
+      { val: '100%', label: 'Mobile accessibility accessibility score' },
+      { val: '0', label: 'Downtime hosting architecture setup' }
     ],
-    tech: ['Python ML', 'Flask API', 'React', 'Tailored Medical Dataset']
+    tech: ['HTML5', 'Sass', 'JavaScript', 'Scripture Search Index']
   },
   {
     id: 'chat-modal',
-    title: 'Real-Time Chat App',
-    subtitle: 'Modern chat application with multimedia support',
-    category: 'Web Application',
-    icon: '💬',
+    title: 'Beauty & Wellness Portal – Luxury Brand Experience',
+    subtitle: 'Immersive digital presence for premium cosmetics and self-care brands',
+    category: 'Luxury Web Development',
+    icon: '🧴',
     image: '/static/images/team_img4.jpg',
-    description: 'A modern chat application with one-to-one & group messaging, multimedia sharing, typing indicators, and optional encryption. Built for scalability and reliability with smooth real-time performance.',
-    problem: 'Existing chat tools lacked scalability, multimedia, and security.',
-    solution: 'Developed a chat app with 1-to-1 & group chat, multimedia sharing, indicators, and optional encryption.',
+    description: 'A luxurious and immersive brand experience designed for beauty, skincare, and wellness products. Features clean minimal layouts, product highlight modals, and high-fidelity transitions.',
+    problem: 'A boutique cosmetics brand needed a luxury online catalog that matched their physical store aesthetic and customer experience.',
+    solution: 'Developed a premium web experience featuring high-end animations, interactive wellness consultations, and minimal typography.',
     results: [
-      { val: '99%', label: 'Uptime for real-time communication' },
-      { val: '40%', label: 'Increased user engagement with group/multimedia features' },
-      { val: '5,000+', label: 'Concurrent users supported' }
+      { val: '40%', label: 'Higher user session duration' },
+      { val: '2.2x', label: 'Increase in product inquiry submissions' },
+      { val: '98%', label: 'Mobile responsive satisfaction score' }
     ],
-    tech: ['Socket.io', 'Node.js', 'Express', 'React', 'MongoDB']
+    tech: ['React.js', 'CSS Transitions', 'Figma UX', 'Responsive Layout']
   },
   {
     id: 'ecommerce-modal',
