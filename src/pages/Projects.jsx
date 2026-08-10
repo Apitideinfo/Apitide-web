@@ -275,7 +275,7 @@ export default function Projects() {
         <section className="proj-banner-section">
           <Link to="/contact" className="proj-banner-link" aria-label="Start Your Project">
             <img 
-              src="/static/images/projects_bottom_banner.jpg" 
+              src="/static/images/projects_bottom_banner_new.png" 
               alt="Apitide Custom Solutions Portfolio Banner" 
               className="proj-banner-img" 
             />
