@@ -8085,7 +8085,6 @@ body {
 }
 
 .aitools-filter-pills,
-.aitools-tabs-bar,
 .aitools-pills-bar {
   display: flex;
   flex-wrap: wrap;
@@ -8093,8 +8092,23 @@ body {
   justify-content: center;
 }
 
-.aitools-pill,
-.aitools-tab-btn {
+.aitools-tabs-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.aitools-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.aitools-pill {
   padding: 9px 18px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.04);
@@ -8107,6 +8121,23 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.aitools-tab-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94A3B8;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .aitools-pill:hover,
