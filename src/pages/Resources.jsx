@@ -471,7 +471,7 @@ export default function Resources() {
           <div className="res-promo-banner-wrap">
             <Link to="/contact">
               <img
-                src="/static/images/resource_promo_banner.png"
+                src="/static/images/resource_promo_banner.webp"
                 alt="A Trusted Software Development Team is Closer Than You Think"
                 className="res-promo-banner-img"
               />

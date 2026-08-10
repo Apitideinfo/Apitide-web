@@ -128,7 +128,7 @@ const PROJECTS_DATA = [
     subtitle: 'Conversion-focused landing page and product storefront for nutrition',
     category: 'E-Commerce & Fitness',
     icon: '🏋️',
-    image: '/static/images/fitness_detail.png',
+    image: '/static/images/fitness_detail.webp',
     description: 'A premium, high-conversion fitness and supplement store designed for Muscle Fuel Express. Optimizes sales of sports nutrition products with interactive feature layouts.',
     problem: 'Client required a reliable, scalable, and user-friendly solution tailored to business requirements.',
     solution: 'Designed and engineered a conversion-focused fitness and supplement landing page.',
@@ -275,7 +275,7 @@ export default function Projects() {
         <section className="proj-banner-section">
           <Link to="/contact" className="proj-banner-link" aria-label="Start Your Project">
             <img 
-              src="/static/images/projects_bottom_banner_new.png" 
+              src="/static/images/projects_bottom_banner_new.webp" 
               alt="Apitide Custom Solutions Portfolio Banner" 
               className="proj-banner-img" 
             />

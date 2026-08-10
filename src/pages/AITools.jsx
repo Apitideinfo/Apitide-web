@@ -1144,7 +1144,7 @@ export default function AITools() {
           <div className="aitools-promo-banner-wrap">
             <Link to="/contact">
               <img
-                src="/static/images/industry_banner.png"
+                src="/static/images/industry_banner.webp"
                 alt="Up to 35% Off on Professional Software Development Services"
                 className="aitools-promo-banner-img"
               />

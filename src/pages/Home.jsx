@@ -314,7 +314,7 @@ export default function Home() {
       {/*  TRANSFORMATION SHOWCASE BANNER (FULL VIEWPORT WIDTH EDGE-TO-EDGE)  */}
       <section className="banner-showcase-section">
         <div className="banner-showcase-wrapper">
-          <img src="/static/images/hero-visual.png" alt="APITIDE - Code Transformation & AI Modernization"
+          <img src="/static/images/hero-visual.webp" alt="APITIDE - Code Transformation & AI Modernization"
             className="transformation-banner-img" loading="lazy" />
         </div>
       </section>
