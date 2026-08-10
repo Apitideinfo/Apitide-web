@@ -1194,7 +1194,7 @@ export default function AITools() {
             <div className="glass-card pricing-plan-card">
               <div className="plan-badge">STARTER</div>
               <div className="plan-price">
-                <span className="currency">$</span>499<span className="period">/mo</span>
+                <span className="currency">$</span>99<span className="period">/mo</span>
               </div>
               <p className="plan-desc">Ideal for small businesses deploying their first single AI tool with full integration.</p>
 
@@ -1216,7 +1216,7 @@ export default function AITools() {
               <div className="popular-ribbon">MOST POPULAR</div>
               <div className="plan-badge text-orange">GROWTH SUITE</div>
               <div className="plan-price">
-                <span className="currency">$</span>1,499<span className="period">/mo</span>
+                <span className="currency">$</span>299<span className="period">/mo</span>
               </div>
               <p className="plan-desc">Full-stack AI suite for growing enterprises automating multiple departments simultaneously.</p>
 

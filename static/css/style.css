@@ -8439,9 +8439,10 @@ body {
 /* Pricing Grid */
 .pricing-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   align-items: stretch;
+  padding-top: 10px;
 }
 
 .pricing-plan-card {
@@ -8450,6 +8451,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: visible !important;
 }
 
 .pricing-plan-card.featured {
@@ -8460,15 +8462,17 @@ body {
 
 .popular-ribbon {
   position: absolute;
-  top: -12px;
-  right: 24px;
+  top: 18px;
+  right: 20px;
   background: linear-gradient(135deg, #F97316, #EA580C);
   color: #FFF;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 800;
-  padding: 4px 12px;
+  padding: 5px 12px;
   border-radius: 10px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+  z-index: 3;
 }
 
 .plan-badge {
