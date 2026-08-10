@@ -1005,7 +1005,7 @@ export default function Home() {
       <section className="ai-promo-banner-section">
         <Link to="/contact" className="ai-promo-banner-link" title="Claim 20% Off Professional Software Development Services">
           <div className="ai-promo-banner-card">
-            <img src="/static/images/software_discount_banner.png" alt="Up to 20% Off on Professional Software Development Services" className="ai-promo-banner-img" loading="lazy" />
+            <img src="/static/images/software_discount_banner.webp" alt="Up to 20% Off on Professional Software Development Services" className="ai-promo-banner-img" loading="lazy" />
             <div className="ai-promo-banner-glow"></div>
           </div>
         </Link>
