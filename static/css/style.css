@@ -11007,7 +11007,7 @@ body {
 
 /* HERO SECTION */
 .contact-hero {
-  padding: 80px 0 50px;
+  padding: 50px 0 20px;
   position: relative;
   text-align: center;
 }
@@ -11178,8 +11178,8 @@ body {
   background: rgba(10, 15, 30, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 24px;
-  padding: 40px;
-  margin-bottom: 36px;
+  padding: 30px 32px;
+  margin-bottom: 24px;
   backdrop-filter: blur(20px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -11187,7 +11187,7 @@ body {
 
 .form-header,
 .scheduler-header {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .form-header h2,
@@ -11209,19 +11209,19 @@ body {
 .contact-form-element {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 16px;
 }
 
 .form-row-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 16px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .form-group label {
@@ -11238,7 +11238,7 @@ body {
 .form-group textarea,
 .form-group select {
   width: 100%;
-  padding: 13px 18px;
+  padding: 11px 16px;
   background: rgba(15, 23, 42, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -11581,20 +11581,20 @@ body {
 @media (max-width: 480px) {
   .form-row-2col {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
   }
   .contact-form-wrapper,
   .contact-scheduler-wrapper {
-    padding: 24px 18px;
+    padding: 20px 16px;
     border-radius: 20px;
   }
   .scheduler-days-grid {
-    gap: 8px;
+    gap: 6px;
   }
   .scheduler-day-card {
-    padding: 10px 4px;
+    padding: 8px 4px;
   }
   .day-number {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }

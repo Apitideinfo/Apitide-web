@@ -351,7 +351,7 @@ export default function Contact() {
                         <textarea 
                           id="details" 
                           name="details" 
-                          rows="4" 
+                          rows="3" 
                           placeholder="Describe your current bottleneck, integrations needed (N8N, Salesforce, OpenAI, WhatsApp), and core project milestones..."
                           value={formData.details}
                           onChange={handleChange}
