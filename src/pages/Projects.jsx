@@ -275,8 +275,8 @@ export default function Projects() {
         <section className="proj-banner-section">
           <Link to="/contact" className="proj-banner-link" aria-label="Start Your Project">
             <img 
-              src="/static/images/fitness_banner.png" 
-              alt="Muscle Fuel Express Fitness Supplement Website Banner" 
+              src="/static/images/projects_bottom_banner.jpg" 
+              alt="Apitide Custom Solutions Portfolio Banner" 
               className="proj-banner-img" 
             />
           </Link>
