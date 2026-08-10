@@ -194,36 +194,36 @@ export default function About() {
             </div>
 
             <div className="abt-team-grid">
-              {/* Harshit Ramawat */}
+              {/* Kritika Paliwal */}
               <div className="abt-card abt-team-card">
-                <div className="team-avatar text-cyan">HR</div>
-                <h3 className="team-name">Harshit Ramawat</h3>
-                <span className="team-role text-cyan">Founder & Principal Automation Engineer</span>
-                <p className="team-bio">Specializes in n8n automation maps, API integrations, and secure HIPAA cloud server deployments.</p>
+                <div className="team-avatar text-cyan">KP</div>
+                <h3 className="team-name">Kritika Paliwal</h3>
+                <span className="team-role text-cyan">UI/UX Designer</span>
+                <p className="team-bio">Specializes in user research, wireframing, high-fidelity UI design systems, and conversion-focused digital experiences.</p>
                 <div className="team-socials">
                   <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-link" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
                   <a href="https://github.com" target="_blank" rel="noreferrer" className="social-link" aria-label="GitHub"><i className="fab fa-github"></i></a>
                 </div>
               </div>
 
-              {/* Karan Bithoo */}
+              {/* Mayank Joshi */}
               <div className="abt-card abt-team-card">
-                <div className="team-avatar text-orange">KB</div>
-                <h3 className="team-name">Karan Bithoo</h3>
+                <div className="team-avatar text-orange">MJ</div>
+                <h3 className="team-name">Mayank Joshi</h3>
                 <span className="team-role text-orange">Co-Founder & Lead Software Engineer</span>
-                <p className="team-bio">Specializes in secure Django/FastAPI configurations, database indexation, and full-stack software schemas.</p>
+                <p className="team-bio">Specializes in enterprise software architecture, full-stack systems, secure database design, and cloud scalability.</p>
                 <div className="team-socials">
                   <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-link" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
                   <a href="https://github.com" target="_blank" rel="noreferrer" className="social-link" aria-label="GitHub"><i className="fab fa-github"></i></a>
                 </div>
               </div>
 
-              {/* Rahul Khatri */}
+              {/* Saurabh */}
               <div className="abt-card abt-team-card">
-                <div className="team-avatar text-blue">RK</div>
-                <h3 className="team-name">Rahul Khatri</h3>
-                <span className="team-role text-blue">Co-Founder & UI/UX Director</span>
-                <p className="team-bio">Specializes in luxury branding visual tokens, advanced CSS micro-animations, and client conversion assets.</p>
+                <div className="team-avatar text-blue">S</div>
+                <h3 className="team-name">Saurabh</h3>
+                <span className="team-role text-blue">Automation Engineer</span>
+                <p className="team-bio">Specializes in n8n workflow maps, custom webhook integrations, process automation, and API orchestration.</p>
                 <div className="team-socials">
                   <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-link" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
                   <a href="https://github.com" target="_blank" rel="noreferrer" className="social-link" aria-label="GitHub"><i className="fab fa-github"></i></a>
