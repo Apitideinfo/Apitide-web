@@ -11009,16 +11009,18 @@ body {
 .contact-hero {
   padding: 80px 0 50px;
   position: relative;
+  text-align: center;
 }
 
 .contact-eyebrow {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 16px;
   font-size: 0.78rem;
   font-weight: 800;
   color: #38BDF8;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 16px;
 }
 
 .contact-hero h1 {
@@ -11028,6 +11030,7 @@ body {
   color: #FFFFFF;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .contact-gradient-blue {
@@ -11042,6 +11045,7 @@ body {
   color: #94A3B8;
   max-width: 640px;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* SPLIT LAYOUT */
