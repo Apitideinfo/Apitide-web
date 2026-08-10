@@ -196,7 +196,9 @@ export default function About() {
             <div className="abt-team-grid">
               {/* Kritika Paliwal */}
               <div className="abt-card abt-team-card">
-                <div className="team-avatar text-cyan">KP</div>
+                <div className="team-avatar text-cyan">
+                  <img src="/static/images/team_img1.jpg" alt="Kritika Paliwal" className="team-avatar-img" />
+                </div>
                 <h3 className="team-name">Kritika Paliwal</h3>
                 <span className="team-role text-cyan">UI/UX Designer</span>
                 <p className="team-bio">Specializes in user research, wireframing, high-fidelity UI design systems, and conversion-focused digital experiences.</p>
@@ -208,7 +210,9 @@ export default function About() {
 
               {/* Mayank Joshi */}
               <div className="abt-card abt-team-card">
-                <div className="team-avatar text-orange">MJ</div>
+                <div className="team-avatar text-orange">
+                  <img src="/static/images/team_img2.jpg" alt="Mayank Joshi" className="team-avatar-img" />
+                </div>
                 <h3 className="team-name">Mayank Joshi</h3>
                 <span className="team-role text-orange">Co-Founder & Lead Software Engineer</span>
                 <p className="team-bio">Specializes in enterprise software architecture, full-stack systems, secure database design, and cloud scalability.</p>
@@ -220,7 +224,9 @@ export default function About() {
 
               {/* Saurabh */}
               <div className="abt-card abt-team-card">
-                <div className="team-avatar text-blue">S</div>
+                <div className="team-avatar text-blue">
+                  <img src="/static/images/team_img3.jpg" alt="Saurabh" className="team-avatar-img" />
+                </div>
                 <h3 className="team-name">Saurabh</h3>
                 <span className="team-role text-blue">Automation Engineer</span>
                 <p className="team-bio">Specializes in n8n workflow maps, custom webhook integrations, process automation, and API orchestration.</p>

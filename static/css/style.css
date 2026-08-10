@@ -10003,6 +10003,14 @@ body {
   font-weight: 800;
   margin-bottom: 20px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.team-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .team-avatar.text-cyan { color: #38BDF8; box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
