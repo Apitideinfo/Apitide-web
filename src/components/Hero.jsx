@@ -79,29 +79,46 @@ export default function Hero({ onOpenDemo }) {
             </button>
           </div>
 
-          {/* Logo Ticker */}
-          <div className="logo-ticker-container">
-            <p className="ticker-label">AUTOMATING OPERATIONS ACROSS INDUSTRY LEADING PLATFORMS</p>
-            <div className="logo-ticker-track">
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe" className="si-logo" /> Stripe</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify" className="si-logo" /> Shopify</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" className="si-logo" /> n8n</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" className="si-logo" /> Zapier</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI" className="si-logo" /> OpenAI</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/slack/ECB22E" alt="Slack" className="si-logo" /> Slack</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/google/4285F4" alt="Google" className="si-logo" /> Google</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable" className="si-logo" /> Airtable</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" className="si-logo" /> WhatsApp</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" className="si-logo" /> HubSpot</div>
-              <div className="logo-ticker-item"><i className="fab fa-aws" style={{ color: '#FF9900', fontSize: '1.2rem' }}></i> AWS</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase" className="si-logo" /> Firebase</div>
+          {/* Moving Logo Ticker Line */}
+          <p className="hero-ticker-label">AUTOMATING OPERATIONS ACROSS INDUSTRY LEADING PLATFORMS</p>
+          <div className="hero-ticker-strip tech-stack">
+            <div className="hero-ticker-track">
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" alt="OpenAI" className="si-logo" style={{ filter: 'brightness(0) invert(1)' }} /> OpenAI</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/n8n.svg" alt="n8n" className="si-logo" style={{ filter: 'invert(35%) sepia(80%) saturate(2500%) hue-rotate(325deg)' }} /> n8n</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twilio.svg" alt="Twilio" className="si-logo" style={{ filter: 'invert(37%) sepia(93%) saturate(3015%) hue-rotate(338deg)' }} /> Twilio</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg" alt="Azure" className="si-logo" style={{ filter: 'invert(40%) sepia(85%) saturate(2000%) hue-rotate(185deg)' }} /> Azure</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/react.svg" alt="React" className="si-logo" style={{ filter: 'invert(65%) sepia(80%) saturate(1000%) hue-rotate(155deg)' }} /> React</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nextdotjs.svg" alt="Next.js" className="si-logo" style={{ filter: 'brightness(0) invert(1)' }} /> Next.js</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nodedotjs.svg" alt="Node.js" className="si-logo" style={{ filter: 'invert(45%) sepia(80%) saturate(1000%) hue-rotate(85deg)' }} /> Node.js</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" alt="Python" className="si-logo" style={{ filter: 'invert(45%) sepia(60%) saturate(1000%) hue-rotate(170deg)' }} /> Python</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/fastapi.svg" alt="FastAPI" className="si-logo" style={{ filter: 'invert(45%) sepia(80%) saturate(1500%) hue-rotate(130deg)' }} /> FastAPI</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker" className="si-logo" style={{ filter: 'invert(45%) sepia(90%) saturate(2000%) hue-rotate(175deg)' }} /> Docker</span>
+              <span className="hero-ticker-item"><i className="fab fa-aws" style={{ color: '#FF9900' }}></i> AWS</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/firebase.svg" alt="Firebase" className="si-logo" style={{ filter: 'invert(80%) sepia(80%) saturate(1500%) hue-rotate(350deg)' }} /> Firebase</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/langchain.svg" alt="LangChain" className="si-logo" style={{ filter: 'brightness(0) invert(1)' }} /> LangChain</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/postgresql.svg" alt="PostgreSQL" className="si-logo" style={{ filter: 'invert(40%) sepia(80%) saturate(1500%) hue-rotate(190deg)' }} /> PostgreSQL</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg" alt="Vercel" className="si-logo" style={{ filter: 'brightness(0) invert(1)' }} /> Vercel</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/stripe.svg" alt="Stripe" className="si-logo" style={{ filter: 'invert(40%) sepia(90%) saturate(2000%) hue-rotate(210deg)' }} /> Stripe</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zapier.svg" alt="Zapier" className="si-logo" style={{ filter: 'invert(45%) sepia(90%) saturate(2500%) hue-rotate(355deg)' }} /> Zapier</span>
+
               {/* Duplicate for seamless loop */}
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="Stripe" className="si-logo" /> Stripe</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify" className="si-logo" /> Shopify</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" className="si-logo" /> n8n</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" className="si-logo" /> Zapier</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI" className="si-logo" /> OpenAI</div>
-              <div className="logo-ticker-item"><img src="https://cdn.simpleicons.org/slack/ECB22E" alt="Slack" className="si-logo" /> Slack</div>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" alt="OpenAI" className="si-logo" style={{ filter: 'brightness(0) invert(1)' }} /> OpenAI</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/n8n.svg" alt="n8n" className="si-logo" style={{ filter: 'invert(35%) sepia(80%) saturate(2500%) hue-rotate(325deg)' }} /> n8n</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twilio.svg" alt="Twilio" className="si-logo" style={{ filter: 'invert(37%) sepia(93%) saturate(3015%) hue-rotate(338deg)' }} /> Twilio</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg" alt="Azure" className="si-logo" style={{ filter: 'invert(40%) sepia(85%) saturate(2000%) hue-rotate(185deg)' }} /> Azure</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/react.svg" alt="React" className="si-logo" style={{ filter: 'invert(65%) sepia(80%) saturate(1000%) hue-rotate(155deg)' }} /> React</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nextdotjs.svg" alt="Next.js" className="si-logo" style={{ filter: 'brightness(0) invert(1)' }} /> Next.js</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nodedotjs.svg" alt="Node.js" className="si-logo" style={{ filter: 'invert(45%) sepia(80%) saturate(1000%) hue-rotate(85deg)' }} /> Node.js</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" alt="Python" className="si-logo" style={{ filter: 'invert(45%) sepia(60%) saturate(1000%) hue-rotate(170deg)' }} /> Python</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/fastapi.svg" alt="FastAPI" className="si-logo" style={{ filter: 'invert(45%) sepia(80%) saturate(1500%) hue-rotate(130deg)' }} /> FastAPI</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker" className="si-logo" style={{ filter: 'invert(45%) sepia(90%) saturate(2000%) hue-rotate(175deg)' }} /> Docker</span>
+              <span className="hero-ticker-item"><i className="fab fa-aws" style={{ color: '#FF9900' }}></i> AWS</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/firebase.svg" alt="Firebase" className="si-logo" style={{ filter: 'invert(80%) sepia(80%) saturate(1500%) hue-rotate(350deg)' }} /> Firebase</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/langchain.svg" alt="LangChain" className="si-logo" style={{ filter: 'brightness(0) invert(1)' }} /> LangChain</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/postgresql.svg" alt="PostgreSQL" className="si-logo" style={{ filter: 'invert(40%) sepia(80%) saturate(1500%) hue-rotate(190deg)' }} /> PostgreSQL</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg" alt="Vercel" className="si-logo" style={{ filter: 'brightness(0) invert(1)' }} /> Vercel</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/stripe.svg" alt="Stripe" className="si-logo" style={{ filter: 'invert(40%) sepia(90%) saturate(2000%) hue-rotate(210deg)' }} /> Stripe</span>
+              <span className="hero-ticker-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zapier.svg" alt="Zapier" className="si-logo" style={{ filter: 'invert(45%) sepia(90%) saturate(2500%) hue-rotate(355deg)' }} /> Zapier</span>
             </div>
           </div>
 
