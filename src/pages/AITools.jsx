@@ -1315,13 +1315,13 @@ export default function AITools() {
         <section className="aitools-section aitools-cta-section">
           <div className="aitools-container">
             <div className="aitools-card aitools-cta-banner">
-              <h2 className="aitools-section-title mb-3">
+              <h2>
                 Ready to Automate Operations with <span className="aitools-gradient-cyan">Intelligent AI?</span>
               </h2>
-              <p className="aitools-section-subtitle mb-6 max-w-2xl mx-auto">
+              <p>
                 Schedule a 15-minute engineering call to claim your 14-day free pilot and custom system blueprint.
               </p>
-              <Link to="/contact" className="aitools-btn aitools-btn-primary large">
+              <Link to="/contact" className="aitools-btn aitools-btn-primary">
                 <i className="fas fa-rocket"></i> Claim Your 14-Day Free Pilot
               </Link>
             </div>
