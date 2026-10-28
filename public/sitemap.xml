@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- 1. Home Page -->
+  <url>
+    <loc>https://apitide.com/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. Portfolio & Projects Showcase (Primary Traffic Destination) -->
+  <url>
+    <loc>https://apitide.com/portfolio</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://apitide.com/static/images/highlights/hotelmantri-thumbnail-1200x800.jpg</image:loc>
+      <image:title>Hotel Mantri Hospitality and Direct Booking Platform</image:title>
+      <image:caption>Full-stack luxury hotel reservation portal with AIOSell channel synchronization</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apitide.com/static/images/highlights/nowfix-thumbnail-1200x800.jpg</image:loc>
+      <image:title>NowFix On-Demand Home Services Marketplace</image:title>
+      <image:caption>Dual-sided service booking web platform with live GPS technician matching</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apitide.com/static/images/highlights/visionme-thumbnail-1200x800.jpg</image:loc>
+      <image:title>VisionME Multi-Tenant SaaS Visual Intelligence Platform</image:title>
+      <image:caption>Enterprise multi-tenant cloud workspace with real-time visual analytics</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apitide.com/static/images/highlights/tailorez-thumbnail-1200x800.jpg</image:loc>
+      <image:title>TailorEZ Bespoke Tailoring Customization Platform</image:title>
+      <image:caption>Custom apparel 3D configurator with algorithmic digital fit locker</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apitide.com/static/images/ai/ai-cold-call-mail.jpg</image:loc>
+      <image:title>AI Cold Call and Outbound Mail Agent</image:title>
+      <image:caption>Autonomous voice AI dialing agent and multi-channel email sequencer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apitide.com/static/images/ai/ai-lead-generation.jpg</image:loc>
+      <image:title>AI Lead Generation and Prospecting Agent</image:title>
+      <image:caption>Continuous B2B target account scraper with verified lead enrichment</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apitide.com/static/images/ai/ai-tutor-thumbnail-1200x800.jpg</image:loc>
+      <image:title>Personal AI Tutor and Step-by-Step Problem Solver</image:title>
+      <image:caption>24/7 curriculum-aligned educational assistant with real-time STEM problem solving</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 3. Projects Alternative URL -->
+  <url>
+    <loc>https://apitide.com/projects</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 4. Services Page -->
+  <url>
+    <loc>https://apitide.com/services</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- 5. AI Tools Directory & Estimators -->
+  <url>
+    <loc>https://apitide.com/ai-tools</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 6. Resources & Knowledge Hub -->
+  <url>
+    <loc>https://apitide.com/resources</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 7. About Agency -->
+  <url>
+    <loc>https://apitide.com/about</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- 8. Contact & Consultation Booking -->
+  <url>
+    <loc>https://apitide.com/contact</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 9. Privacy Policy -->
+  <url>
+    <loc>https://apitide.com/privacy</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+  <!-- 10. Terms of Service -->
+  <url>
+    <loc>https://apitide.com/terms</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>

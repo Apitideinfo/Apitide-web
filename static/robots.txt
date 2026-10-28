@@ -1,0 +1,20 @@
+# APITIDE Robots.txt - Web Crawler Guidelines
+User-agent: *
+Allow: /
+Allow: /portfolio
+Allow: /projects
+Allow: /services
+Allow: /ai-tools
+Allow: /resources
+Allow: /about
+Allow: /contact
+
+# Crawl-delay for server responsiveness
+Crawl-delay: 1
+
+# Disallow internal backend API routes
+Disallow: /api/
+
+# Host and Canonical Sitemap
+Host: https://apitide.com
+Sitemap: https://apitide.com/sitemap.xml
