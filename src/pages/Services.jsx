@@ -23,7 +23,7 @@ export default function Services() {
               </p>
               <div className="hero-buttons">
                 <Link to="/contact" className="cta-btn primary">Start Your Project</Link>
-                <Link to="/projects" className="cta-btn secondary">View Our Work</Link>
+                <Link to="/portfolio" className="cta-btn secondary">View Portfolio</Link>
               </div>
             </div>
           </div>

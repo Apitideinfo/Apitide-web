@@ -395,8 +395,8 @@ export default function About() {
                 <Link to="/contact" className="abt-btn abt-btn-primary">
                   <i className="fas fa-calendar-check"></i> Start Your Free Consultation
                 </Link>
-                <Link to="/projects" className="abt-btn abt-btn-secondary">
-                  See Our Work <i className="fas fa-arrow-right"></i>
+                <Link to="/portfolio" className="abt-btn abt-btn-secondary">
+                  See Our Portfolio <i className="fas fa-arrow-right"></i>
                 </Link>
               </div>
             </div>

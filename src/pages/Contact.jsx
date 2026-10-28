@@ -177,8 +177,8 @@ export default function Contact() {
                         Thank you for reaching out to Apitide. A custom automation blueprint is being drafted for you. One of our technical architects will email you within 24 hours to schedule a detailed code walkthrough.
                       </p>
                       <div className="success-action-wrap">
-                        <Link to="/projects" className="contact-btn contact-btn-secondary">
-                          View Our Case Studies
+                        <Link to="/portfolio" className="contact-btn contact-btn-secondary">
+                          View Our Portfolio
                         </Link>
                       </div>
                     </div>
