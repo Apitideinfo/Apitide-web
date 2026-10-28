@@ -95,7 +95,7 @@ export default function Footer() {
               <li><Link to="/ai-tools"><i className="fas fa-chevron-right arrow"></i> AI Tools</Link></li>
               <li><Link to="/resources"><i className="fas fa-chevron-right arrow"></i> Resources & Blog</Link></li>
               <li><Link to="/about"><i className="fas fa-chevron-right arrow"></i> About Us</Link></li>
-              <li><Link to="/projects"><i className="fas fa-chevron-right arrow"></i> Featured Projects</Link></li>
+              <li><Link to="/portfolio"><i className="fas fa-chevron-right arrow"></i> Portfolio</Link></li>
               <li><Link to="/contact"><i className="fas fa-chevron-right arrow"></i> Contact Us</Link></li>
             </ul>
           </div>

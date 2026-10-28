@@ -71,7 +71,7 @@ export default function Hero({ onOpenDemo }) {
             <Link to="/contact" className="cta-btn primary">
               <i className="fas fa-calendar-alt"></i> Book Consultation
             </Link>
-            <Link to="/projects" className="cta-btn secondary">
+            <Link to="/portfolio" className="cta-btn secondary">
               View Portfolio
             </Link>
             <button onClick={onOpenDemo} className="cta-btn secondary" type="button">

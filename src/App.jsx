@@ -37,6 +37,7 @@ export default function App() {
             <Route path="/ai-tools" element={<AITools />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Projects />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />

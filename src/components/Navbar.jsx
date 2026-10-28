@@ -45,8 +45,8 @@ export default function Navbar() {
           <Link to="/about" className={isActive('/about') ? 'active' : ''} onClick={closeMobileMenu}>
             About
           </Link>
-          <Link to="/projects" className={isActive('/projects') ? 'active' : ''} onClick={closeMobileMenu}>
-            Projects
+          <Link to="/portfolio" className={isActive('/portfolio') || isActive('/projects') ? 'active' : ''} onClick={closeMobileMenu}>
+            Portfolio
           </Link>
           <Link to="/contact" className={isActive('/contact') ? 'active' : ''} onClick={closeMobileMenu}>
             Contact

@@ -150,7 +150,7 @@ export default function Home() {
               <Link to="/contact" className="cta-btn primary">
                 <i className="fas fa-calendar-alt"></i> Book Consultation
               </Link>
-              <Link to="/projects" className="cta-btn secondary">View Portfolio</Link>
+              <Link to="/portfolio" className="cta-btn secondary">View Portfolio</Link>
               <Link to="#" id="watch-demo-btn" className="cta-btn secondary">
                 <i className="fas fa-play-circle"></i> Watch Demo
               </Link>
@@ -316,6 +316,155 @@ export default function Home() {
         <div className="banner-showcase-wrapper">
           <img src="/static/images/hero-visual.webp" alt="APITIDE - Code Transformation & AI Modernization"
             className="transformation-banner-img" loading="lazy" />
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════
+          FEATURED PORTFOLIO HIGHLIGHTS (FROM DOWNLOADS/HIGHLIGHTS)
+          ═══════════════════════════════════════════════════ */}
+      <section className="home-highlights-section" id="portfolio-highlights">
+        <div className="container">
+          <div className="home-highlights-header">
+            <h2 className="home-highlights-title">
+              Featured <span className="gradient-text-orange">Flagship</span> Websites & <span className="gradient-text-blue">Platforms</span>
+            </h2>
+            <p className="home-highlights-subtitle">
+              Explore our recent production-grade client platforms — engineered for high conversion, rock-solid stability, and seamless digital experiences.
+            </p>
+          </div>
+
+          <div className="home-highlights-grid">
+            {/* 1. Hotel Mantri */}
+            <div className="home-highlight-card glass-card">
+              <div className="highlight-img-wrap">
+                <img
+                  src="/static/images/highlights/hotelmantri-thumbnail-1200x800.jpg"
+                  alt="Hotel Mantri Hospitality & Direct Booking Platform"
+                  className="highlight-img"
+                  loading="lazy"
+                />
+                <span className="highlight-category-pill">
+                  <i className="fas fa-hotel"></i> Hospitality Web Platform
+                </span>
+                <span className="highlight-metric-chip">
+                  <i className="fas fa-chart-line"></i> +180% Direct Bookings
+                </span>
+              </div>
+              <div className="highlight-card-body">
+                <h3 className="highlight-card-title">Hotel Mantri – Hospitality & Direct Booking Platform</h3>
+                <p className="highlight-card-desc">
+                  Full-stack hotel management and direct guest reservation portal integrated with AIOSell channel manager, automated WhatsApp concierge, and real-time room inventory sync.
+                </p>
+                <div className="highlight-card-footer">
+                  <Link to="/portfolio#hotelmantri" className="highlight-action-link">
+                    <span>View Case Study</span>
+                    <i className="fas fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* 2. NowFix */}
+            <div className="home-highlight-card glass-card">
+              <div className="highlight-img-wrap">
+                <img
+                  src="/static/images/highlights/nowfix-thumbnail-1200x800.jpg"
+                  alt="NowFix On-Demand Home Services & Repair Marketplace"
+                  className="highlight-img"
+                  loading="lazy"
+                />
+                <span className="highlight-category-pill">
+                  <i className="fas fa-tools"></i> On-Demand Marketplace
+                </span>
+                <span className="highlight-metric-chip">
+                  <i className="fas fa-bolt"></i> &lt;15m Tech Dispatch
+                </span>
+              </div>
+              <div className="highlight-card-body">
+                <h3 className="highlight-card-title">NowFix – On-Demand Home Services & Repair Marketplace</h3>
+                <p className="highlight-card-desc">
+                  High-performance service booking platform with real-time technician matching, transparent tiered pricing, live GPS dispatch tracking, and escrow-backed payments.
+                </p>
+                <div className="highlight-card-footer">
+                  <Link to="/portfolio#nowfix" className="highlight-action-link">
+                    <span>View Case Study</span>
+                    <i className="fas fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* 3. TailorEZ */}
+            <div className="home-highlight-card glass-card">
+              <div className="highlight-img-wrap">
+                <img
+                  src="/static/images/highlights/tailorez-thumbnail-1200x800.jpg"
+                  alt="TailorEZ Bespoke Tailoring & Garment E-Commerce Platform"
+                  className="highlight-img"
+                  loading="lazy"
+                />
+                <span className="highlight-category-pill">
+                  <i className="fas fa-tshirt"></i> Ecomm Website
+                </span>
+                <span className="highlight-metric-chip">
+                  <i className="fas fa-gem"></i> 2.4x Order Value
+                </span>
+              </div>
+              <div className="highlight-card-body">
+                <h3 className="highlight-card-title">TailorEZ – Bespoke Tailoring & Garment E-Commerce</h3>
+                <p className="highlight-card-desc">
+                  Bespoke apparel e-commerce web platform where customers customize fabrics, collars, cuffs, and measurements with precision digital fit algorithms and alteration tracking.
+                </p>
+                <div className="highlight-card-footer">
+                  <Link to="/portfolio#tailorez" className="highlight-action-link">
+                    <span>View Case Study</span>
+                    <i className="fas fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. VisionME */}
+            <div className="home-highlight-card glass-card">
+              <div className="highlight-img-wrap">
+                <img
+                  src="/static/images/highlights/visionme-thumbnail-1200x800.jpg"
+                  alt="VisionME Multi-Tenant SaaS & Visual Intelligence Platform"
+                  className="highlight-img"
+                  loading="lazy"
+                />
+                <span className="highlight-category-pill">
+                  <i className="fas fa-cubes"></i> Multi-Tenant SaaS
+                </span>
+                <span className="highlight-metric-chip">
+                  <i className="fas fa-shield-alt"></i> 99.99% Uptime SLA
+                </span>
+              </div>
+              <div className="highlight-card-body">
+                <h3 className="highlight-card-title">VisionME – Multi-Tenant SaaS & Visual Intelligence</h3>
+                <p className="highlight-card-desc">
+                  Scalable enterprise software providing automated visual intelligence analytics, team collaboration workspaces, custom client domains, and sub-second dashboard reporting.
+                </p>
+                <div className="highlight-card-footer">
+                  <Link to="/portfolio#visionme" className="highlight-action-link">
+                    <span>View Case Study</span>
+                    <i className="fas fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Action Row */}
+          <div className="home-highlights-action">
+            <Link to="/portfolio" className="cta-btn primary">
+              <span>View All Portfolio Websites</span>
+              <i className="fas fa-arrow-right"></i>
+            </Link>
+            <Link to="/contact" className="cta-btn secondary">
+              <span>Request Custom Website Build</span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -2001,7 +2150,7 @@ export default function Home() {
                       <p>Managing Director, Rajputana Roadlines</p>
                     </div>
                   </div>
-                  <Link to="/projects#rajputana-modal" className="story-link">Read Full Case Study <i className="fas fa-arrow-right"></i></Link>
+                  <Link to="/portfolio#hotelmantri" className="story-link">Read Full Case Study <i className="fas fa-arrow-right"></i></Link>
                 </div>
               </div>
 
@@ -2019,7 +2168,7 @@ export default function Home() {
                       <p>VP of Engineering, Nordic Health Tech</p>
                     </div>
                   </div>
-                  <Link to="/projects#rag-modal" className="story-link">Read Full Case Study <i className="fas fa-arrow-right"></i></Link>
+                  <Link to="/portfolio#visionme" className="story-link">Read Full Case Study <i className="fas fa-arrow-right"></i></Link>
                 </div>
               </div>
 
@@ -2037,7 +2186,7 @@ export default function Home() {
                       <p>Chief Operating Officer, Apex Global Logistics</p>
                     </div>
                   </div>
-                  <Link to="/projects#saas-feeder-modal" className="story-link">Read Full Case Study <i className="fas fa-arrow-right"></i></Link>
+                  <Link to="/portfolio#nowfix" className="story-link">Read Full Case Study <i className="fas fa-arrow-right"></i></Link>
                 </div>
               </div>
 
@@ -2055,7 +2204,7 @@ export default function Home() {
                       <p>CEO & Co-Founder, SaaSScale B2B</p>
                     </div>
                   </div>
-                  <Link to="/projects" className="story-link">Read Full Case Study <i className="fas fa-arrow-right"></i></Link>
+                  <Link to="/portfolio#tailorez" className="story-link">Read Full Case Study <i className="fas fa-arrow-right"></i></Link>
                 </div>
               </div>
             </div>
