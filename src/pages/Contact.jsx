@@ -1,22 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const DAYS_DATA = [
-  { day: 'Mon', num: '24', date: 'Monday, August 24' },
-  { day: 'Tue', num: '25', date: 'Tuesday, August 25' },
-  { day: 'Wed', num: '26', date: 'Wednesday, August 26' },
-  { day: 'Thu', num: '27', date: 'Thursday, August 27' },
-  { day: 'Fri', num: '28', date: 'Friday, August 28' },
-];
-
-const TIME_SLOTS = [
-  '10:00 AM',
-  '11:30 AM',
-  '02:00 PM',
-  '03:30 PM',
-  '05:00 PM',
-];
-
 export default function Contact() {
   // Form States
   const [formData, setFormData] = useState({
@@ -35,11 +19,29 @@ export default function Contact() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
-  // Scheduler States
-  const [selectedDayIndex, setSelectedDayIndex] = useState(0);
-  const [selectedTimeIndex, setSelectedTimeIndex] = useState(null);
-  const [isBooking, setIsBooking] = useState(false);
-  const [bookingSuccess, setBookingSuccess] = useState(false);
+  // Initialize Calendly inline widget on mount
+  useEffect(() => {
+    const initCalendly = () => {
+      const container = document.getElementById('calendly-inline-container');
+      if (container && window.Calendly) {
+        container.innerHTML = '';
+        window.Calendly.initInlineWidget({
+          url: 'https://calendly.com/apitideinfo/30min',
+          parentElement: container,
+        });
+      }
+    };
+
+    if (window.Calendly) {
+      initCalendly();
+    } else {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      script.onload = initCalendly;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   // Form Pre-fill from URL Query Params (e.g. ?plan=starter)
   useEffect(() => {
@@ -128,19 +130,6 @@ export default function Contact() {
     } finally {
       setIsSending(false);
     }
-  };
-
-  const handleBookingConfirm = () => {
-    if (selectedTimeIndex === null) {
-      alert('Please select a time slot first.');
-      return;
-    }
-
-    setIsBooking(true);
-    setTimeout(() => {
-      setIsBooking(false);
-      setBookingSuccess(true);
-    }, 1200);
   };
 
   return (
@@ -384,95 +373,21 @@ export default function Contact() {
               {/* RIGHT COLUMN: Scheduler & Direct Info Stacked */}
               <div className="contact-info-column">
                 
-                {/* Scheduler Card */}
-                <div className="contact-scheduler-wrapper">
-                  {bookingSuccess ? (
-                    <div className="contact-success-state text-center booking">
-                      <div className="success-icon-badge">📅</div>
-                      <h2>Consultation Booking Registered!</h2>
-                      <p>
-                        A calendar invitation has been sent for **{DAYS_DATA[selectedDayIndex].date} at {TIME_SLOTS[selectedTimeIndex]}**. 
-                        Our lead technical architect will join the video call to review your system intake details.
-                      </p>
-                      <button 
-                        type="button" 
-                        onClick={() => {
-                          setBookingSuccess(false);
-                          setSelectedTimeIndex(null);
-                        }} 
-                        className="contact-btn contact-btn-secondary"
-                      >
-                        Book Another Slot
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="contact-scheduler-container">
-                      <div className="scheduler-header">
-                        <h2>Schedule Instantly</h2>
-                        <p>Sync directly with our technical team in real time. Select an open slot.</p>
-                      </div>
+                {/* Calendly Scheduler Card */}
+                <div className="contact-scheduler-wrapper" id="schedule">
+                  <div className="scheduler-header">
+                    <h2>Schedule Consultation</h2>
+                    <p>Sync directly with our technical engineering team in real time. Pick an open 30-min slot below.</p>
+                  </div>
 
-                      {/* Day Grid */}
-                      <div className="scheduler-days-grid">
-                        {DAYS_DATA.map((item, idx) => (
-                          <div 
-                            key={idx}
-                            className={`scheduler-day-card ${selectedDayIndex === idx ? 'active' : ''}`}
-                            onClick={() => {
-                              setSelectedDayIndex(idx);
-                              setSelectedTimeIndex(null);
-                            }}
-                          >
-                            <span className="day-name">{item.day}</span>
-                            <span className="day-number">{item.num}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Time Slots */}
-                      <div className="scheduler-time-slots-container">
-                        <span className="slots-title">Available Hours ({DAYS_DATA[selectedDayIndex].day}):</span>
-                        <div className="time-slots-grid">
-                          {TIME_SLOTS.map((time, idx) => (
-                            <button
-                              key={idx}
-                              type="button"
-                              className={`time-slot-btn ${selectedTimeIndex === idx ? 'active' : ''}`}
-                              onClick={() => setSelectedTimeIndex(idx)}
-                            >
-                              {time}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Selection Summary */}
-                      <div className="scheduler-summary-alert">
-                        {selectedTimeIndex !== null ? (
-                          <p className="summary-text">
-                            <i className="far fa-clock"></i> Selected Slot: <strong>{DAYS_DATA[selectedDayIndex].date} at {TIME_SLOTS[selectedTimeIndex]}</strong>
-                          </p>
-                        ) : (
-                          <p className="summary-text muted">
-                            <i className="far fa-calendar-alt"></i> Please choose an available time slot above.
-                          </p>
-                        )}
-                      </div>
-
-                      <button
-                        type="button"
-                        onClick={handleBookingConfirm}
-                        className="contact-btn contact-btn-primary full-width"
-                        disabled={selectedTimeIndex === null || isBooking}
-                      >
-                        {isBooking ? (
-                          <span><i className="fas fa-spinner fa-spin"></i> Locking Slot...</span>
-                        ) : (
-                          <span>Confirm Booking Slot</span>
-                        )}
-                      </button>
-                    </div>
-                  )}
+                  {/* Calendly inline widget begin */}
+                  <div 
+                    id="calendly-inline-container"
+                    className="calendly-inline-widget" 
+                    data-url="https://calendly.com/apitideinfo/30min" 
+                    style={{ minWidth: '320px', height: '700px', borderRadius: '16px', overflow: 'hidden' }}
+                  ></div>
+                  {/* Calendly inline widget end */}
                 </div>
 
                 {/* Direct Channels Card */}

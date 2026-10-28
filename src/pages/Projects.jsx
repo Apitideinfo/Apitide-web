@@ -85,7 +85,69 @@ export const PORTFOLIO_PROJECTS = [
     tech: ['Next.js / React', 'TailwindCSS', 'Custom 3D Configurator', 'Razorpay / Stripe', 'Node.js']
   },
 
-  // ── 2. CORPORATE & BRAND PORTALS ──
+  // ── 2. AI & AUTOMATIONS ──
+  {
+    id: 'ai-cold-call-mail',
+    title: 'AI Cold Call & Outbound Mail Agent',
+    subtitle: 'Autonomous voice AI dialing agent & hyper-personalized multi-stage email sequencer',
+    category: 'AI Voice & Outreach Agent',
+    categoryGroup: 'ai',
+    icon: '📞',
+    image: '/static/images/ai/ai-cold-call-mail.jpg',
+    badge: 'AI Sales Agent',
+    description: 'An autonomous multi-channel AI outbound agent that dials prospect lists, conducts natural conversational qualification calls, handles objections, and triggers tailored multi-stage email sequences.',
+    problem: 'Sales teams were bogged down by manual phone prospecting lists, high dial fatigue, low live connection rates, and tedious CRM data entry after every outbound call.',
+    solution: 'Engineered a sub-500ms ultra-low latency voice agent with dynamic objection handling, real-time speech synthesis, and automated n8n webhook email workflows synced with HubSpot and Salesforce.',
+    results: [
+      { val: '12x', label: 'More outbound conversations conducted per day' },
+      { val: '42%', label: 'Qualified lead booking conversion rate' },
+      { val: '<480ms', label: 'Average voice latency for conversational realism' },
+      { val: '80%', label: 'Reduction in manual SDR prospecting hours' }
+    ],
+    tech: ['Python / FastAPI', 'Vapi / ElevenLabs', 'OpenAI GPT-4o', 'n8n Workflows', 'HubSpot API', 'Twilio Voice']
+  },
+  {
+    id: 'ai-lead-generation',
+    title: 'AI Lead Generation & Prospecting Agent',
+    subtitle: 'Autonomous target account scraping, verified email discovery & CRM injection pipeline',
+    category: 'Lead Automation Agent',
+    categoryGroup: 'ai',
+    icon: '🎯',
+    image: '/static/images/ai/ai-lead-generation.jpg',
+    badge: 'Lead Automation',
+    description: 'An autonomous intelligence pipeline that continuously discovers ideal customer profiles (ICPs), enriches prospect records with live web intelligence, and verifies contact details before CRM routing.',
+    problem: 'B2B sales teams were relying on outdated purchased databases with high bounce rates (18%+), burning sales rep capacity on manual Google and LinkedIn research.',
+    solution: 'Constructed an automated AI prospect discovery engine using headless scrapers, multi-provider email verification (Apollo & Hunter APIs), Vector DB ICP matching, and automated CRM pipeline routing.',
+    results: [
+      { val: '8,500+', label: 'Verified B2B decision-maker leads captured monthly' },
+      { val: '98.5%', label: 'Email deliverability rate with zero sender domain risk' },
+      { val: '85%', label: 'Reduction in manual sales research & list preparation' },
+      { val: '3.8x', label: 'Faster lead qualification velocity to scheduled demo' }
+    ],
+    tech: ['Python', 'LangChain', 'n8n Automations', 'Puppeteer', 'Vector DB', 'PostgreSQL', 'Apollo API']
+  },
+  {
+    id: 'ai-tutor',
+    title: 'Personal AI Tutor & Problem Solver',
+    subtitle: '24/7 interactive curriculum-aligned learning assistant with step-by-step problem breakdowns',
+    category: 'EdTech AI Assistant',
+    categoryGroup: 'ai',
+    icon: '🎓',
+    image: '/static/images/ai/ai-tutor-thumbnail-1200x800.jpg',
+    badge: 'AI EdTech Platform',
+    description: 'An always-on intelligent learning companion that breaks complex STEM concepts into intuitive step-by-step solutions, dynamically generates practice quizzes, and tracks student mastery streaks.',
+    problem: 'Students struggled with static textbooks and recorded videos that lacked interactive feedback, personalized explanations, and immediate help when encountering difficult equations or homework problems.',
+    solution: 'Developed an adaptive AI tutoring web application with real-time LaTeX formula rendering, interactive Socratic questioning, progress tracking dashboards, and personalized concept reinforcement.',
+    results: [
+      { val: '82%', label: 'Curriculum mastery rate achieved across enrolled learners' },
+      { val: '<800ms', label: 'Instant step-by-step conversational response time' },
+      { val: '4.9/5', label: 'Student engagement rating across 25,000+ solved problems' },
+      { val: '3.2x', label: 'Increase in daily student practice consistency' }
+    ],
+    tech: ['React.js', 'FastAPI', 'OpenAI RAG', 'LaTeX Engine', 'TailwindCSS', 'PostgreSQL']
+  },
+
+  // ── 3. CORPORATE & BRAND PORTALS ──
   {
     id: 'corporate-branding',
     title: 'Corporate Website – Premium Landing Page & Branding',
@@ -212,6 +274,25 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState('all');
   const location = useLocation();
 
+  // Dynamic SEO meta updates for Portfolio
+  useEffect(() => {
+    document.title = 'Production Portfolio & Case Studies | APITIDE AI Systems & Web Platforms';
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) {
+      descMeta.setAttribute(
+        'content',
+        'Explore APITIDE client projects: Hotel Mantri direct reservation platform, NowFix marketplace, VisionME enterprise SaaS, TailorEZ ecommerce, and autonomous AI sales & lead agents.'
+      );
+    }
+    const kwMeta = document.querySelector('meta[name="keywords"]');
+    if (kwMeta) {
+      kwMeta.setAttribute(
+        'content',
+        'portfolio, web development projects, custom software portfolio, website designs, web application examples, ecommerce website showcase, SaaS platforms, AI bots, full stack case studies, Hotel Mantri, NowFix, VisionME, TailorEZ, hire developers, web agency portfolio'
+      );
+    }
+  }, []);
+
   // Auto-open modal if URL has hash (e.g., #hotelmantri)
   useEffect(() => {
     if (location.hash) {
@@ -224,6 +305,7 @@ export default function Projects() {
   }, [location.hash]);
 
   const appProjects = PORTFOLIO_PROJECTS.filter(p => p.categoryGroup === 'apps');
+  const aiProjects = PORTFOLIO_PROJECTS.filter(p => p.categoryGroup === 'ai');
   const corporateProjects = PORTFOLIO_PROJECTS.filter(p => p.categoryGroup === 'corporate');
   const ecommProjects = PORTFOLIO_PROJECTS.filter(p => p.categoryGroup === 'ecomm' || p.isEcomm);
 
@@ -244,10 +326,10 @@ export default function Projects() {
                 Turning Ideas into <span className="proj-gradient-orange">High-Impact</span> Digital Platforms
               </h1>
               <p className="proj-hero-subtitle">
-                Explore our curated portfolio of bespoke web applications, corporate portals, and high-converting e-commerce storefronts.
+                Explore our curated portfolio of bespoke web applications, autonomous AI agents & automations, corporate portals, and high-converting e-commerce storefronts.
               </p>
               <div className="proj-count-badge">
-                <i className="fas fa-check-circle"></i> {PORTFOLIO_PROJECTS.length} Production Websites & Web Platforms Delivered
+                <i className="fas fa-check-circle"></i> {PORTFOLIO_PROJECTS.length} Production Systems, AI Agents & Web Platforms Delivered
               </div>
 
               {/* Filter Tabs */}
@@ -265,6 +347,13 @@ export default function Projects() {
                   type="button"
                 >
                   <i className="fas fa-mobile-alt"></i> Web Apps ({appProjects.length})
+                </button>
+                <button
+                  className={`portfolio-filter-btn ${activeTab === 'ai' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('ai')}
+                  type="button"
+                >
+                  <i className="fas fa-robot"></i> AI & Automations ({aiProjects.length})
                 </button>
                 <button
                   className={`portfolio-filter-btn ${activeTab === 'corporate' ? 'active' : ''}`}
@@ -341,7 +430,65 @@ export default function Projects() {
         )}
 
         {/* ──────────────────────────────────────────────────────────────────────────
-           3. SECTION: CORPORATE & BRAND WEBSITES
+           3. SECTION: AI & AUTOMATIONS (RIGHT BELOW WEB APPS & PLATFORMS)
+           ────────────────────────────────────────────────────────────────────────── */}
+        {(activeTab === 'all' || activeTab === 'ai') && (
+          <section className="proj-section proj-ai-section" id="ai-automations">
+            <div className="proj-container">
+              <div className="proj-section-header">
+                <div className="ai-section-pill">
+                  <i className="fas fa-robot"></i> AUTONOMOUS INTELLIGENCE &amp; AUTOMATIONS
+                </div>
+                <h2 className="proj-section-title">
+                  AI &amp; <span className="proj-gradient-purple">Automations</span>
+                </h2>
+                <p className="proj-section-subtitle">
+                  Intelligent voice callers, autonomous cold outreach systems, continuous lead enrichment engines, and 24/7 AI learning assistants built to eliminate operational friction.
+                </p>
+              </div>
+
+              <div className="proj-grid">
+                {aiProjects.map((project) => (
+                  <div
+                    key={project.id}
+                    className="proj-card ai-card"
+                    onClick={() => setActiveModal(project)}
+                  >
+                    <div className="card-image-wrap">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="card-image"
+                        loading="lazy"
+                      />
+                      <span className="card-icon-badge">{project.icon}</span>
+                    </div>
+
+                    <div className="card-body">
+                      <span className="card-category ai-cat">{project.category}</span>
+                      <h3 className="card-title">{project.title}</h3>
+                      <p className="card-desc">{project.description}</p>
+
+                      <div className="card-highlight-stat ai-stat">
+                        <span className="stat-pill-val">{project.results[0].val}</span>
+                        <span className="stat-pill-lbl">{project.results[0].label}</span>
+                      </div>
+                    </div>
+
+                    <div className="card-footer">
+                      <button className="proj-action-btn" type="button">
+                        View Case Study <i className="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ──────────────────────────────────────────────────────────────────────────
+           4. SECTION: CORPORATE & BRAND WEBSITES
            ────────────────────────────────────────────────────────────────────────── */}
         {(activeTab === 'all' || activeTab === 'corporate') && (
           <section className="proj-section proj-bg-darker" id="corporate-websites">
@@ -396,7 +543,7 @@ export default function Projects() {
         )}
 
         {/* ──────────────────────────────────────────────────────────────────────────
-           4. SECTION: ECOMM WEBSITES (KEPT IN THE END)
+           5. SECTION: ECOMM WEBSITES (KEPT IN THE END)
            ────────────────────────────────────────────────────────────────────────── */}
         {(activeTab === 'all' || activeTab === 'ecomm') && (
           <section className="proj-section proj-ecomm-section" id="ecomm-websites">
@@ -454,14 +601,14 @@ export default function Projects() {
         )}
 
         {/* ──────────────────────────────────────────────────────────────────────────
-           5. CONVERSION CTA BANNER
+           6. CONVERSION CTA BANNER
            ────────────────────────────────────────────────────────────────────────── */}
         <section className="proj-banner-section">
           <Link to="/contact" className="proj-banner-link" aria-label="Start Your Website Project">
-            <img 
-              src="/static/images/projects_bottom_banner_new.webp" 
-              alt="Apitide Custom Solutions Portfolio Banner" 
-              className="proj-banner-img" 
+            <img
+              src="/static/images/projects_bottom_banner_new.webp"
+              alt="Apitide Custom Solutions Portfolio Banner"
+              className="proj-banner-img"
             />
           </Link>
         </section>
@@ -536,9 +683,20 @@ export default function Projects() {
                   <h4>Want a platform engineered like this?</h4>
                   <p>Let's build a high-performance web experience tailored to your exact business specifications.</p>
                 </div>
-                <Link to="/contact" className="cta-btn primary" onClick={() => setActiveModal(null)}>
+                <a 
+                  href="https://calendly.com/apitideinfo/30min" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="cta-btn primary"
+                  onClick={(e) => {
+                    if (window.Calendly) {
+                      e.preventDefault();
+                      window.Calendly.initPopupWidget({ url: 'https://calendly.com/apitideinfo/30min' });
+                    }
+                  }}
+                >
                   Book Free Consultation <i className="fas fa-arrow-right"></i>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
